@@ -43,3 +43,9 @@ Input, game state and UI modules will be added as needed. Scene motion is time-b
 Remote: https://github.com/trebizondoculpepper/idea_grabber.git
 
 The Spec Kitty configuration was moved from `my-project/` to this root. The original Python starter files were preserved outside the repository in `../idea_grabber-python-starter/`; the existing local virtual environment and IDE settings are ignored.
+
+## PS1 rendering prototype
+
+The current scene uses original editable 128 × 128 SVG textures for the capsule, checkerboard floor and patterned backdrop. Textures use nearest-neighbour filtering without mipmaps. The canvas renders within a 640 × 480 pixel budget and scales with CSS pixelation while HTML text stays sharp.
+
+`src/rendering/ps1-material.ts` extends the standard material shader to snap projected vertices to a two-pixel grid while preserving depth and clip w. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops animation. Affine texture warping is not implemented in this prototype.

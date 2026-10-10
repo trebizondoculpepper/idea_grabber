@@ -47,3 +47,7 @@ header p {
   background: #15101d;
   color: white;
 }
+
+canvas {
+  image-rendering: pixelated;
+}
