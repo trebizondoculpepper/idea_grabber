@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-10T21:44:23.211737+00:00",
+  "flattened": false,
+  "friendly_name": "Synchronised sound effects",
+  "mid8": "01M4KWCC",
+  "mission_id": "01M4KWCCWK8JX25CNX0BZA7RGR",
+  "mission_number": null,
+  "mission_slug": "synchronised-sound-effects-01M4KWCC",
+  "mission_type": "software-dev",
+  "purpose_context": "Make the toy arcade tactile and expressive by synchronising sound cues with existing animations and speech bubbles. Use the downloaded open audio collections, respect mute and reduced motion, and keep music outside this mission.",
+  "purpose_tldr": "Integrate downloaded sound effects with machine movement, ball interactions and character speech.",
+  "slug": "synchronised-sound-effects-01M4KWCC",
+  "target_branch": "feat/arcade-world",
+  "topology": "single_branch"
+}
