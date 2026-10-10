@@ -13,7 +13,17 @@ export function bindCoinieSpeech(
   const anchor = new Vector3();
   let spokenGeneration = -1;
   let remaining = 0;
+  let utterance = 0;
   return {
+    get busy() {
+      return remaining > 0;
+    },
+    say(text: string) {
+      bubble.textContent = text;
+      remaining = 8;
+      utterance++;
+      bubble.hidden = false;
+    },
     // The mouth moves for about as long as the line takes to say.
     get talking() {
       const talkTime = Math.min(
@@ -23,7 +33,7 @@ export function bindCoinieSpeech(
       return !bubble.hidden && 8 - remaining < talkTime;
     },
     get speechKey() {
-      return bubble.hidden ? undefined : spokenGeneration;
+      return bubble.hidden ? undefined : utterance;
     },
     update(delta: number) {
       const onstage =
@@ -31,6 +41,7 @@ export function bindCoinieSpeech(
         (world.coiniePhase === 'walking' && world.coinieProgress >= 0.55);
       if (onstage && spokenGeneration !== world.coinieGeneration) {
         spokenGeneration = world.coinieGeneration;
+        utterance++;
         bubble.textContent = nextLine();
         remaining = 8;
       }

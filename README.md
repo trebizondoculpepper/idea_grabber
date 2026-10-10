@@ -34,6 +34,12 @@ Other effects were excerpted, converted and encoded for browser playback; see th
 
 Background arcade cabinets each have three attract-mode screens: the original gameplay view, a second stage and a themed high-score table. They change at staggered 7–10 second intervals and hold still with reduced motion. The project-created SVG variants can be regenerated with `python3 scripts/generate-arcade-screens.py`.
 
+### Rack wordplay
+
+Each genre in [the catalogue](docs/ingredient-catalogue.json) has a `words` object containing `verbs`, `nouns` and `adjectives`. These curated word sets travel with the capsule's ingredient, including recycled balls. Use base-form verbs that can take an object (such as `extract`, `shoot`, or `dance with`), bare noun phrases (such as `garden`), and adjectives that work before a noun (such as `space`). Empty arrays are allowed where a part of speech does not fit.
+
+After 18–30 seconds of quiet time, Coinie or Bulbee may combine a verb and noun from different genres currently on the rack, optionally adding an adjective from a third. For example: “I can't wait to extract the garden!” Existing entrance and capsule announcements take priority. The feature uses fixed templates and random choices locally; it makes no AI requests.
+
 ### Development tools
 
 The project uses [Vite](https://vite.dev/) (MIT), [TypeScript](https://www.typescriptlang.org/) (Apache-2.0), [Vitest](https://vitest.dev/) (MIT), [ESLint](https://eslint.org/) (MIT), [Prettier](https://prettier.io/) (MIT), [Node.js](https://nodejs.org/), and [Spec Kitty](https://github.com/Priivacy-ai/spec-kitty) for mission tracking. Dependency versions and transitive packages are recorded in [package.json](package.json) and [package-lock.json](package-lock.json); each package retains its own licence. The public game is hosted on [Fly.io](https://fly.io/).

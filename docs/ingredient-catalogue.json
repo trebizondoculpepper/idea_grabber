@@ -3,738 +3,1353 @@
     "id": "platformer",
     "label": "Platformer",
     "category": "action-and-movement",
-    "emoji": "👟"
+    "emoji": "👟",
+    "words": {
+      "verbs": ["jump over", "climb"],
+      "nouns": ["platform", "ledge"],
+      "adjectives": ["bouncy"]
+    }
   },
   {
     "id": "precision-platformer",
     "label": "Precision platformer",
     "category": "action-and-movement",
-    "emoji": "🎯"
+    "emoji": "🎯",
+    "words": {
+      "verbs": ["land on", "dodge"],
+      "nouns": ["spike", "ledge"],
+      "adjectives": ["precise"]
+    }
   },
   {
     "id": "action",
     "label": "Action",
     "category": "action-and-movement",
-    "emoji": "⚔️"
+    "emoji": "⚔️",
+    "words": {
+      "verbs": ["punch", "smash"],
+      "nouns": ["explosion", "hero"],
+      "adjectives": ["explosive"]
+    }
   },
   {
     "id": "runner",
     "label": "Endless runner",
     "category": "action-and-movement",
-    "emoji": "🏃"
+    "emoji": "🏃",
+    "words": {
+      "verbs": ["outrun", "dodge"],
+      "nouns": ["obstacle", "finish line"],
+      "adjectives": ["endless"]
+    }
   },
   {
     "id": "parkour",
     "label": "Parkour",
     "category": "action-and-movement",
-    "emoji": "🤸"
+    "emoji": "🤸",
+    "words": {
+      "verbs": ["vault over", "climb"],
+      "nouns": ["rooftop", "wall"],
+      "adjectives": ["acrobatic"]
+    }
   },
   {
     "id": "beat-em-up",
     "label": "Beat ’em up",
     "category": "action-and-movement",
-    "emoji": "🥊"
+    "emoji": "🥊",
+    "words": {
+      "verbs": ["punch", "kick"],
+      "nouns": ["gang", "street"],
+      "adjectives": ["rowdy"]
+    }
   },
   {
     "id": "hack-and-slash",
     "label": "Hack and slash",
     "category": "action-and-movement",
-    "emoji": "🗡️"
+    "emoji": "🗡️",
+    "words": {
+      "verbs": ["slash", "chop"],
+      "nouns": ["sword", "horde"],
+      "adjectives": ["sharp"]
+    }
   },
   {
     "id": "character-action",
     "label": "Character action",
     "category": "action-and-movement",
-    "emoji": "⚔️"
+    "emoji": "⚔️",
+    "words": {
+      "verbs": ["juggle", "launch"],
+      "nouns": ["combo", "hero"],
+      "adjectives": ["stylish"]
+    }
   },
   {
     "id": "stealth",
     "label": "Stealth",
     "category": "action-and-movement",
-    "emoji": "🥷"
+    "emoji": "🥷",
+    "words": {
+      "verbs": ["sneak past", "hide from"],
+      "nouns": ["guard", "shadow"],
+      "adjectives": ["sneaky"]
+    }
   },
   {
     "id": "survival",
     "label": "Survival",
     "category": "action-and-movement",
-    "emoji": "🛡️"
+    "emoji": "🛡️",
+    "words": {
+      "verbs": ["survive", "forage for"],
+      "nouns": ["wilderness", "shelter"],
+      "adjectives": ["wild"]
+    }
   },
   {
     "id": "boss-rush",
     "label": "Boss rush",
     "category": "action-and-movement",
-    "emoji": "👑"
+    "emoji": "👑",
+    "words": {
+      "verbs": ["defeat", "challenge"],
+      "nouns": ["boss", "arena"],
+      "adjectives": ["colossal"]
+    }
   },
   {
     "id": "arena-combat",
     "label": "Arena combat",
     "category": "action-and-movement",
-    "emoji": "🥊"
+    "emoji": "🥊",
+    "words": {
+      "verbs": ["fight", "challenge"],
+      "nouns": ["arena", "champion"],
+      "adjectives": ["gladiatorial"]
+    }
   },
   {
     "id": "souls-like",
     "label": "Souls-like",
     "category": "action-and-movement",
-    "emoji": "🔥"
+    "emoji": "🔥",
+    "words": {
+      "verbs": ["dodge", "parry"],
+      "nouns": ["bonfire", "knight"],
+      "adjectives": ["cursed"]
+    }
   },
   {
     "id": "puzzle-platformer",
     "label": "Puzzle platformer",
     "category": "action-and-movement",
-    "emoji": "🧩"
+    "emoji": "🧩",
+    "words": {
+      "verbs": ["solve", "climb"],
+      "nouns": ["puzzle", "platform"],
+      "adjectives": ["puzzling"]
+    }
   },
   {
     "id": "collectathon",
     "label": "Collectathon",
     "category": "action-and-movement",
-    "emoji": "🧺"
+    "emoji": "🧺",
+    "words": {
+      "verbs": ["collect", "hoard"],
+      "nouns": ["treasure", "trinket"],
+      "adjectives": ["shiny"]
+    }
   },
   {
     "id": "first-person-shooter",
     "label": "First-person shooter",
     "category": "shooting-and-combat",
-    "emoji": "🎯"
+    "emoji": "🎯",
+    "words": {
+      "verbs": ["shoot", "aim at"],
+      "nouns": ["target", "rifle"],
+      "adjectives": ["first-person"]
+    }
   },
   {
     "id": "third-person-shooter",
     "label": "Third-person shooter",
     "category": "shooting-and-combat",
-    "emoji": "🔫"
+    "emoji": "🔫",
+    "words": {
+      "verbs": ["shoot", "take cover behind"],
+      "nouns": ["target", "barricade"],
+      "adjectives": ["third-person"]
+    }
   },
   {
     "id": "twin-stick-shooter",
     "label": "Twin-stick shooter",
     "category": "shooting-and-combat",
-    "emoji": "🕹️"
+    "emoji": "🕹️",
+    "words": {
+      "verbs": ["shoot", "dodge"],
+      "nouns": ["swarm", "laser"],
+      "adjectives": ["frantic"]
+    }
   },
   {
     "id": "shoot-em-up",
     "label": "Shoot ’em up",
     "category": "shooting-and-combat",
-    "emoji": "🚀"
+    "emoji": "🚀",
+    "words": {
+      "verbs": ["shoot", "blast"],
+      "nouns": ["spaceship", "squadron"],
+      "adjectives": ["aerial"]
+    }
   },
   {
     "id": "bullet-hell",
     "label": "Bullet hell",
     "category": "shooting-and-combat",
-    "emoji": "☄️"
+    "emoji": "☄️",
+    "words": {
+      "verbs": ["dodge", "shoot"],
+      "nouns": ["bullet", "pattern"],
+      "adjectives": ["bulletproof"]
+    }
   },
   {
     "id": "rail-shooter",
     "label": "Rail shooter",
     "category": "shooting-and-combat",
-    "emoji": "🛤️"
+    "emoji": "🛤️",
+    "words": {
+      "verbs": ["shoot", "ride"],
+      "nouns": ["rail", "target"],
+      "adjectives": ["on-rails"]
+    }
   },
   {
     "id": "tactics",
     "label": "Tactics",
     "category": "shooting-and-combat",
-    "emoji": "♟️"
+    "emoji": "♟️",
+    "words": {
+      "verbs": ["outflank", "ambush"],
+      "nouns": ["squad", "battlefield"],
+      "adjectives": ["tactical"]
+    }
   },
   {
     "id": "shooter",
     "label": "Shooter",
     "category": "shooting-and-combat",
-    "emoji": "🔫"
+    "emoji": "🔫",
+    "words": {
+      "verbs": ["shoot", "blast"],
+      "nouns": ["target", "bullet"],
+      "adjectives": ["trigger-happy"]
+    }
   },
   {
     "id": "artillery",
     "label": "Artillery game",
     "category": "shooting-and-combat",
-    "emoji": "💣"
+    "emoji": "💣",
+    "words": {
+      "verbs": ["bombard", "shell"],
+      "nouns": ["cannon", "fort"],
+      "adjectives": ["ballistic"]
+    }
   },
   {
     "id": "fighting",
     "label": "Fighting game",
     "category": "shooting-and-combat",
-    "emoji": "👊"
+    "emoji": "👊",
+    "words": {
+      "verbs": ["punch", "kick"],
+      "nouns": ["opponent", "fist"],
+      "adjectives": ["combative"]
+    }
   },
   {
     "id": "duelling",
     "label": "Duelling",
     "category": "shooting-and-combat",
-    "emoji": "⚔️"
+    "emoji": "⚔️",
+    "words": {
+      "verbs": ["challenge", "parry"],
+      "nouns": ["rival", "sword"],
+      "adjectives": ["honourable"]
+    }
   },
   {
     "id": "auto-battler",
     "label": "Auto battler",
     "category": "shooting-and-combat",
-    "emoji": "♟️"
+    "emoji": "♟️",
+    "words": {
+      "verbs": ["deploy", "recruit"],
+      "nouns": ["army", "champion"],
+      "adjectives": ["automatic"]
+    }
   },
   {
     "id": "bullet-heaven",
     "label": "Bullet heaven",
     "category": "shooting-and-combat",
-    "emoji": "🌠"
+    "emoji": "🌠",
+    "words": {
+      "verbs": ["blast", "upgrade"],
+      "nouns": ["horde", "projectile"],
+      "adjectives": ["overpowered"]
+    }
   },
   {
     "id": "looter-shooter",
     "label": "Looter shooter",
     "category": "shooting-and-combat",
-    "emoji": "🎒"
+    "emoji": "🎒",
+    "words": {
+      "verbs": ["loot", "shoot"],
+      "nouns": ["loot", "rifle"],
+      "adjectives": ["legendary"]
+    }
   },
   {
     "id": "extraction-shooter",
     "label": "Extraction shooter",
     "category": "shooting-and-combat",
-    "emoji": "🚁"
+    "emoji": "🚁",
+    "words": {
+      "verbs": ["extract", "shoot"],
+      "nouns": ["extraction zone", "loot"],
+      "adjectives": ["tactical"]
+    }
   },
   {
     "id": "hero-shooter",
     "label": "Hero shooter",
     "category": "shooting-and-combat",
-    "emoji": "🦸"
+    "emoji": "🦸",
+    "words": {
+      "verbs": ["shoot", "rescue"],
+      "nouns": ["hero", "payload"],
+      "adjectives": ["heroic"]
+    }
   },
   {
     "id": "battle-royale",
     "label": "Battle royale",
     "category": "shooting-and-combat",
-    "emoji": "🪂"
+    "emoji": "🪂",
+    "words": {
+      "verbs": ["outlast", "eliminate"],
+      "nouns": ["opponent", "safe zone"],
+      "adjectives": ["last-standing"]
+    }
   },
   {
     "id": "fetch-quest",
     "label": "Fetch quest",
     "category": "adventure-and-narrative",
-    "emoji": "📦"
+    "emoji": "📦",
+    "words": {
+      "verbs": ["fetch", "deliver"],
+      "nouns": ["parcel", "errand"],
+      "adjectives": ["long-distance"]
+    }
   },
   {
     "id": "point-and-click",
     "label": "Point-and-click adventure",
     "category": "adventure-and-narrative",
-    "emoji": "👆"
+    "emoji": "👆",
+    "words": {
+      "verbs": ["inspect", "click on"],
+      "nouns": ["inventory", "clue"],
+      "adjectives": ["clickable"]
+    }
   },
   {
     "id": "graphic-adventure",
     "label": "Graphic adventure",
     "category": "adventure-and-narrative",
-    "emoji": "🚪"
+    "emoji": "🚪",
+    "words": {
+      "verbs": ["explore", "inspect"],
+      "nouns": ["scene", "clue"],
+      "adjectives": ["illustrated"]
+    }
   },
   {
     "id": "text-adventure",
     "label": "Text adventure",
     "category": "adventure-and-narrative",
-    "emoji": "📖"
+    "emoji": "📖",
+    "words": {
+      "verbs": ["read", "examine"],
+      "nouns": ["passage", "door"],
+      "adjectives": ["text-based"]
+    }
   },
   {
     "id": "visual-novel",
     "label": "Visual novel",
     "category": "adventure-and-narrative",
-    "emoji": "💬"
+    "emoji": "💬",
+    "words": {
+      "verbs": ["romance", "read"],
+      "nouns": ["story", "crush"],
+      "adjectives": ["dramatic"]
+    }
   },
   {
     "id": "interactive-fiction",
     "label": "Interactive fiction",
     "category": "adventure-and-narrative",
-    "emoji": "✍️"
+    "emoji": "✍️",
+    "words": {
+      "verbs": ["rewrite", "read"],
+      "nouns": ["story", "choice"],
+      "adjectives": ["branching"]
+    }
   },
   {
     "id": "walking-simulator",
     "label": "Walking simulator",
     "category": "adventure-and-narrative",
-    "emoji": "🚶"
+    "emoji": "🚶",
+    "words": {
+      "verbs": ["explore", "photograph"],
+      "nouns": ["landscape", "footpath"],
+      "adjectives": ["quiet"]
+    }
   },
   {
     "id": "mystery",
     "label": "Mystery game",
     "category": "adventure-and-narrative",
-    "emoji": "❓"
+    "emoji": "❓",
+    "words": {
+      "verbs": ["solve", "investigate"],
+      "nouns": ["mystery", "clue"],
+      "adjectives": ["mysterious"]
+    }
   },
   {
     "id": "detective",
     "label": "Detective game",
     "category": "adventure-and-narrative",
-    "emoji": "🔎"
+    "emoji": "🔎",
+    "words": {
+      "verbs": ["interrogate", "investigate"],
+      "nouns": ["suspect", "case"],
+      "adjectives": ["suspicious"]
+    }
   },
   {
     "id": "escape-room",
     "label": "Escape room",
     "category": "adventure-and-narrative",
-    "emoji": "🔐"
+    "emoji": "🔐",
+    "words": {
+      "verbs": ["escape", "unlock"],
+      "nouns": ["room", "lock"],
+      "adjectives": ["locked"]
+    }
   },
   {
     "id": "exploration",
     "label": "Exploration",
     "category": "adventure-and-narrative",
-    "emoji": "🧭"
+    "emoji": "🧭",
+    "words": {
+      "verbs": ["explore", "photograph"],
+      "nouns": ["scenery", "ruin"],
+      "adjectives": ["uncharted"]
+    }
   },
   {
     "id": "adventure",
     "label": "Adventure",
     "category": "adventure-and-narrative",
-    "emoji": "🚪"
+    "emoji": "🚪",
+    "words": {
+      "verbs": ["explore", "rescue"],
+      "nouns": ["treasure", "traveller"],
+      "adjectives": ["adventurous"]
+    }
   },
   {
     "id": "horror",
     "label": "Horror",
     "category": "adventure-and-narrative",
-    "emoji": "👻"
+    "emoji": "👻",
+    "words": {
+      "verbs": ["haunt", "terrify"],
+      "nouns": ["monster", "nightmare"],
+      "adjectives": ["haunted"]
+    }
   },
   {
     "id": "survival-horror",
     "label": "Survival horror",
     "category": "adventure-and-narrative",
-    "emoji": "🧟"
+    "emoji": "🧟",
+    "words": {
+      "verbs": ["survive", "hide from"],
+      "nouns": ["nightmare", "monster"],
+      "adjectives": ["terrifying"]
+    }
   },
   {
     "id": "psychological-horror",
     "label": "Psychological horror",
     "category": "adventure-and-narrative",
-    "emoji": "🪞"
+    "emoji": "🪞",
+    "words": {
+      "verbs": ["unsettle", "haunt"],
+      "nouns": ["mind", "memory"],
+      "adjectives": ["unsettling"]
+    }
   },
   {
     "id": "rpg",
     "label": "RPG",
     "category": "role-playing-and-progression",
-    "emoji": "🧙"
+    "emoji": "🧙",
+    "words": {
+      "verbs": ["level up", "recruit"],
+      "nouns": ["party", "quest"],
+      "adjectives": ["magical"]
+    }
   },
   {
     "id": "dungeon-crawler",
     "label": "Dungeon crawler",
     "category": "role-playing-and-progression",
-    "emoji": "🏰"
+    "emoji": "🏰",
+    "words": {
+      "verbs": ["explore", "loot"],
+      "nouns": ["dungeon", "chest"],
+      "adjectives": ["underground"]
+    }
   },
   {
     "id": "monster-collecting",
     "label": "Monster collecting",
     "category": "role-playing-and-progression",
-    "emoji": "👾"
+    "emoji": "👾",
+    "words": {
+      "verbs": ["collect", "tame"],
+      "nouns": ["monster", "creature"],
+      "adjectives": ["monstrous"]
+    }
   },
   {
     "id": "roguelike",
     "label": "Roguelike",
     "category": "role-playing-and-progression",
-    "emoji": "💀"
+    "emoji": "💀",
+    "words": {
+      "verbs": ["explore", "loot"],
+      "nouns": ["dungeon", "relic"],
+      "adjectives": ["procedural"]
+    }
   },
   {
     "id": "roguelite",
     "label": "Roguelite",
     "category": "role-playing-and-progression",
-    "emoji": "🔁"
+    "emoji": "🔁",
+    "words": {
+      "verbs": ["upgrade", "explore"],
+      "nouns": ["relic", "upgrade"],
+      "adjectives": ["ever-changing"]
+    }
   },
   {
     "id": "metroidvania",
     "label": "Metroidvania",
     "category": "role-playing-and-progression",
-    "emoji": "🗝️"
+    "emoji": "🗝️",
+    "words": {
+      "verbs": ["unlock", "explore"],
+      "nouns": ["passage", "ability"],
+      "adjectives": ["interconnected"]
+    }
   },
   {
     "id": "action-rpg",
     "label": "Action RPG",
     "category": "role-playing-and-progression",
-    "emoji": "🗡️"
+    "emoji": "🗡️",
+    "words": {
+      "verbs": ["slash", "enchant"],
+      "nouns": ["sword", "quest"],
+      "adjectives": ["enchanted"]
+    }
   },
   {
     "id": "jrpg",
     "label": "JRPG",
     "category": "role-playing-and-progression",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "words": {
+      "verbs": ["summon", "recruit"],
+      "nouns": ["party", "crystal"],
+      "adjectives": ["epic"]
+    }
   },
   {
     "id": "crpg",
     "label": "CRPG",
     "category": "role-playing-and-progression",
-    "emoji": "📜"
+    "emoji": "📜",
+    "words": {
+      "verbs": ["persuade", "recruit"],
+      "nouns": ["companion", "quest"],
+      "adjectives": ["fantastical"]
+    }
   },
   {
     "id": "tactical-rpg",
     "label": "Tactical RPG",
     "category": "role-playing-and-progression",
-    "emoji": "♟️"
+    "emoji": "♟️",
+    "words": {
+      "verbs": ["deploy", "upgrade"],
+      "nouns": ["party", "squad"],
+      "adjectives": ["tactical"]
+    }
   },
   {
     "id": "real-time-strategy",
     "label": "Real-time strategy",
     "category": "strategy-and-management",
-    "emoji": "⏱️"
+    "emoji": "⏱️",
+    "words": {
+      "verbs": ["command", "build"],
+      "nouns": ["army", "base"],
+      "adjectives": ["real-time"]
+    }
   },
   {
     "id": "turn-based-strategy",
     "label": "Turn-based strategy",
     "category": "strategy-and-management",
-    "emoji": "♟️"
+    "emoji": "♟️",
+    "words": {
+      "verbs": ["command", "conquer"],
+      "nouns": ["army", "territory"],
+      "adjectives": ["turn-based"]
+    }
   },
   {
     "id": "grand-strategy",
     "label": "Grand strategy",
     "category": "strategy-and-management",
-    "emoji": "🌍"
+    "emoji": "🌍",
+    "words": {
+      "verbs": ["conquer", "govern"],
+      "nouns": ["empire", "province"],
+      "adjectives": ["imperial"]
+    }
   },
   {
     "id": "four-x",
     "label": "4X strategy",
     "category": "strategy-and-management",
-    "emoji": "🪐"
+    "emoji": "🪐",
+    "words": {
+      "verbs": ["explore", "colonise"],
+      "nouns": ["planet", "empire"],
+      "adjectives": ["expansionist"]
+    }
   },
   {
     "id": "tower-defence",
     "label": "Tower defence",
     "category": "strategy-and-management",
-    "emoji": "🏰"
+    "emoji": "🏰",
+    "words": {
+      "verbs": ["defend", "build"],
+      "nouns": ["tower", "castle"],
+      "adjectives": ["fortified"]
+    }
   },
   {
     "id": "city-builder",
     "label": "City builder",
     "category": "strategy-and-management",
-    "emoji": "🏙️"
+    "emoji": "🏙️",
+    "words": {
+      "verbs": ["build", "zone"],
+      "nouns": ["city", "skyscraper"],
+      "adjectives": ["urban"]
+    }
   },
   {
     "id": "colony-sim",
     "label": "Colony management",
     "category": "strategy-and-management",
-    "emoji": "🛖"
+    "emoji": "🛖",
+    "words": {
+      "verbs": ["manage", "settle"],
+      "nouns": ["colony", "colonist"],
+      "adjectives": ["colonial"]
+    }
   },
   {
     "id": "factory-automation",
     "label": "Factory automation",
     "category": "strategy-and-management",
-    "emoji": "🏭"
+    "emoji": "🏭",
+    "words": {
+      "verbs": ["automate", "assemble"],
+      "nouns": ["factory", "conveyor belt"],
+      "adjectives": ["industrial"]
+    }
   },
   {
     "id": "business-management",
     "label": "Management",
     "category": "strategy-and-management",
-    "emoji": "🏪"
+    "emoji": "🏪",
+    "words": {
+      "verbs": ["manage", "organise"],
+      "nouns": ["manager", "meeting"],
+      "adjectives": ["bureaucratic"]
+    }
   },
   {
     "id": "resource-management",
     "label": "Resource management",
     "category": "strategy-and-management",
-    "emoji": "⚖️"
+    "emoji": "⚖️",
+    "words": {
+      "verbs": ["ration", "allocate"],
+      "nouns": ["resource", "stockpile"],
+      "adjectives": ["scarce"]
+    }
   },
   {
     "id": "deck-building",
     "label": "Deck building",
     "category": "strategy-and-management",
-    "emoji": "🃏"
+    "emoji": "🃏",
+    "words": {
+      "verbs": ["shuffle", "build"],
+      "nouns": ["deck", "card"],
+      "adjectives": ["stacked"]
+    }
   },
   {
     "id": "real-time-tactics",
     "label": "Real-time tactics",
     "category": "strategy-and-management",
-    "emoji": "⏱️"
+    "emoji": "⏱️",
+    "words": {
+      "verbs": ["ambush", "command"],
+      "nouns": ["squad", "formation"],
+      "adjectives": ["real-time"]
+    }
   },
   {
     "id": "card-game",
     "label": "Card game",
     "category": "strategy-and-management",
-    "emoji": "🃏"
+    "emoji": "🃏",
+    "words": {
+      "verbs": ["shuffle", "deal"],
+      "nouns": ["card", "deck"],
+      "adjectives": ["lucky"]
+    }
   },
   {
     "id": "board-game",
     "label": "Board game",
     "category": "strategy-and-management",
-    "emoji": "🎲"
+    "emoji": "🎲",
+    "words": {
+      "verbs": ["move", "roll"],
+      "nouns": ["piece", "dice"],
+      "adjectives": ["tabletop"]
+    }
   },
   {
     "id": "moba",
     "label": "MOBA",
     "category": "strategy-and-management",
-    "emoji": "🏟️"
+    "emoji": "🏟️",
+    "words": {
+      "verbs": ["defend", "destroy"],
+      "nouns": ["lane", "base"],
+      "adjectives": ["competitive"]
+    }
   },
   {
     "id": "civilisation",
     "label": "Civilisation",
     "category": "strategy-and-management",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "words": {
+      "verbs": ["build", "govern"],
+      "nouns": ["civilisation", "monument"],
+      "adjectives": ["ancient"]
+    }
   },
   {
     "id": "chess",
     "label": "Chess",
     "category": "strategy-and-management",
-    "emoji": "♟️"
+    "emoji": "♟️",
+    "words": {
+      "verbs": ["capture", "checkmate"],
+      "nouns": ["king", "pawn"],
+      "adjectives": ["checkered"]
+    }
   },
   {
     "id": "draughts",
     "label": "Draughts",
     "category": "strategy-and-management",
-    "emoji": "🔴"
+    "emoji": "🔴",
+    "words": {
+      "verbs": ["capture", "jump over"],
+      "nouns": ["piece", "board"],
+      "adjectives": ["checkered"]
+    }
   },
   {
     "id": "life-sim",
     "label": "Life simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🏡"
+    "emoji": "🏡",
+    "words": {
+      "verbs": ["befriend", "decorate"],
+      "nouns": ["house", "neighbour"],
+      "adjectives": ["domestic"]
+    }
   },
   {
     "id": "farming-sim",
     "label": "Farming simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🥕"
+    "emoji": "🥕",
+    "words": {
+      "verbs": ["plant", "harvest"],
+      "nouns": ["crop", "farm"],
+      "adjectives": ["organic"]
+    }
   },
   {
     "id": "fishing-sim",
     "label": "Fishing",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🎣"
+    "emoji": "🎣",
+    "words": {
+      "verbs": ["catch", "reel in"],
+      "nouns": ["fish", "pond"],
+      "adjectives": ["fishy"]
+    }
   },
   {
     "id": "cooking-game",
     "label": "Cooking game",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🍳"
+    "emoji": "🍳",
+    "words": {
+      "verbs": ["cook", "season"],
+      "nouns": ["meal", "soup"],
+      "adjectives": ["delicious"]
+    }
   },
   {
     "id": "shopkeeping",
     "label": "Shopkeeping",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🛍️"
+    "emoji": "🛍️",
+    "words": {
+      "verbs": ["sell", "stock"],
+      "nouns": ["shop", "bargain"],
+      "adjectives": ["discounted"]
+    }
   },
   {
     "id": "pet-care",
     "label": "Pet care",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🐾"
+    "emoji": "🐾",
+    "words": {
+      "verbs": ["groom", "feed"],
+      "nouns": ["pet", "puppy"],
+      "adjectives": ["fluffy"]
+    }
   },
   {
     "id": "flight-sim",
     "label": "Flight simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "✈️"
+    "emoji": "✈️",
+    "words": {
+      "verbs": ["pilot", "land"],
+      "nouns": ["aircraft", "runway"],
+      "adjectives": ["aerodynamic"]
+    }
   },
   {
     "id": "driving-sim",
     "label": "Driving simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🚗"
+    "emoji": "🚗",
+    "words": {
+      "verbs": ["drive", "park"],
+      "nouns": ["car", "truck"],
+      "adjectives": ["motorised"]
+    }
   },
   {
     "id": "space-sim",
     "label": "Space simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🛸"
+    "emoji": "🛸",
+    "words": {
+      "verbs": ["pilot", "explore"],
+      "nouns": ["spaceship", "planet"],
+      "adjectives": ["space"]
+    }
   },
   {
     "id": "vehicle-building",
     "label": "Vehicle building",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🔧"
+    "emoji": "🔧",
+    "words": {
+      "verbs": ["build", "repair"],
+      "nouns": ["vehicle", "engine"],
+      "adjectives": ["custom-built"]
+    }
   },
   {
     "id": "physics",
     "label": "Physics",
     "category": "simulation-and-everyday-systems",
-    "emoji": "⚙️"
+    "emoji": "⚙️",
+    "words": {
+      "verbs": ["bounce", "launch"],
+      "nouns": ["ball", "pendulum"],
+      "adjectives": ["wobbly"]
+    }
   },
   {
     "id": "sandbox",
     "label": "Sandbox",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🏖️"
+    "emoji": "🏖️",
+    "words": {
+      "verbs": ["build", "reshape"],
+      "nouns": ["sandcastle", "world"],
+      "adjectives": ["sandy"]
+    }
   },
   {
     "id": "ecosystem-sim",
     "label": "Ecosystem simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🌿"
+    "emoji": "🌿",
+    "words": {
+      "verbs": ["nurture", "balance"],
+      "nouns": ["ecosystem", "forest"],
+      "adjectives": ["ecological"]
+    }
   },
   {
     "id": "immersive-sim",
     "label": "Immersive simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🧰"
+    "emoji": "🧰",
+    "words": {
+      "verbs": ["hack", "manipulate"],
+      "nouns": ["system", "vent"],
+      "adjectives": ["immersive"]
+    }
   },
   {
     "id": "dating-sim",
     "label": "Dating simulation",
     "category": "simulation-and-everyday-systems",
-    "emoji": "💕"
+    "emoji": "💕",
+    "words": {
+      "verbs": ["romance", "flirt with"],
+      "nouns": ["date", "crush"],
+      "adjectives": ["romantic"]
+    }
   },
   {
     "id": "god-game",
     "label": "God game",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🌍"
+    "emoji": "🌍",
+    "words": {
+      "verbs": ["bless", "smite"],
+      "nouns": ["worshipper", "world"],
+      "adjectives": ["divine"]
+    }
   },
   {
     "id": "survival-crafting",
     "label": "Survival crafting",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🪓"
+    "emoji": "🪓",
+    "words": {
+      "verbs": ["craft", "repair"],
+      "nouns": ["shelter", "tool"],
+      "adjectives": ["handmade"]
+    }
   },
   {
     "id": "idle-game",
     "label": "Idle game",
     "category": "simulation-and-everyday-systems",
-    "emoji": "⌛"
+    "emoji": "⌛",
+    "words": {
+      "verbs": ["automate", "upgrade"],
+      "nouns": ["machine", "button"],
+      "adjectives": ["idle"]
+    }
   },
   {
     "id": "incremental",
     "label": "Incremental game",
     "category": "simulation-and-everyday-systems",
-    "emoji": "📈"
+    "emoji": "📈",
+    "words": {
+      "verbs": ["multiply", "upgrade"],
+      "nouns": ["number", "upgrade"],
+      "adjectives": ["exponential"]
+    }
   },
   {
     "id": "gardening",
     "label": "Gardening",
     "category": "simulation-and-everyday-systems",
-    "emoji": "🌻"
+    "emoji": "🌻",
+    "words": {
+      "verbs": ["plant", "prune"],
+      "nouns": ["garden", "hedge"],
+      "adjectives": ["blooming"]
+    }
   },
   {
     "id": "match-three",
     "label": "Match three",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "💎"
+    "emoji": "💎",
+    "words": {
+      "verbs": ["match", "swap"],
+      "nouns": ["gem", "tile"],
+      "adjectives": ["sparkling"]
+    }
   },
   {
     "id": "falling-blocks",
     "label": "Falling-block puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🧱"
+    "emoji": "🧱",
+    "words": {
+      "verbs": ["stack", "rotate"],
+      "nouns": ["block", "tower"],
+      "adjectives": ["falling"]
+    }
   },
   {
     "id": "sokoban",
     "label": "Box-pushing puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "📦"
+    "emoji": "📦",
+    "words": {
+      "verbs": ["push", "move"],
+      "nouns": ["crate", "warehouse"],
+      "adjectives": ["boxy"]
+    }
   },
   {
     "id": "logic-puzzle",
     "label": "Logic puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🧩"
+    "emoji": "🧩",
+    "words": {
+      "verbs": ["solve", "untangle"],
+      "nouns": ["puzzle", "contradiction"],
+      "adjectives": ["logical"]
+    }
   },
   {
     "id": "word-game",
     "label": "Word game",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🔤"
+    "emoji": "🔤",
+    "words": {
+      "verbs": ["spell", "unscramble"],
+      "nouns": ["word", "letter"],
+      "adjectives": ["wordy"]
+    }
   },
   {
     "id": "number-puzzle",
     "label": "Number puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🔢"
+    "emoji": "🔢",
+    "words": {
+      "verbs": ["count", "solve"],
+      "nouns": ["number", "equation"],
+      "adjectives": ["numerical"]
+    }
   },
   {
     "id": "spatial-puzzle",
     "label": "Spatial puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🔷"
+    "emoji": "🔷",
+    "words": {
+      "verbs": ["rotate", "arrange"],
+      "nouns": ["shape", "room"],
+      "adjectives": ["geometric"]
+    }
   },
   {
     "id": "perspective-puzzle",
     "label": "Perspective puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "👁️"
+    "emoji": "👁️",
+    "words": {
+      "verbs": ["rotate", "align"],
+      "nouns": ["perspective", "illusion"],
+      "adjectives": ["impossible"]
+    }
   },
   {
     "id": "programming-puzzle",
     "label": "Programming puzzle",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🤖"
+    "emoji": "🤖",
+    "words": {
+      "verbs": ["program", "debug"],
+      "nouns": ["robot", "algorithm"],
+      "adjectives": ["programmable"]
+    }
   },
   {
     "id": "hidden-object",
     "label": "Hidden-object game",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🔍"
+    "emoji": "🔍",
+    "words": {
+      "verbs": ["find", "inspect"],
+      "nouns": ["object", "attic"],
+      "adjectives": ["hidden"]
+    }
   },
   {
     "id": "typing-game",
     "label": "Typing game",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "⌨️"
+    "emoji": "⌨️",
+    "words": {
+      "verbs": ["type", "spell"],
+      "nouns": ["word", "keyboard"],
+      "adjectives": ["misspelled"]
+    }
   },
   {
     "id": "pinball",
     "label": "Pinball",
     "category": "puzzles-and-unusual-interactions",
-    "emoji": "🎱"
+    "emoji": "🎱",
+    "words": {
+      "verbs": ["flip", "launch"],
+      "nouns": ["ball", "bumper"],
+      "adjectives": ["bouncy"]
+    }
   },
   {
     "id": "arcade",
     "label": "Arcade",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🕹️"
+    "emoji": "🕹️",
+    "words": {
+      "verbs": ["beat", "collect"],
+      "nouns": ["high score", "token"],
+      "adjectives": ["coin-operated"]
+    }
   },
   {
     "id": "racing",
     "label": "Racing",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🏎️"
+    "emoji": "🏎️",
+    "words": {
+      "verbs": ["race", "overtake"],
+      "nouns": ["car", "finish line"],
+      "adjectives": ["turbocharged"]
+    }
   },
   {
     "id": "kart-racing",
     "label": "Kart racing",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🏁"
+    "emoji": "🏁",
+    "words": {
+      "verbs": ["race", "throw"],
+      "nouns": ["kart", "banana peel"],
+      "adjectives": ["slippery"]
+    }
   },
   {
     "id": "football",
     "label": "Soccer",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "⚽"
+    "emoji": "⚽",
+    "words": {
+      "verbs": ["kick", "score against"],
+      "nouns": ["ball", "goalkeeper"],
+      "adjectives": ["sporty"]
+    }
   },
   {
     "id": "basketball",
     "label": "Basketball",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🏀"
+    "emoji": "🏀",
+    "words": {
+      "verbs": ["dunk", "dribble"],
+      "nouns": ["ball", "hoop"],
+      "adjectives": ["slam-dunk"]
+    }
   },
   {
     "id": "skateboarding",
     "label": "Skateboarding",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🛹"
+    "emoji": "🛹",
+    "words": {
+      "verbs": ["grind", "jump over"],
+      "nouns": ["rail", "skateboard"],
+      "adjectives": ["radical"]
+    }
   },
   {
     "id": "extreme-sports",
     "label": "Extreme sports",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🏂"
+    "emoji": "🏂",
+    "words": {
+      "verbs": ["jump over", "ride"],
+      "nouns": ["ramp", "cliff"],
+      "adjectives": ["extreme"]
+    }
   },
   {
     "id": "rhythm-game",
     "label": "Rhythm game",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🎵"
+    "emoji": "🎵",
+    "words": {
+      "verbs": ["tap", "follow"],
+      "nouns": ["beat", "rhythm"],
+      "adjectives": ["rhythmic"]
+    }
   },
   {
     "id": "dance-game",
     "label": "Dance game",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "💃"
+    "emoji": "💃",
+    "words": {
+      "verbs": ["dance with", "spin"],
+      "nouns": ["dancer", "disco ball"],
+      "adjectives": ["disco"]
+    }
   },
   {
     "id": "party-game",
     "label": "Party game",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🎉"
+    "emoji": "🎉",
+    "words": {
+      "verbs": ["invite", "challenge"],
+      "nouns": ["guest", "party"],
+      "adjectives": ["festive"]
+    }
   },
   {
     "id": "social-deduction",
     "label": "Social deduction",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🕵️"
+    "emoji": "🕵️",
+    "words": {
+      "verbs": ["accuse", "interrogate"],
+      "nouns": ["impostor", "suspect"],
+      "adjectives": ["deceptive"]
+    }
   },
   {
     "id": "american-football",
     "label": "American football",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🏈"
+    "emoji": "🏈",
+    "words": {
+      "verbs": ["tackle", "throw"],
+      "nouns": ["quarterback", "ball"],
+      "adjectives": ["armoured"]
+    }
   },
   {
     "id": "golf",
     "label": "Golf",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "⛳"
+    "emoji": "⛳",
+    "words": {
+      "verbs": ["putt", "hit"],
+      "nouns": ["ball", "hole"],
+      "adjectives": ["miniature"]
+    }
   },
   {
     "id": "music",
     "label": "Music",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🎵"
+    "emoji": "🎵",
+    "words": {
+      "verbs": ["compose", "remix"],
+      "nouns": ["song", "orchestra"],
+      "adjectives": ["musical"]
+    }
   },
   {
     "id": "melody",
     "label": "Melody",
     "category": "sports-rhythm-and-social-play",
-    "emoji": "🎶"
+    "emoji": "🎶",
+    "words": {
+      "verbs": ["hum", "compose"],
+      "nouns": ["melody", "tune"],
+      "adjectives": ["melodic"]
+    }
   },
   {
     "id": "vampires",
     "label": "Vampires",
     "category": "subjects-and-themes",
-    "emoji": "🧛"
+    "emoji": "🧛",
+    "words": {
+      "verbs": ["bite", "terrify"],
+      "nouns": ["vampire", "castle"],
+      "adjectives": ["vampiric"]
+    }
   }
 ]

@@ -5,6 +5,7 @@ import { bindCoinieSpeech } from '../ui/coinie-speech';
 import { bindBulbeeSpeech } from '../ui/bulbee-speech';
 import { bindCoinieInput } from '../input/coinie-input';
 import { bindSound } from '../audio/bind-sound';
+import { createRackHumour } from '../game/rack-humour';
 import { createMusicDance } from '../scene/music-dance';
 
 export function startScene(canvas: HTMLCanvasElement) {
@@ -25,6 +26,7 @@ export function startScene(canvas: HTMLCanvasElement) {
   const speech = bindBulbeeSpeech(canvas, camera, world);
   const coinieSpeech = bindCoinieSpeech(canvas, camera, world);
   const sound = bindSound();
+  const humour = createRackHumour();
   const dance = createMusicDance(world.scene);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let elapsed = 0;
@@ -98,6 +100,18 @@ export function startScene(canvas: HTMLCanvasElement) {
     input.update();
     speech.update(delta);
     coinieSpeech.update(delta);
+    const joke = humour.update(
+      delta,
+      world.ingredients,
+      world.coiniePhase === 'ready' &&
+        world.canInsertCoinie &&
+        !speech.busy &&
+        !coinieSpeech.busy,
+    );
+    if (joke) {
+      if (joke.speaker === 'bulbee') speech.say(joke.text);
+      else coinieSpeech.say(joke.text);
+    }
     sound.update(
       {
         phase: world.coiniePhase,

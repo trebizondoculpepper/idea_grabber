@@ -12,7 +12,17 @@ export function bindBulbeeSpeech(
   const anchor = new Vector3();
   let landing = 0;
   let remaining = 0;
+  let utterance = 0;
   return {
+    get busy() {
+      return remaining > 0;
+    },
+    say(text: string) {
+      bubble.textContent = text;
+      remaining = 10;
+      utterance++;
+      bubble.hidden = false;
+    },
     // The mouth moves for about as long as the line takes to say.
     get talking() {
       const talkTime = Math.min(
@@ -22,11 +32,12 @@ export function bindBulbeeSpeech(
       return !bubble.hidden && 10 - remaining < talkTime;
     },
     get speechKey() {
-      return bubble.hidden ? undefined : landing;
+      return bubble.hidden ? undefined : utterance;
     },
     update(delta: number) {
       if (landing !== world.landings) {
         landing = world.landings;
+        utterance++;
         const line = createBulbeeLine(world.ingredients, landing);
         const nodes: Node[] = [document.createTextNode(`${line.opening} `)];
         line.names.forEach((name, index) => {
