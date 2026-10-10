@@ -4,7 +4,7 @@ You are creating the soundtrack for Idea Grabber, a goofy, hyper-coloured browse
 
 ## Deliverable
 
-Produce a bank of **20 separate instrumental music snippets**, each **20–40 seconds**, aiming for about 30 seconds. The game will play them in shuffled order with short crossfades. Together they should feel like a montage of memorable classic game melodies, performed as goofy chiptune cover versions and miniature mashups.
+Produce a bank of **20 separate instrumental music snippets**, each **20–40 seconds**, aiming for about 30 seconds. The game will play them in shuffled order with short crossfades. **Each snippet is a goofy chiptune rendition of exactly one famous game theme.** The random sequence of separate snippets creates the medley during playback. Keep each file focused on its single source melody throughout.
 
 The reference era is broadly the **1980s and 1990s**, encompassing the user's examples: **OutRun, The Legend of Zelda and Frogger**. Use recognisable melodic hooks, freshly performed with synthesised chip instruments. Give each track a clear musical identity; the bank should have variety while sounding like one eccentric house band.
 
@@ -21,32 +21,32 @@ The reference era is broadly the **1980s and 1990s**, encompassing the user's ex
 
 ## Twenty track briefs and filenames
 
-Each row is a miniature cover/mashup brief. The named sources are the melodic reference targets; arrange them with a playful chiptune house sound. Within 20–40 seconds, use a hook, a contrasting twist and a satisfying exit. Two clear ideas are generally enough: do not cram every reference into every track.
+Each row specifies one source theme and one rendition. Build the 20–40 second arrangement around that melody, with playful variations, fills and a tidy ending. The shared chip-instrument palette makes the separately shuffled tracks sound like one eccentric house band.
 
-| Filename stem                   | Reference melodies / direction                                                                                                       |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `bgm-01-neon-roadtrip`          | OutRun cruising theme into a jaunty Super Mario Bros. flourish; sun-soaked FM chords and silly bouncing bass.                        |
-| `bgm-02-pocket-quest`           | The Legend of Zelda adventure theme with a Frogger-style hopping arcade interlude; tiny heroic fanfare.                              |
-| `bgm-03-frog-in-a-ferrari`      | Frogger arcade melody into an OutRun racing groove; comic stop-start percussion and quick lane-changing arpeggios.                   |
-| `bgm-04-plumber-on-a-mission`   | Super Mario Bros. overworld and underground motifs; cheerful lead handing off to a comically sneaky bass line.                       |
-| `bgm-05-blue-blur-boogie`       | Sonic the Hedgehog platforming melodies with an OutRun-flavoured FM accompaniment; fast, elastic and funky.                          |
-| `bgm-06-falling-block-party`    | Tetris's familiar falling-block melody remade as a chip polka, with a Dr. Mario puzzle-pop turn.                                     |
-| `bgm-07-banana-brass-band`      | Donkey Kong Country jungle-flavoured melody and Donkey Kong arcade rhythm; rubbery bass and miniature brass.                         |
-| `bgm-08-pink-puff-parade`       | Kirby platforming melody and Yoshi's Island-flavoured playful counterpoint; toy-box march and squeaky chip lead.                     |
-| `bgm-09-robot-lunch-break`      | Mega Man stage-theme energy with a Metroid-flavoured mysterious detour; robot funk that becomes cheerful again.                      |
-| `bgm-10-tiny-castle-big-drama`  | Castlevania melody into a Ghosts 'n Goblins-style comic spooky march; dramatic arpeggios and cartoon menace.                         |
-| `bgm-11-pac-picnic`             | Pac-Man arcade motifs expanded into a musical hook, with a Frogger-like jaunty response; minimal bleeps becoming a big dance.        |
-| `bgm-12-space-snack-attack`     | Space Invaders rhythmic pulse with Galaga arcade fanfare motifs; build a melodic chip groove around the simple source material.      |
-| `bgm-13-turbo-kart-confetti`    | Super Mario Kart racing melodies with Sonic-style momentum; noisy chip drums and ridiculous victory flourishes.                      |
-| `bgm-14-eight-bit-knockout`     | Street Fighter II stage-theme melody with Punch-Out!!-style comic boxing energy; bright FM stabs and bounce.                         |
-| `bgm-15-bomberman-disco`        | Bomberman melody with Bubble Bobble's cheerful arcade flavour; bubbly bass, pulse leads and tiny disco breaks.                       |
-| `bgm-16-monster-pocket-money`   | Pokémon adventure/battle melody with a Zelda-style quest response; eager, curious and heroic on a tiny budget.                       |
-| `bgm-17-fantasy-fanfare-fumble` | Final Fantasy victory/adventure motifs turned into a goofy marching chip band; grand entrance, comic stumble, triumphant recovery.   |
-| `bgm-18-lemming-lemonade`       | Lemmings-style puzzle melody with a Tetris-flavoured chip-waltz detour; busy little workers and cheerful chaos.                      |
-| `bgm-19-pirate-pixel-shuffle`   | Monkey Island pirate-theme melody arranged with chip instruments and an OutRun-flavoured groove; swashbuckling beach-party nonsense. |
-| `bgm-20-arcade-curtain-call`    | A final compact mashup of OutRun, Zelda and Frogger hooks; a joyful miniature arcade finale that can hand off to any other track.    |
+| Filename stem                   | Single source theme                                  | Arrangement direction                                                                     |
+| ------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `bgm-01-neon-roadtrip`          | OutRun — Magical Sound Shower                        | Sun-soaked FM chords and silly bouncing bass.                                             |
+| `bgm-02-pocket-quest`           | The Legend of Zelda — overworld theme                | A tiny heroic fanfare with cheeky pulse arpeggios.                                        |
+| `bgm-03-frog-hop-jamboree`      | Frogger — one recognisable arcade-stage melody       | Comic stop-start percussion and hopping bass. Identify the chosen melody in the manifest. |
+| `bgm-04-plumber-on-a-mission`   | Super Mario Bros. — overworld theme                  | A cheerful square-wave lead and comically springy bass.                                   |
+| `bgm-05-blue-blur-boogie`       | Sonic the Hedgehog — Green Hill Zone                 | Fast, elastic FM funk.                                                                    |
+| `bgm-06-falling-block-party`    | Tetris — Type A theme                                | The familiar falling-block tune as a tiny chip polka.                                     |
+| `bgm-07-banana-brass-band`      | Donkey Kong Country — Jungle Hijinxs theme           | Rubbery bass and miniature synth brass.                                                   |
+| `bgm-08-pink-puff-parade`       | Kirby's Dream Land — Green Greens                    | A toy-box march and squeaky chip lead.                                                    |
+| `bgm-09-robot-lunch-break`      | Mega Man 2 — Dr. Wily stage theme                    | An enthusiastic robot band with exaggerated chip drum fills.                              |
+| `bgm-10-tiny-castle-big-drama`  | Castlevania — Vampire Killer                         | Dramatic arpeggios and cartoon menace.                                                    |
+| `bgm-11-bubble-pop-picnic`      | Bubble Bobble — main theme                           | A bubbly pulse lead and cheerful miniature disco accompaniment.                           |
+| `bgm-12-space-snack-attack`     | Metroid — Brinstar theme                             | A mysterious space tune performed by a surprisingly bouncy chip band.                     |
+| `bgm-13-turbo-kart-confetti`    | Super Mario Kart — Mario Circuit theme               | Noisy chip drums and ridiculous racing flourishes.                                        |
+| `bgm-14-eight-bit-knockout`     | Street Fighter II — Guile's theme                    | Bright FM stabs and an overenthusiastic tiny rhythm section.                              |
+| `bgm-15-doctor-pixel-disco`     | Dr. Mario — Fever theme                              | Puzzle-pop melody with cheeky bass and compact disco breaks.                              |
+| `bgm-16-monster-pocket-money`   | Pokémon Red/Blue — main title theme                  | Eager, curious and heroic on a tiny budget.                                               |
+| `bgm-17-fantasy-fanfare-fumble` | Final Fantasy — victory fanfare                      | Develop the single fanfare into a 20–40 second goofy chip-band rendition with variations. |
+| `bgm-18-yoshi-toybox`           | Super Mario World 2: Yoshi's Island — athletic theme | A jaunty toy-instrument parade with bright chip percussion.                               |
+| `bgm-19-pirate-pixel-shuffle`   | The Secret of Monkey Island — main theme             | Swashbuckling chip-instrument beach-party nonsense.                                       |
+| `bgm-20-duck-disco-finale`      | DuckTales — The Moon theme                           | A joyful miniature space-disco rendition with sparkling arpeggios.                        |
 
-If a particular source melody is unavailable to your tool, preserve the track brief and report the substitution in the manifest. Keep the twenty filenames stable.
+If a particular source melody is unavailable to your tool, choose one other famous game theme for that file and report the substitution in the manifest. Each file must still have exactly one source theme. Keep the twenty filenames stable.
 
 ## Arrangement and transition requirements
 
@@ -100,7 +100,8 @@ Manifest schema:
       "file": "bgm-01-neon-roadtrip.mp3",
       "durationSeconds": 30.0,
       "bpm": 132,
-      "references": ["OutRun", "Super Mario Bros."],
+      "sourceGame": "OutRun",
+      "sourceTheme": "Magical Sound Shower",
       "masterFile": "bgm-01-neon-roadtrip.wav",
       "notes": "Describe the actual arrangement and any substitutions."
     }
@@ -112,6 +113,6 @@ The example numbers illustrate the schema. Fill all 20 entries with the actual m
 
 ## Completion check
 
-Listen to every delivered track. Confirm all 20 MP3s decode, last 20–40 seconds, have distinct arrangements, have tidy starts/ends, and sound consistent in loudness. Confirm matching masters and an accurate manifest exist at the absolute paths above.
+Listen to every delivered track. Confirm all 20 MP3s decode, last 20–40 seconds, each cover exactly one famous game theme, have distinct arrangements, have tidy starts/ends, and sound consistent in loudness. Confirm matching masters and an accurate manifest exist at the absolute paths above.
 
 Deliver audio files, not merely descriptions of the proposed music. If your environment cannot write into this checkout, provide a bundle with these exact filenames and explain where to extract the browser files and masters. Finish with a concise inventory and any unresolved export limitations.
