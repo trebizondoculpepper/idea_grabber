@@ -60,6 +60,7 @@ export function createScene() {
     get canInsertCoinie() {
       return cycle.phase === 'ready' && !machine.busy;
     },
+    coinSlot: parts.coinSlot,
     get trayBalls() {
       return machine.trayBalls;
     },
@@ -74,6 +75,10 @@ export function createScene() {
       rat.update(elapsed, reducedMotion);
       lighting.update(elapsed, reducedMotion);
       cabinetLights.update(elapsed, reducedMotion);
+      parts.insertCoinLit.visible =
+        cycle.phase === 'ready' &&
+        !machine.busy &&
+        (reducedMotion || Math.floor(elapsed * 2.5) % 2 === 0);
       smoke.update(delta, reducedMotion);
       cycle.advance(delta, reducedMotion);
       if (generation !== cycle.generation) {

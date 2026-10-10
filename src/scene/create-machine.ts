@@ -123,6 +123,14 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     [0, 0.05, 0.13],
     kit.textured('coin-panel'),
   );
+  // A bright copy of the sign, toggled on and off to flash while a coin can go in.
+  const insertCoinLit = kit.panel(
+    coinSlot,
+    'InsertCoinLit',
+    [0.74, 0.88],
+    [0, 1.16, 0.14],
+    kit.textured('insert-coin-lit'),
+  );
   kit.box(
     coinSlot,
     'JoystickBase',
@@ -348,5 +356,15 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     ball.userData.ingredient = appearance.ingredient;
     ball.userData.colour = appearance.colour;
   }
-  return { machine, assembly, claw, cable, pitBalls, rack, recycle };
+  return {
+    machine,
+    assembly,
+    claw,
+    cable,
+    pitBalls,
+    rack,
+    recycle,
+    coinSlot,
+    insertCoinLit,
+  };
 }

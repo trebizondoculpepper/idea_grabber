@@ -5,7 +5,7 @@ import type { CoiniePhase } from '../game/coinie-cycle';
 const smooth = (t: number) => t * t * (3 - 2 * t);
 
 export function createMachineAnimation(
-  parts: ReturnType<typeof createMachine>,
+  parts: Omit<ReturnType<typeof createMachine>, 'coinSlot' | 'insertCoinLit'>,
 ) {
   const { machine, assembly, claw, cable, pitBalls, recycle } = parts;
   const rest = new Vector3(-0.45, 4.75, 0.5);

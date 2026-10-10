@@ -26,7 +26,11 @@ export function bindCoinieInput(
   }
   function hitCoinie(x: number, y: number) {
     if (!world.canInsertCoinie || !aim(x, y)) return false;
-    return raycaster.intersectObject(world.coinie, true).length > 0;
+    // The insert-coin panel on the machine works just like clicking Coinie.
+    return (
+      raycaster.intersectObjects([world.coinie, world.coinSlot], true).length >
+      0
+    );
   }
   // Tray balls can be thrown away while the machine is idle.
   function hitTrayBall(x: number, y: number) {
