@@ -131,27 +131,6 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     [0, 1.16, 0.14],
     kit.textured('insert-coin-lit'),
   );
-  kit.box(
-    coinSlot,
-    'JoystickBase',
-    [0.62, 0.15, 0.45],
-    [0, -0.96, 0.34],
-    palette.teal,
-    true,
-  );
-  kit.box(
-    coinSlot,
-    'JoystickStem',
-    [0.07, 0.4, 0.07],
-    [0, -0.7, 0.34],
-    palette.ink,
-  );
-  const knobGeometry = kit.ownGeometry(new IcosahedronGeometry(0.19, 0));
-  const knob = new Mesh(knobGeometry, kit.material(palette.pink));
-  knob.name = 'JoystickKnob';
-  knob.position.set(0, -0.46, 0.34);
-  coinSlot.add(knob);
-
   const assembly = kit.group(machine, 'ClawAssembly', -0.45, 5.4, 0.5);
   const carriage = kit.group(assembly, 'Carriage');
   kit.box(carriage, 'Rail', [3.55, 0.12, 0.12], [0, 0.02, 0], palette.ink);
