@@ -77,7 +77,7 @@ ArcadeScene
 └── Coinie → Body / LeftArm / RightArm / LeftLeg / RightLeg
 ```
 
-Groups provide pivots for animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. The tray fills from right to left, with five spaces; further insertions stop when it is full. Coinie's click cycle ignores further clicks until the machine finishes and his replacement finishes walking in. Keyboard users can Tab to the Insert Coinie button and press Enter. Reduced motion uses brief transitions instead of the jump and walk. There are no camera controls. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
+Groups provide pivots for animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. The tray fills from right to left, with five spaces. Once full, the oldest ball rolls off the right end and stage forwards out of view; the other four shift right before the next ball enters from the left. Offstage balls recycle into the pit, keeping the FIFO running indefinitely. Coinie's click cycle ignores further clicks until the machine finishes and his replacement finishes walking in. Keyboard users can Tab to the Insert Coinie button and press Enter. Reduced motion uses brief transitions instead of the jump and walk. There are no camera controls. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
 
 `docs/ingredient-catalogue.json` contains 120 future ingredients with Unicode emoji suggestions; current balls remain identical.
 

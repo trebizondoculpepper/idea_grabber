@@ -4,7 +4,7 @@ import { createCoinieCycle, phaseDurations } from './coinie-cycle';
 describe('Coinie machine cycle', () => {
   it('finishes every machine and ball movement before the replacement enters', () => {
     const cycle = createCoinieCycle();
-    expect(cycle.start()).toBe(true);
+    expect(cycle.start(true)).toBe(true);
     for (const [phase, duration] of Object.entries(phaseDurations)) {
       expect(cycle.phase).toBe(phase);
       for (let i = 0; i < 20; i++) expect(cycle.start()).toBe(false);
@@ -12,7 +12,7 @@ describe('Coinie machine cycle', () => {
     }
     expect(cycle.phase).toBe('ready');
     expect(cycle.generation).toBe(1);
-    expect(cycle.start()).toBe(true);
+    expect(cycle.start(true)).toBe(true);
     cycle.advance(20);
     expect(cycle.phase).toBe('ready');
     expect(cycle.generation).toBe(2);
@@ -22,8 +22,8 @@ describe('Coinie machine cycle', () => {
     const long = createCoinieCycle();
     small.start();
     long.start();
-    for (let i = 0; i < 1400; i++) small.advance(0.01);
-    long.advance(14);
+    for (let i = 0; i < 1800; i++) small.advance(0.01);
+    long.advance(18);
     expect(small.phase).toBe(long.phase);
     expect(small.generation).toBe(long.generation);
     expect(long.phase).toBe('ready');
@@ -39,4 +39,19 @@ describe('Coinie machine cycle', () => {
     expect(cycle.phase).toBe('ready');
     expect(cycle.generation).toBe(1);
   });
+});
+
+it('skips tray ejection until the tray is full', () => {
+  const cycle = createCoinieCycle();
+  cycle.start();
+  cycle.advance(
+    phaseDurations.jumping +
+      phaseDurations.lowering +
+      phaseDurations.grabbing +
+      phaseDurations.lifting +
+      phaseDurations.carrying +
+      phaseDurations.dropping +
+      0.01,
+  );
+  expect(cycle.phase).toBe('rolling');
 });

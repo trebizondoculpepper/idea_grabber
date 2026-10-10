@@ -5,6 +5,7 @@ export const phaseDurations = {
   lifting: 1.4,
   carrying: 1.5,
   dropping: 0.7,
+  ejecting: 2.4,
   rolling: 3.2,
   returning: 1.3,
   walking: 1.8,
@@ -18,6 +19,7 @@ export function createCoinieCycle() {
   let elapsed = 0;
   let generation = 0;
   let progress = 0;
+  let evict = false;
   return {
     get phase() {
       return phase;
@@ -28,8 +30,9 @@ export function createCoinieCycle() {
     get progress() {
       return progress;
     },
-    start() {
+    start(trayFull = false) {
       if (phase !== 'ready') return false;
+      evict = trayFull;
       phase = 'jumping';
       elapsed = 0;
       progress = 0;
@@ -48,7 +51,11 @@ export function createCoinieCycle() {
         elapsed -= duration;
         if (phase === 'jumping') generation += 1;
         const next: CoiniePhase | undefined =
-          phase === 'walking' ? undefined : phases[phases.indexOf(phase) + 1];
+          phase === 'walking'
+            ? undefined
+            : phase === 'dropping' && !evict
+              ? 'rolling'
+              : phases[phases.indexOf(phase) + 1];
         phase = next ?? 'ready';
         if (phase === 'ready') elapsed = 0;
         progress = 0;

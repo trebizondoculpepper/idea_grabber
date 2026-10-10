@@ -44,10 +44,10 @@ export function createScene() {
       return machine.delivered;
     },
     get canInsertCoinie() {
-      return cycle.phase === 'ready' && !machine.full;
+      return cycle.phase === 'ready';
     },
     activateCoinie() {
-      return !machine.full && cycle.start();
+      return cycle.start(machine.full);
     },
     update(elapsed: number, delta = 0, reducedMotion = false) {
       smoke.update(delta, reducedMotion);
