@@ -192,6 +192,12 @@
     "emoji": "🪂"
   },
   {
+    "id": "fetch-quest",
+    "label": "Fetch quest",
+    "category": "adventure-and-narrative",
+    "emoji": "📦"
+  },
+  {
     "id": "point-and-click",
     "label": "Point-and-click adventure",
     "category": "adventure-and-narrative",
@@ -373,7 +379,7 @@
   },
   {
     "id": "colony-sim",
-    "label": "Colony simulation",
+    "label": "Colony management",
     "category": "strategy-and-management",
     "emoji": "🛖"
   },
@@ -385,7 +391,7 @@
   },
   {
     "id": "business-management",
-    "label": "Business management",
+    "label": "Management",
     "category": "strategy-and-management",
     "emoji": "🏪"
   },
@@ -424,6 +430,12 @@
     "label": "MOBA",
     "category": "strategy-and-management",
     "emoji": "🏟️"
+  },
+  {
+    "id": "civilisation",
+    "label": "Civilisation",
+    "category": "strategy-and-management",
+    "emoji": "🏛️"
   },
   {
     "id": "life-sim",
@@ -538,6 +550,12 @@
     "label": "Incremental game",
     "category": "simulation-and-everyday-systems",
     "emoji": "📈"
+  },
+  {
+    "id": "gardening",
+    "label": "Gardening",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🌻"
   },
   {
     "id": "match-three",
