@@ -7,9 +7,10 @@ export function createMusicPlayer(
   audio: HTMLAudioElement = new Audio(),
   tracks: readonly MusicTrack[] = manifest.tracks,
   random: () => number = Math.random,
+  initiallyWanted = true,
 ) {
   let index = Math.floor(random() * tracks.length);
-  let wanted = true;
+  let wanted = initiallyWanted;
   let hidden = false;
   let disposed = false;
   let pending = false;

@@ -6,11 +6,26 @@ import { createMusicPlayer } from './music-player';
 export function bindSound() {
   const player = createSoundPlayer();
   const director = createSoundDirector();
-  const music = createMusicPlayer();
+  // Music is on by default; switching it off is remembered for this browser session.
+  let musicWanted = true;
+  try {
+    musicWanted = sessionStorage.getItem('idea-grabber-music') !== 'off';
+  } catch {
+    /* Storage can be disabled; music stays on by default. */
+  }
+  const music = createMusicPlayer(undefined, undefined, undefined, musicWanted);
   const transport = document.querySelector<HTMLButtonElement>('#music-toggle');
   const next = document.querySelector<HTMLButtonElement>('#music-next');
   const toggleMusic = () => {
     music.toggle();
+    try {
+      sessionStorage.setItem(
+        'idea-grabber-music',
+        music.timing.wanted ? 'on' : 'off',
+      );
+    } catch {
+      /* Storage can be disabled. */
+    }
     refreshMusic();
   };
   const nextMusic = () => {

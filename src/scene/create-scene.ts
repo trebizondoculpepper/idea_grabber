@@ -7,6 +7,7 @@ import { createRat } from './create-rat';
 import { createMachineAnimation } from './animate-machine';
 import { createMachine } from './create-machine';
 import { createMachineLighting } from './machine-lighting';
+import { createPassersBy } from './passers-by';
 import { createHero } from './create-hero';
 import { createSlotSmoke } from './create-slot-smoke';
 import { createCoinieCycle } from '../game/coinie-cycle';
@@ -26,11 +27,13 @@ export function createScene() {
   const parts = createMachine(scene, kit);
   const machine = createMachineAnimation(parts);
   const cabinetLights = createMachineLighting(parts.machine);
+  const passersBy = createPassersBy(scene, kit);
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
   let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
   const cycle = createCoinieCycle(true);
   poseCoinieWalk(coinie.hero, 0, false);
   const smoke = createSlotSmoke(scene, kit);
+  const talking = { bulbee: false, coinie: false };
   let generation = cycle.generation;
   let replacement = 0;
   return {
@@ -67,6 +70,10 @@ export function createScene() {
     discardBall(ball: Mesh) {
       return machine.discard(ball);
     },
+    setTalking(bulbeeTalking: boolean, coinieTalking: boolean) {
+      talking.bulbee = bulbeeTalking;
+      talking.coinie = coinieTalking;
+    },
     activateCoinie() {
       if (machine.busy) return false;
       return cycle.start(machine.full);
@@ -75,6 +82,7 @@ export function createScene() {
       rat.update(elapsed, reducedMotion);
       lighting.update(elapsed, reducedMotion);
       cabinetLights.update(elapsed, reducedMotion);
+      passersBy.update(delta, reducedMotion);
       parts.insertCoinLit.visible =
         cycle.phase === 'ready' &&
         !machine.busy &&
@@ -93,12 +101,14 @@ export function createScene() {
         coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
         replacement = generation;
       }
-      bulbee.update(elapsed);
+      bulbee.update(elapsed, undefined, talking.bulbee, reducedMotion);
       coinie.update(
         elapsed,
         cycle.phase === 'walking' && !reducedMotion
           ? cycle.progress
           : undefined,
+        talking.coinie,
+        reducedMotion,
       );
       if (cycle.phase === 'jumping')
         poseCoinieJump(coinie.hero, cycle.progress, reducedMotion);

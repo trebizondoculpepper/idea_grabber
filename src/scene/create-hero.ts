@@ -1,6 +1,7 @@
 import type { Group, Object3D } from 'three';
 import type { SceneKit } from './scene-kit';
 import { palette } from './scene-kit';
+import { createFace, faces } from './create-face';
 
 export function createHero(
   parent: Object3D,
@@ -19,8 +20,9 @@ export function createHero(
     'IllustratedBody',
     bulb ? [1.82, 2.43] : [1.93, 1.93],
     [0, 0, 0],
-    kit.textured(bulb ? 'bulbee-body' : 'coinie-body', 1, 1, true),
+    kit.textured(bulb ? 'bulbee-body-plain' : 'coinie-body-plain', 1, 1, true),
   );
+  const face = createFace(body, kit, faces[name]);
   const leftArm = kit.group(hero, 'LeftArm', -0.62, bulb ? 1.24 : 1.23, -0.02);
   const rightArm = kit.group(hero, 'RightArm', 0.64, bulb ? 1.36 : 1.3, -0.02);
   for (const arm of [leftArm, rightArm]) {
@@ -60,8 +62,20 @@ export function createHero(
   }
   return {
     hero,
-    update(elapsed: number, walkingProgress?: number) {
+    get mouthShape() {
+      return face.mouthShape;
+    },
+    update(
+      elapsed: number,
+      walkingProgress?: number,
+      talking = false,
+      reducedMotion = false,
+    ) {
       body.rotation.z = Math.sin(elapsed * 1.15 + (bulb ? 0 : 1)) * 0.035;
+      face.update(elapsed, talking, reducedMotion);
+      // A little squash and stretch while talking.
+      const squash = talking && !reducedMotion ? Math.sin(elapsed * 16) : 0;
+      body.scale.set(1 - squash * 0.015, 1 + squash * 0.03, 1);
       const step =
         walkingProgress === undefined
           ? 0

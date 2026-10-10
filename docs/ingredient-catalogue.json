@@ -438,6 +438,18 @@
     "emoji": "🏛️"
   },
   {
+    "id": "chess",
+    "label": "Chess",
+    "category": "strategy-and-management",
+    "emoji": "♟️"
+  },
+  {
+    "id": "draughts",
+    "label": "Draughts",
+    "category": "strategy-and-management",
+    "emoji": "🔴"
+  },
+  {
     "id": "life-sim",
     "label": "Life simulation",
     "category": "simulation-and-everyday-systems",
@@ -649,7 +661,7 @@
   },
   {
     "id": "football",
-    "label": "Football",
+    "label": "Soccer",
     "category": "sports-rhythm-and-social-play",
     "emoji": "⚽"
   },
@@ -706,6 +718,18 @@
     "label": "Golf",
     "category": "sports-rhythm-and-social-play",
     "emoji": "⛳"
+  },
+  {
+    "id": "music",
+    "label": "Music",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🎵"
+  },
+  {
+    "id": "melody",
+    "label": "Melody",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🎶"
   },
   {
     "id": "vampires",

@@ -2,7 +2,7 @@ import { expect, it, vi } from 'vitest';
 import { createMusicPlayer } from './music-player';
 import manifest from '../../public/audio/bgm/manifest.json';
 
-function fixture(blocked = false) {
+function fixture(blocked = false, wanted = true) {
   const events = new Map<string, () => void>();
   const audio = {
     paused: true,
@@ -30,6 +30,7 @@ function fixture(blocked = false) {
       audio as unknown as HTMLAudioElement,
       manifest.tracks,
       () => 0.5,
+      wanted,
     ),
   };
 }
@@ -87,4 +88,14 @@ it('retains unknown BPM without inventing beat timing', () => {
   );
   expect(player.timing.bpm).toBeNull();
   expect(player.timing.beats).toBeNull();
+});
+
+it('can start with music switched off and stay silent until toggled on', async () => {
+  const { player, audio } = fixture(false, false);
+  await Promise.resolve();
+  expect(player.timing.wanted).toBe(false);
+  expect(audio.play).not.toHaveBeenCalled();
+  player.toggle();
+  expect(player.timing.wanted).toBe(true);
+  expect(audio.play).toHaveBeenCalled();
 });

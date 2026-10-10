@@ -13,6 +13,14 @@ export function bindBulbeeSpeech(
   let landing = 0;
   let remaining = 0;
   return {
+    // The mouth moves for about as long as the line takes to say.
+    get talking() {
+      const talkTime = Math.min(
+        10 - 1,
+        0.6 + (bubble.textContent?.length ?? 0) * 0.055,
+      );
+      return !bubble.hidden && 10 - remaining < talkTime;
+    },
     get speechKey() {
       return bubble.hidden ? undefined : landing;
     },

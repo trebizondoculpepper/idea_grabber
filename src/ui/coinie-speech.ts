@@ -14,6 +14,14 @@ export function bindCoinieSpeech(
   let spokenGeneration = -1;
   let remaining = 0;
   return {
+    // The mouth moves for about as long as the line takes to say.
+    get talking() {
+      const talkTime = Math.min(
+        8 - 1,
+        0.6 + (bubble.textContent?.length ?? 0) * 0.055,
+      );
+      return !bubble.hidden && 8 - remaining < talkTime;
+    },
     get speechKey() {
       return bubble.hidden ? undefined : spokenGeneration;
     },

@@ -83,6 +83,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     camera.lookAt(0, 2.85, 0);
     ps1Uniforms.snapPixels.value = reducedMotion.matches ? 0 : 1;
     dance.restore();
+    world.setTalking(speech.talking, coinieSpeech.talking);
     world.update(elapsed, delta, reducedMotion.matches);
     const music = sound.musicTiming;
     dance.update(
