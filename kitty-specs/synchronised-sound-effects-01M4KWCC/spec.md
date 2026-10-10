@@ -2,7 +2,7 @@
 
 **Mission branch / merge target**: `main` (explicit user override of original `feat/arcade-world` target)  
 **Created**: 2026-10-10  
-**Status**: Confirmed scope; implementation under validation  
+**Status**: Implemented; ready for review  
 **Input**: Integrate downloaded sound effects as the machines and characters move. Forget about music. Merge everything, switch to main and start.
 
 ## User Scenarios & Testing
