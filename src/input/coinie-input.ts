@@ -15,7 +15,7 @@ export function bindCoinieInput(
   let lastPointer: { x: number; y: number } | undefined;
 
   function hitCoinie(x: number, y: number) {
-    if (world.coiniePhase !== 'ready') return false;
+    if (!world.canInsertCoinie) return false;
     const bounds = canvas.getBoundingClientRect();
     if (bounds.width === 0 || bounds.height === 0) return false;
     pointer.set(
@@ -46,8 +46,9 @@ export function bindCoinieInput(
   return {
     update() {
       canvas.dataset.coinieState = world.coiniePhase;
+      canvas.dataset.trayCount = String(world.trayCount);
       canvas.dataset.coinieGeneration = String(world.coinieGeneration);
-      if (button) button.disabled = world.coiniePhase !== 'ready';
+      if (button) button.disabled = !world.canInsertCoinie;
       if (lastPointer)
         canvas.style.cursor = hitCoinie(lastPointer.x, lastPointer.y)
           ? 'pointer'
@@ -59,7 +60,11 @@ export function bindCoinieInput(
               ? 'Coinie is jumping into the coin slot.'
               : world.coiniePhase === 'walking'
                 ? 'A new Coinie is walking in from the right.'
-                : 'Coinie is ready. Click him to insert another coin.';
+                : world.coiniePhase !== 'ready'
+                  ? `The claw machine is ${world.coiniePhase}.`
+                  : world.canInsertCoinie
+                    ? 'Coinie is ready. Click him to insert another coin.'
+                    : 'The ball tray is full.';
         lastPhase = world.coiniePhase;
       }
     },

@@ -1,6 +1,7 @@
 import { AmbientLight, Color, DirectionalLight, Scene } from 'three';
 import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
+import { createMachineAnimation } from './animate-machine';
 import { createMachine } from './create-machine';
 import { createHero } from './create-hero';
 import { createSlotSmoke } from './create-slot-smoke';
@@ -21,12 +22,13 @@ export function createScene() {
   scene.add(light);
   const kit = createSceneKit();
   createEnvironment(scene, kit);
-  createMachine(scene, kit);
+  const machine = createMachineAnimation(createMachine(scene, kit));
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
   let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
   const cycle = createCoinieCycle();
   const smoke = createSlotSmoke(scene, kit);
   let generation = cycle.generation;
+  let replacement = 0;
   return {
     scene,
     get coinie() {
@@ -38,7 +40,15 @@ export function createScene() {
     get coinieGeneration() {
       return cycle.generation;
     },
-    activateCoinie: cycle.start,
+    get trayCount() {
+      return machine.delivered;
+    },
+    get canInsertCoinie() {
+      return cycle.phase === 'ready' && !machine.full;
+    },
+    activateCoinie() {
+      return !machine.full && cycle.start();
+    },
     update(elapsed: number, delta = 0, reducedMotion = false) {
       smoke.update(delta, reducedMotion);
       cycle.advance(delta, reducedMotion);
@@ -46,8 +56,13 @@ export function createScene() {
         smoke.burst(reducedMotion);
         smoke.update(0, reducedMotion);
         scene.remove(coinie.hero);
-        coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
+        coinie.hero.visible = false;
         generation = cycle.generation;
+      }
+      machine.update(cycle.phase, cycle.progress);
+      if (cycle.phase === 'walking' && replacement !== generation) {
+        coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
+        replacement = generation;
       }
       bulbee.update(elapsed);
       coinie.update(

@@ -234,10 +234,12 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
       kit.textured('claw-star', 1, 1, true),
     );
     parent.add(ball);
+    if (parent.name === 'CapsulePit') pitBalls.push(ball);
     return ball;
   }
   const pit = kit.group(machine, 'CapsulePit', -0.46, 1.88, 0);
   kit.box(pit, 'PitTray', [3.85, 0.14, 2.4], [0, -0.16, 0], palette.purple);
+  const pitBalls: Mesh[] = [];
   let ballIndex = 0;
   for (let row = 0; row < 3; row++) {
     for (let column = 0; column < 5; column++) {
@@ -283,14 +285,14 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
       palette.yellow,
     );
   for (let i = 0; i < 5; i++) {
-    const position = kit.group(
+    kit.group(
       rack,
       `CapsulePosition${i + 1}`,
       -1.55 + i * 0.77,
       -0.01,
       0.35,
     );
-    capsule(position, `RackCapsule${i + 1}`, 0, 0, 0);
+    // Positions begin empty; collected capsules fill them from the right.
   }
   const chute = kit.group(machine, 'Chute', -2.23, 1.55, 1.72);
   kit.box(chute, 'ChuteBack', [0.53, 1.1, 0.16], [0, 0, 0], palette.lavender);
@@ -329,5 +331,8 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
   );
   glass.material.transparent = true;
   glass.material.depthWrite = false;
-  return machine;
+  const rail = carriage.getObjectByName('Rail')!;
+  machine.updateMatrixWorld(true);
+  machine.attach(rail);
+  return { machine, assembly, claw, cable, pitBalls, rack };
 }

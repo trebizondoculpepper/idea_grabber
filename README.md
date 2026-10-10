@@ -1,6 +1,6 @@
 # Idea Grabber
 
-A browser claw-machine game with bold cartoon art and PS1 rendering. The current demo contains the cabinet, claw, chute, five-position rack, identical faceted capsules, and the paper-cutout heroes Bulbee and Coinie. Click Coinie to make him jump into the slot; a new Coinie walks in from the right.
+A browser claw-machine game with bold cartoon art and PS1 rendering. The current demo contains the cabinet, claw, chute, five-position rack, identical faceted capsules, and the paper-cutout heroes Bulbee and Coinie. The tray starts empty. Click Coinie to make him jump into the slot: the claw collects a capsule, carries it right and drops it through a hidden chute. The capsule emerges at the bottom left and rolls slowly right. After the capsule settles and the claw parks, a new Coinie walks in from the right.
 
 ## Run locally
 
@@ -77,7 +77,7 @@ ArcadeScene
 └── Coinie → Body / LeftArm / RightArm / LeftLeg / RightLeg
 ```
 
-Groups provide pivots for animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. Rack contents are decorative. Coinie's click cycle ignores further clicks until his replacement finishes walking in. Keyboard users can Tab to the Insert Coinie button and press Enter. Reduced motion uses brief transitions instead of the jump and walk. There are no camera controls. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
+Groups provide pivots for animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. The tray fills from right to left, with five spaces; further insertions stop when it is full. Coinie's click cycle ignores further clicks until the machine finishes and his replacement finishes walking in. Keyboard users can Tab to the Insert Coinie button and press Enter. Reduced motion uses brief transitions instead of the jump and walk. There are no camera controls. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
 
 `docs/ingredient-catalogue.json` contains 120 future ingredients with Unicode emoji suggestions; current balls remain identical.
 
