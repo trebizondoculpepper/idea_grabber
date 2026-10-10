@@ -1,6 +1,6 @@
 # Idea Grabber
 
-A browser claw-machine game with bold cartoon art and PS1 rendering. This scaffold establishes the toolchain and a minimal animated Three.js scene; gameplay and the visual demo follow in later missions.
+A browser claw-machine game with bold cartoon art and PS1 rendering. The current visual demo contains the cabinet, claw, chute, five-position rack, identical faceted capsules, and the paper-cutout heroes Bulbee and Coinie. Gameplay follows in later missions.
 
 ## Run locally
 
@@ -29,7 +29,7 @@ The build produces static files in `dist/`. Preview serves them at http://127.0.
 ## Layout
 
 - `src/main.ts`: entry point, error reporting and hot-reload cleanup.
-- `src/scene/`: world geometry and animation.
+- `src/scene/`: named machine/environment/hero factories, shared scene resources and idle animation.
 - `src/rendering/`: renderer, camera and lifecycle; future PS1 shaders belong here.
 - `src/styles/`: HTML styling.
 - `public/assets/`: runtime artwork and audio, served locally.
@@ -46,10 +46,43 @@ The Spec Kitty configuration was moved from `my-project/` to this root. The orig
 
 ## PS1 rendering prototype
 
-The current scene uses original editable 128 × 128 SVG textures for the capsule, checkerboard floor and patterned backdrop. Textures use nearest-neighbour filtering without mipmaps. The canvas renders within a 640 × 480 pixel budget and scales with CSS pixelation while HTML text stays sharp.
+The scene uses original editable SVG artwork for the cabinet, marquee, floor, backdrop and paper-cutout hero bodies, hands and feet. All capsules share one faceted geometry and turquoise material with the same star decal. Textures use nearest-neighbour filtering without mipmaps. The canvas renders within a 640 × 480 pixel budget and scales with CSS pixelation while HTML text stays sharp.
 
 `src/rendering/ps1-material.ts` extends the standard material shader to blend projected vertices 35% toward a one-pixel grid while preserving depth and clip w. This keeps polygon instability visible without making slow motion appear to run at a low frame rate. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops animation. Affine texture warping is not implemented in this prototype.
 
 ### Frame-rate diagnostics
 
-In development (or production with `?perf`), inspect the canvas `data-fps`, `data-render-ms`, `data-draw-calls` and `data-triangles` attributes in browser developer tools. Samples cover two seconds and reset when tab visibility changes. Render milliseconds measure CPU submission time, not GPU completion. No diagnostic controls or overlays are added to the demo.
+In development (or production with `?perf`), inspect the canvas `data-fps`, `data-fps10`, `data-render-ms`, `data-draw-calls` and `data-triangles` attributes in browser developer tools. Samples cover two seconds, with a separate ten-second average, and reset when tab visibility changes. With `?perf`, the browser title also reports these values for native Safari verification. Render milliseconds measure CPU submission time, not GPU completion. No diagnostic controls or overlays are added to the demo.
+
+## Scene graph
+
+```text
+ArcadeScene
+├── Environment
+│   ├── CheckerboardFloor
+│   ├── ArcadeBackdrop
+│   └── BackgroundCabinet1 / BackgroundCabinet2
+├── IdeaGrabberMachine
+│   ├── Cabinet
+│   ├── Marquee
+│   ├── CoinSlot
+│   ├── ClawAssembly
+│   │   ├── Carriage
+│   │   ├── Cable
+│   │   └── Claw → Finger1 / Finger2 / Finger3
+│   ├── CapsulePit → PitCapsule1 … PitCapsule25
+│   ├── OutputRack → CapsulePosition1 … CapsulePosition5
+│   └── Chute
+├── Bulbee → Body / LeftArm / RightArm / LeftLeg / RightLeg
+└── Coinie → Body / LeftArm / RightArm / LeftLeg / RightLeg
+```
+
+Groups provide pivots for future animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. Rack contents are decorative, not game state. No gameplay or camera controls are implemented. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
+
+`docs/ingredient-catalogue.json` contains 120 future ingredients with Unicode emoji suggestions; current balls remain identical.
+
+## Verification
+
+The expanded scene was verified in Chrome and Safari using the production preview (`npm run build` then `npm run preview`). Both browsers measured 59.9 fps across a ten-second visible-tab sample on this Mac; Chrome reported 169 draw calls and 3,246 triangles, with about 1.49 ms CPU render-submission time. These measurements are specific to this machine and scene. Desktop 1280 × 800 and portrait 390 × 844 screenshots are in `docs/references/arcade-world-*.png`. Independent source review found no blocking issues.
+
+Safari rendered the production preview correctly; its development-server page showed unstyled HTML without starting the scene, so production preview is the verified Safari route. This development-server limitation remains to investigate separately.

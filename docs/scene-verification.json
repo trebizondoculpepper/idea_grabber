@@ -1,0 +1,34 @@
+{
+  "scene": "Arcade world and two heroes",
+  "browsers": {
+    "chrome": {
+      "route": "production preview",
+      "fps10": 59.9,
+      "drawCalls": 169,
+      "triangles": 3246,
+      "cpuRenderSubmissionMs": 1.49,
+      "consoleErrors": 0
+    },
+    "safari": {
+      "route": "production preview",
+      "fps10": 59.9,
+      "drawCalls": 168,
+      "visualRendering": "passed"
+    }
+  },
+  "viewports": [
+    { "width": 1280, "height": 800 },
+    { "width": 390, "height": 844 }
+  ],
+  "independentReview": "No blocking findings; typecheck, lint and SVG XML parsing passed.",
+  "limitations": [
+    "Safari development-server route displayed unstyled HTML; production build is verified.",
+    "Reduced-motion and disposal paths reviewed in source; not changed through system preferences during verification."
+  ],
+  "capsules": {
+    "pit": 25,
+    "rack": 5,
+    "appearance": "shared turquoise faceted sphere and yellow star decal"
+  },
+  "scope": "Visual demo only; no gameplay or camera controls."
+}

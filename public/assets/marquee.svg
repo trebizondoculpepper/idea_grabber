@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="256" viewBox="0 0 1024 256">
+<rect x="5" y="5" width="1014" height="246" fill="#20dccc" stroke="#171023" stroke-width="10"/>
+<path d="m10 20 68 17-28 39 32 35-70 16zM930 18l71 25-50 30 55 51-80-4zM120 230l32-40 28 41M871 240l-30-40 70-4" fill="#ffdf20"/>
+<path d="m116 23 10 23 26 3-20 17 5 26-21-14-22 14 5-26-19-17 25-3zm745 119 11 23 26 3-20 17 5 26-22-14-22 14 5-26-20-17 26-3z" fill="#ff38a8" stroke="#171023" stroke-width="5"/>
+<g transform="translate(50 26) rotate(-2 450 105)" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="120" stroke="#171023" stroke-width="15" paint-order="stroke" stroke-linejoin="round">
+<text x="15" y="161" fill="#ffdf20">Idea</text><text x="325" y="161" fill="#ff38a8">Grabber</text></g>
+</svg>

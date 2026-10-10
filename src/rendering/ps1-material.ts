@@ -1,4 +1,4 @@
-import { MeshStandardMaterial, Vector2 } from 'three';
+import { MeshBasicMaterial, MeshStandardMaterial, Vector2 } from 'three';
 import type { MeshStandardMaterialParameters } from 'three';
 
 // Quantize projected coordinates, preserving clip-space depth and the original w.
@@ -9,12 +9,17 @@ export const ps1Uniforms = {
   snapStrength: { value: 0.35 },
 };
 
-export function createPs1Material(options: MeshStandardMaterialParameters) {
-  const material = new MeshStandardMaterial({
-    ...options,
-    flatShading: true,
-    roughness: 1,
-  });
+export function createPs1Material(
+  options: MeshStandardMaterialParameters,
+  unlit = false,
+) {
+  const material = unlit
+    ? new MeshBasicMaterial(options)
+    : new MeshStandardMaterial({
+        ...options,
+        flatShading: true,
+        roughness: 1,
+      });
   material.onBeforeCompile = (shader) => {
     shader.uniforms.ps1Resolution = ps1Uniforms.resolution;
     shader.uniforms.ps1SnapPixels = ps1Uniforms.snapPixels;

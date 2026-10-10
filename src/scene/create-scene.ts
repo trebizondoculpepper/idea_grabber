@@ -1,71 +1,28 @@
-import {
-  AmbientLight,
-  DirectionalLight,
-  Color,
-  IcosahedronGeometry,
-  Mesh,
-  PlaneGeometry,
-  Scene,
-  TextureLoader,
-  NearestFilter,
-  RepeatWrapping,
-  SRGBColorSpace,
-} from 'three';
-import { createPs1Material } from '../rendering/ps1-material';
+import { AmbientLight, Color, DirectionalLight, Scene } from 'three';
+import { createSceneKit } from './scene-kit';
+import { createEnvironment } from './create-environment';
+import { createMachine } from './create-machine';
+import { createHero } from './create-hero';
 
 export function createScene() {
   const scene = new Scene();
+  scene.name = 'ArcadeScene';
   scene.background = new Color('#361477');
   scene.add(new AmbientLight(0xffffff, 1.8));
   const light = new DirectionalLight(0xffffff, 2.5);
-  light.position.set(3, 5, 4);
+  light.position.set(3, 7, 5);
   scene.add(light);
-
-  const loader = new TextureLoader();
-  const texture = (name: string, repeat: number) => {
-    const map = loader.load(`${import.meta.env.BASE_URL}assets/${name}.svg`);
-    map.colorSpace = SRGBColorSpace;
-    map.magFilter = NearestFilter;
-    map.minFilter = NearestFilter;
-    map.generateMipmaps = false;
-    map.wrapS = map.wrapT = RepeatWrapping;
-    map.repeat.set(repeat, repeat);
-    return map;
-  };
-  const capsuleMap = texture('capsule', 1);
-  const floorMap = texture('stage', 12);
-  const backdropMap = texture('backdrop', 6);
-  const capsule = new Mesh(
-    new IcosahedronGeometry(0.9, 0),
-    createPs1Material({ map: capsuleMap }),
-  );
-  capsule.position.y = 1.25;
-  scene.add(capsule);
-
-  const floor = new Mesh(
-    new PlaneGeometry(24, 24, 12, 12),
-    createPs1Material({ map: floorMap }),
-  );
-  floor.rotation.x = -Math.PI / 2;
-  scene.add(floor);
-  const backdrop = new Mesh(
-    new PlaneGeometry(24, 12, 12, 6),
-    createPs1Material({ map: backdropMap }),
-  );
-  backdrop.position.set(0, 6, -6);
-  scene.add(backdrop);
-
+  const kit = createSceneKit();
+  createEnvironment(scene, kit);
+  createMachine(scene, kit);
+  const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
+  const coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
   return {
     scene,
     update(elapsed: number) {
-      capsule.rotation.y = elapsed * 0.12;
+      bulbee.update(elapsed);
+      coinie.update(elapsed);
     },
-    dispose() {
-      for (const mesh of [capsule, floor, backdrop]) {
-        mesh.geometry.dispose();
-        mesh.material.dispose();
-      }
-      for (const map of [capsuleMap, floorMap, backdropMap]) map.dispose();
-    },
+    dispose: kit.dispose,
   };
 }
