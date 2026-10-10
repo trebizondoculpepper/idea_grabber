@@ -28,7 +28,8 @@
       "last_transition_at": "2026-10-10T20:28:42.157518+00:00",
       "model": "__resolved_model_absent__",
       "notes": [
-        "Creative implementation in the primary checkout as explicitly requested by user; isolated DevOps files left untouched."
+        "Creative implementation in the primary checkout as explicitly requested by user; isolated DevOps files left untouched.",
+        "Creative scene implemented in primary checkout by explicit user instruction. Chrome and Safari production preview measure 59.9 fps; source review has no blocking findings; screenshots and verification evidence committed."
       ],
       "provider": "__resolved_provider_absent__",
       "role": "implementer",
