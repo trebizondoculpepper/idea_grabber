@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "mission_slug": "arcade-world-01M4KQ60",
+  "mission_id": "01M4KQ60MXWR29DJ3FB61JDN0P",
+  "mission_branch": "kitty/mission-arcade-world-01M4KQ60",
+  "target_branch": "feat/arcade-world",
+  "lanes": [
+    {
+      "lane_id": "lane-a",
+      "wp_ids": [
+        "WP01"
+      ],
+      "write_scope": [
+        "README.md",
+        "docs/**",
+        "index.html",
+        "public/assets/**",
+        "src/rendering/**",
+        "src/scene/**",
+        "src/styles/**"
+      ],
+      "predicted_surfaces": [
+        "api"
+      ],
+      "depends_on_lanes": [],
+      "parallel_group": 0
+    }
+  ],
+  "computed_at": "2026-10-10T20:16:36.573220+00:00",
+  "computed_from": "dependency_graph+ownership",
+  "planning_artifact_wps": [],
+  "planning_commit_sha": "69d703c04b6c531416b0a90ca5344dfe8ee1ff87"
+}
