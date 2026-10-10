@@ -1,6 +1,6 @@
 # Todo
 
-- [ ] Credits page and resource attribution — mission `credits-and-resource-attribution-01M4KVWV` ([mission metadata](../kitty-specs/credits-and-resource-attribution-01M4KVWV/meta.json)). Add an accessible in-game credits page linking creators, engine and resource packs; include mandatory attribution and licence notices. Specification intake pending.
+- [x] Resource credits in the README, linked by the bottom-right GitHub icon. This replaces the planned in-game credits screen for mission `credits-and-resource-attribution-01M4KVWV`; mandatory licence notices remain bundled.
 - [ ] Keep [resource-credits.json](resource-credits.json) current whenever a third-party asset or library is acquired, edited, integrated or removed. Downloaded candidates must not be presented as shipped resources.
 - [ ] Record final music provenance, creator, licence and any applicable attribution when soundtrack files arrive; the existing music prompt is not evidence of a delivered resource licence.
 

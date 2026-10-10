@@ -1,5 +1,5 @@
 {
-  "policy": "Track every third-party resource here when acquired; mark used and record specific files when integrated. Publish used resources on the credits page, preserving mandatory licence notices separately.",
+  "policy": "Track every third-party resource here when acquired; mark used and record specific files when integrated. Publish used resources on the README credits, preserving mandatory licence notices separately.",
   "resources": [
     {
       "id": "threejs",
@@ -9,7 +9,7 @@
       "license": "MIT",
       "status": "used",
       "credit_required": true,
-      "requirements": "Retain full copyright and MIT licence text with distributed copies. Include source link on credits page.",
+      "requirements": "Retain full copyright and MIT licence text with distributed copies. Include source link on README credits.",
       "evidence": "node_modules/three/LICENSE",
       "version": "0.186.1"
     },
@@ -170,6 +170,18 @@
       "requirements": "Record generation provenance and retain credits applicable to the underlying project artwork.",
       "evidence": "docs/social-preview.md",
       "outputs": ["public/social/idea-grabber-preview.jpg"]
+    },
+    {
+      "id": "github-octicons",
+      "name": "GitHub mark (Octicons)",
+      "creator": "GitHub",
+      "source": "https://github.com/primer/octicons",
+      "license": "MIT",
+      "status": "used",
+      "credit_required": true,
+      "requirements": "Retain copyright and MIT notice; included in public/licenses/octicons.txt and linked from README.",
+      "evidence": "public/licenses/octicons.txt",
+      "outputs": ["public/assets/github-mark.svg"]
     }
   ]
 }

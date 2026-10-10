@@ -159,3 +159,25 @@ canvas {
 #music-toggle[data-wanted='false'] .stop-icon {
   display: none;
 }
+
+.github-link {
+  position: absolute;
+  z-index: 3;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #ffdf20;
+  border-radius: 0.5rem;
+  background: #fff6cf;
+  transition: background 0.15s;
+}
+.github-link:hover {
+  background: #ffdf20;
+}
+.github-link:focus-visible {
+  outline: 3px solid #20dccc;
+  outline-offset: 3px;
+}

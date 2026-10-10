@@ -2,6 +2,40 @@
 
 A browser claw-machine game with bold cartoon art and PS1 rendering. The current demo contains the cabinet, claw, chute, five-position rack, faceted capsules with distinct catalogue icons and independently random colours, and the paper-cutout heroes Bulbee and Coinie. The tray starts empty. Click Coinie to make him jump into the slot: the claw collects a capsule, carries it right and drops it through a hidden chute. The capsule emerges at the bottom left and rolls slowly right. After the capsule settles and the claw parks, a new Coinie walks in from the right.
 
+## Credits and resources
+
+Play at [idea-grabber.fly.dev](https://idea-grabber.fly.dev/). The bottom-right GitHub icon links here for source code and credits.
+
+### Engine and interface
+
+- [Three.js](https://threejs.org/) by the three.js authors — MIT. [Full licence notice](public/licenses/three.txt).
+- [GitHub Octicons](https://github.com/primer/octicons) by GitHub — MIT. The GitHub mark links to this repository. [Full licence notice](public/licenses/octicons.txt).
+
+### Sound effects
+
+| Resource                                                                             | Creator      | Licence                                                   | Use                                                    |
+| ------------------------------------------------------------------------------------ | ------------ | --------------------------------------------------------- | ------------------------------------------------------ |
+| [Casino Audio](https://kenney.nl/assets/casino-audio)                                | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Coin insertion and capsules landing in the rack        |
+| [Impact Sounds](https://kenney.nl/assets/impact-sounds)                              | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Footsteps and capsule impacts                          |
+| [Interface Sounds](https://kenney.nl/assets/interface-sounds)                        | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Clicks, claw grip/release, jumping, smoke and ejection |
+| [Sci Fi Sounds](https://kenney.nl/assets/sci-fi-sounds)                              | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Claw motor and cabinet hum                             |
+| [Marble Roll](https://freesound.org/people/JuandreSound/sounds/490913/) (HQ preview) | JuandreSound | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Rolling capsules                                       |
+| [Talking Synthesizer](https://opengameart.org/content/talking-synthesizer)           | tcarisland   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Coinie and Bulbee speech                               |
+
+**Talking Synthesizer attribution:** Talking Synthesizer by tcarisland, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified for Coinie and Bulbee using short excerpts, different pitch and speed, mono conversion, fades and MP3 encoding. [Original resource](https://opengameart.org/content/talking-synthesizer), [exact source excerpts and processing](public/audio/sfx/sources.json), and [preserved licence notices](public/audio/sfx/licenses/).
+
+Other effects were excerpted, converted and encoded for browser playback; see the same processing manifest for details. Downloaded audition candidates are recorded in [the resource register](docs/resource-credits.json) and are not included in the game credits unless used.
+
+### Music and artwork
+
+- **Background music:** 40 tracks delivered by the music-generation LLM. [Track titles, tempo and inspiration references](public/audio/bgm/manifest.json), [generation brief](docs/prompts/music-generation.md), and [original masters](assets/audio-masters/bgm/). The generator/provider and licence were not recorded in the delivery; their provenance and usage terms remain to be documented. Inspiration references are not claims of endorsement or licences to those games' music.
+- **Game artwork and models:** project-created SVG artwork and procedural Three.js models in [public/assets](public/assets/) and [src/scene](src/scene/), including Coinie, Bulbee, the grabber, parody arcade cabinets, posters, floor litter, rat and passers-by. Artwork uses Unicode emoji rendered by the player's platform fonts.
+- **Social preview:** generated with OpenAI imagegen using the project artwork as reference. [Image](public/social/idea-grabber-preview.jpg) and [generation prompt/provenance](docs/social-preview.md).
+
+### Development tools
+
+The project uses [Vite](https://vite.dev/) (MIT), [TypeScript](https://www.typescriptlang.org/) (Apache-2.0), [Vitest](https://vitest.dev/) (MIT), [ESLint](https://eslint.org/) (MIT), [Prettier](https://prettier.io/) (MIT), [Node.js](https://nodejs.org/), and [Spec Kitty](https://github.com/Priivacy-ai/spec-kitty) for mission tracking. Dependency versions and transitive packages are recorded in [package.json](package.json) and [package-lock.json](package-lock.json); each package retains its own licence. The public game is hosted on [Fly.io](https://fly.io/).
+
 ## Run locally
 
 Use Node.js 22.13.x, 24.x, or 26+ and npm (the scaffold was verified with Node 26.10.0 / npm 11.19.1).
