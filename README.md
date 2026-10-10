@@ -48,4 +48,8 @@ The Spec Kitty configuration was moved from `my-project/` to this root. The orig
 
 The current scene uses original editable 128 × 128 SVG textures for the capsule, checkerboard floor and patterned backdrop. Textures use nearest-neighbour filtering without mipmaps. The canvas renders within a 640 × 480 pixel budget and scales with CSS pixelation while HTML text stays sharp.
 
-`src/rendering/ps1-material.ts` extends the standard material shader to snap projected vertices to a two-pixel grid while preserving depth and clip w. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops animation. Affine texture warping is not implemented in this prototype.
+`src/rendering/ps1-material.ts` extends the standard material shader to blend projected vertices 35% toward a one-pixel grid while preserving depth and clip w. This keeps polygon instability visible without making slow motion appear to run at a low frame rate. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops animation. Affine texture warping is not implemented in this prototype.
+
+### Frame-rate diagnostics
+
+In development (or production with `?perf`), inspect the canvas `data-fps`, `data-render-ms`, `data-draw-calls` and `data-triangles` attributes in browser developer tools. Samples cover two seconds and reset when tab visibility changes. Render milliseconds measure CPU submission time, not GPU completion. No diagnostic controls or overlays are added to the demo.
