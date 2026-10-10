@@ -55,3 +55,15 @@ it('skips tray ejection until the tray is full', () => {
   );
   expect(cycle.phase).toBe('rolling');
 });
+
+it('starts with an offstage entrance without inserting a coin or running the machine', () => {
+  const cycle = createCoinieCycle(true);
+  expect(cycle.phase).toBe('walking');
+  expect(cycle.start()).toBe(false);
+  cycle.advance(0.9);
+  expect(cycle.progress).toBeCloseTo(0.5);
+  cycle.advance(0.9);
+  expect(cycle.phase).toBe('ready');
+  expect(cycle.generation).toBe(0);
+  expect(cycle.start()).toBe(true);
+});

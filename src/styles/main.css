@@ -98,3 +98,18 @@ canvas {
   text-decoration-color: #ff38a8;
   text-decoration-thickness: 3px;
 }
+
+.coinie-bubble {
+  background: #ffdf20;
+  box-shadow: 5px 5px 0 #20dccc;
+}
+.coinie-bubble::after {
+  background: #ffdf20;
+}
+@media (max-width: 600px) {
+  .coinie-bubble::after {
+    top: -16px;
+    bottom: auto;
+    transform: translateX(-50%) rotate(225deg);
+  }
+}

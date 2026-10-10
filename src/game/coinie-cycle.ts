@@ -14,8 +14,8 @@ export type CoiniePhase = 'ready' | keyof typeof phaseDurations;
 const phases = Object.keys(phaseDurations) as (keyof typeof phaseDurations)[];
 
 // One accepted click owns the entire machine cycle; no input queue or timers.
-export function createCoinieCycle() {
-  let phase: CoiniePhase = 'ready';
+export function createCoinieCycle(initialEntrance = false) {
+  let phase: CoiniePhase = initialEntrance ? 'walking' : 'ready';
   let elapsed = 0;
   let generation = 0;
   let progress = 0;

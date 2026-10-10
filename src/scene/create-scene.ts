@@ -25,7 +25,8 @@ export function createScene() {
   const machine = createMachineAnimation(createMachine(scene, kit));
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
   let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
-  const cycle = createCoinieCycle();
+  const cycle = createCoinieCycle(true);
+  poseCoinieWalk(coinie.hero, 0, false);
   const smoke = createSlotSmoke(scene, kit);
   let generation = cycle.generation;
   let replacement = 0;
@@ -40,6 +41,9 @@ export function createScene() {
     },
     get coinie() {
       return coinie.hero;
+    },
+    get coinieProgress() {
+      return cycle.progress;
     },
     get coiniePhase() {
       return cycle.phase;
