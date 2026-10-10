@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Deploy
-        run: flyctl deploy --remote-only --ha=false
+        run: flyctl deploy --remote-only --ha=false --build-arg "VITE_GOOGLE_TAG_ID=$VITE_GOOGLE_TAG_ID"
         env:
+          VITE_GOOGLE_TAG_ID: ${{ secrets.VITE_GOOGLE_TAG_ID }}
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

@@ -53,3 +53,14 @@ container run --rm -p 8080:8080 idea-grabber
 ```
 
 Then open http://localhost:8080 and check http://localhost:8080/healthz.
+
+## Google Analytics
+
+Production builds inject the Google tag when `VITE_GOOGLE_TAG_ID` is set. The
+measurement ID is held in the repository's `VITE_GOOGLE_TAG_ID` Actions secret and
+passed to the remote builder; it is not hard-coded in public source. The delivered
+HTML necessarily exposes it to visitors. Development sessions do not load the tag.
+
+For a local production build, set the variable in `.env.production.local` (ignored
+by Git). For a manual Fly deployment, pass `--build-arg VITE_GOOGLE_TAG_ID=...`.
+No Google administrative credentials are needed or stored by the game.
