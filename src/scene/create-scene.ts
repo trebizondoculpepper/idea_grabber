@@ -3,6 +3,7 @@ import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
 import { createMachine } from './create-machine';
 import { createHero } from './create-hero';
+import { createSlotSmoke } from './create-slot-smoke';
 import { createCoinieCycle } from '../game/coinie-cycle';
 import {
   poseCoinieJump,
@@ -24,6 +25,7 @@ export function createScene() {
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
   let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
   const cycle = createCoinieCycle();
+  const smoke = createSlotSmoke(scene, kit);
   let generation = cycle.generation;
   return {
     scene,
@@ -38,8 +40,11 @@ export function createScene() {
     },
     activateCoinie: cycle.start,
     update(elapsed: number, delta = 0, reducedMotion = false) {
+      smoke.update(delta, reducedMotion);
       cycle.advance(delta, reducedMotion);
       if (generation !== cycle.generation) {
+        smoke.burst(reducedMotion);
+        smoke.update(0, reducedMotion);
         scene.remove(coinie.hero);
         coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
         generation = cycle.generation;
