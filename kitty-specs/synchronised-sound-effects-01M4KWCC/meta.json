@@ -10,6 +10,7 @@
   "purpose_context": "Make the toy arcade tactile and expressive by synchronising sound cues with existing animations and speech bubbles. Use the downloaded open audio collections, respect mute and reduced motion, and keep music outside this mission.",
   "purpose_tldr": "Integrate downloaded sound effects with machine movement, ball interactions and character speech.",
   "slug": "synchronised-sound-effects-01M4KWCC",
-  "target_branch": "feat/arcade-world",
-  "topology": "single_branch"
+  "target_branch": "main",
+  "topology": "single_branch",
+  "source_description": "User explicitly redirected all work to main and approved starting sound integration on 2026-10-10."
 }

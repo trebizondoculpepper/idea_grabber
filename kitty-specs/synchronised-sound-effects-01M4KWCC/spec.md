@@ -1,130 +1,102 @@
-# Mission Specification: [MISSION NAME]
-<!-- Replace [MISSION NAME] with the confirmed friendly title generated during /spec-kitty.specify. -->
+# Mission Specification: Synchronised sound effects
 
-**Mission Branch**: `[###-mission-name]`  
-**Created**: [DATE]  
-**Status**: Draft  
-**Input**: User description: "$ARGUMENTS"
+**Mission branch / merge target**: `main` (explicit user override of original `feat/arcade-world` target)  
+**Created**: 2026-10-10  
+**Status**: Confirmed scope; implementation under validation  
+**Input**: Integrate downloaded sound effects as the machines and characters move. Forget about music. Merge everything, switch to main and start.
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing
 
-<!--
-  IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
-  Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
-  you should still have a viable MVP (Minimum Viable Product) that delivers value.
-  
-  Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
-  Think of each story as a standalone slice of functionality that can be:
-  - Developed independently
-  - Tested independently
-  - Deployed independently
-  - Demonstrated to users independently
--->
+### User Story 1 — Hear the machine and balls (Priority: P1)
 
-### User Story 1 - [Brief Title] (Priority: P1)
+A player inserts Coinie and hears sounds corresponding to visible machine and capsule actions.
 
-[Describe this user journey in plain language]
+**Independent test**: Run a normal turn and a turn with a full rack.
 
-**Why this priority**: [Explain the value and why it has this priority level]
+**Acceptance scenarios**:
 
-**Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
+1. Given sound is available and unmuted, when Coinie enters the slot, the claw moves/closes/releases and the capsule drops, corresponding cues sound once at those actions.
+2. Given a capsule is rolling, when it settles on the rack, rolling stops and a single rack contact sounds.
+3. Given the rack is full, when the oldest capsule leaves, ejection and landing cues follow its movement; ordinary turns do not produce an ejection cue.
+4. Given reduced motion is enabled, when a turn runs faster, sounds follow the shorter movement rather than continuing for the original duration.
 
-**Acceptance Scenarios**:
+### User Story 2 — Hear the characters (Priority: P1)
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-2. **Given** [initial state], **When** [action], **Then** [expected outcome]
+A player sees a character speak and hears a brief, recognisable gibberish voice.
 
----
+**Independent test**: Trigger each character's next line.
 
-### User Story 2 - [Brief Title] (Priority: P2)
+**Acceptance scenarios**:
 
-[Describe this user journey in plain language]
+1. Given a new speech bubble, when it appears, the character produces a finite burst of varied syllables; Coinie and Bulbee have distinct timbres/rhythms.
+2. Given a speech bubble hides or changes, when that occurs, the old voice stops.
+3. Given speech occurred before audio unlock or while muted, when audio becomes available, stale speech is not replayed.
 
-**Why this priority**: [Explain the value and why it has this priority level]
+### User Story 3 — Control sound (Priority: P1)
 
-**Independent Test**: [Describe how this can be tested independently]
+A player can mute sound, leave the tab and return without stuck loops.
 
-**Acceptance Scenarios**:
+**Independent test**: Toggle mute during movement, reload and background the tab.
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
+**Acceptance scenarios**:
 
----
+1. Given active audio, when mute is enabled, all sounds stop and the control reflects the new state; the preference survives reload where storage is available.
+2. Given the tab becomes hidden or the scene is disposed, when that happens, audio stops and resources are cleaned up.
+3. Given a clip fails to load or browser audio is unavailable, when the game runs, gameplay continues.
 
-### User Story 3 - [Brief Title] (Priority: P3)
+### Edge cases
 
-[Describe this user journey in plain language]
+- Repeated render updates must not duplicate contacts or restart loops.
+- A rapid interaction while audio is loading must not queue stale sounds for later replay.
+- Reduced-motion walking must not emit footsteps for motion that is not shown.
+- Reveal and manual discard are absent from the current game; do not create those interactions merely to add their sounds.
+- Storage denial must not break the mute control.
 
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-
----
-
-[Add more user stories as needed, each with an assigned priority]
-
-### Edge Cases
-
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right edge cases.
--->
-
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
-
-## Requirements *(mandatory)*
-
-<!--
-  ACTION REQUIRED:
-  1) Keep requirement types separated (Functional / Non-Functional / Constraints)
-  2) Use unique IDs per type (FR-###, NFR-###, C-###)
-  3) Keep Status populated for every row
-  4) Non-functional requirements must include measurable thresholds
--->
+## Requirements
 
 ### Functional Requirements
 
-| ID | Title | User Story | Priority | Status |
-|----|-------|------------|----------|--------|
-| FR-001 | [Short title] | As a [role], I want [goal] so that [benefit]. | High | Open |
-| FR-002 | [Short title] | As a [role], I want [goal] so that [benefit]. | Medium | Open |
-| FR-003 | [Short title] | As a [role], I want [goal] so that [benefit]. | Low | Open |
+| ID     | Title            | Requirement                                                                                                               | Priority | Status      |
+| ------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| FR-001 | Machine cues     | Play coin/slot, claw motor, grip/release and chute contact cues corresponding to current movement.                        | High     | Implemented |
+| FR-002 | Capsule cues     | Play rolling, one rack arrival contact, and overflow-only ejection/contact cues.                                          | High     | Implemented |
+| FR-003 | Character speech | Give both characters distinct finite gibberish bursts for new speech; stop on hiding/replacement.                         | High     | Implemented |
+| FR-004 | Supporting cues  | Add Coinie jump, slot puff, walking footsteps and quiet UI feedback; optional low cabinet hum.                            | Medium   | Implemented |
+| FR-005 | Mute             | Provide a visible keyboard-accessible mute control and persist its preference when storage is available.                  | High     | Implemented |
+| FR-006 | Audio lifecycle  | Unlock via interaction; stop audio on backgrounding/disposal; avoid replaying stale speech and resume only current loops. | High     | Implemented |
+| FR-007 | Source records   | Record selected original files, output files, edits, creators and licences; ship required credit/notice text.             | High     | Implemented |
 
 ### Non-Functional Requirements
 
-| ID | Title | Requirement | Category | Priority | Status |
-|----|-------|-------------|----------|----------|--------|
-| NFR-001 | [Short title] | [Measurable threshold, e.g., p95 latency under 300ms] | Performance | High | Open |
-| NFR-002 | [Short title] | [Measurable threshold] | Security | High | Open |
-| NFR-003 | [Short title] | [Measurable threshold] | Reliability | Medium | Open |
+| ID      | Title             | Requirement                                                                                                              | Category    | Priority | Status   |
+| ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- | -------- | -------- |
+| NFR-001 | Synchronisation   | Trigger contacts within one displayed animation update of their landmark; emit no duplicate contact for unchanged state. | Timing      | High     | Verified |
+| NFR-002 | Bounded playback  | Maintain at most one loop per cue; each new speech burst contains at most eight syllables.                               | Reliability | High     | Verified |
+| NFR-003 | Download size     | Selected MP3 effects total less than 250 KB; do not ship the full source library.                                        | Performance | Medium   | Verified |
+| NFR-004 | Failure tolerance | One failed audio clip or unavailable audio subsystem does not stop a game turn.                                          | Reliability | High     | Verified |
 
 ### Constraints
 
-| ID | Title | Constraint | Category | Priority | Status |
-|----|-------|------------|----------|----------|--------|
-| C-001 | [Short title] | [Required boundary or limitation] | Technical | High | Open |
-| C-002 | [Short title] | [Required boundary or limitation] | Business | Medium | Open |
-| C-003 | [Short title] | [Required boundary or limitation] | Regulatory | Medium | Open |
+| ID    | Title                | Constraint                                                                                           | Category | Priority | Status    |
+| ----- | -------------------- | ---------------------------------------------------------------------------------------------------- | -------- | -------- | --------- |
+| C-001 | Music excluded       | This mission does not produce or integrate music.                                                    | Scope    | High     | Satisfied |
+| C-002 | Existing behaviour   | Preserve current game, rack and character behaviour; audio observes their state.                     | Scope    | High     | Satisfied |
+| C-003 | Shared main          | Work directly on main as explicitly requested; preserve other contributors' work.                    | Delivery | High     | Satisfied |
+| C-004 | Resource permissions | Use the downloaded licensed material and preserve the required attribution/notices for chosen clips. | Assets   | High     | Satisfied |
 
-### Key Entities *(include if feature involves data)*
+### Key Entities
 
-- **[Entity 1]**: [What it represents, key attributes without implementation]
-- **[Entity 2]**: [What it represents, relationships to other entities]
+- Sound cue: audible response associated with a movement, contact or speech event.
+- Speech burst: finite sequence associated with one character line.
+- Resource record: provenance, licence, original files, output files and edits for selected material.
 
-## Success Criteria *(mandatory)*
+## Success Criteria
 
-<!--
-  ACTION REQUIRED: Define measurable success criteria.
-  These must be technology-agnostic and measurable.
--->
+- SC-001: Normal and overflowing turns produce the appropriate cues without duplicates.
+- SC-002: Both characters have recognisably different chatter and hidden bubbles produce no ongoing speech.
+- SC-003: Mute stops all active audio and no movement loop remains after its movement ends.
+- SC-004: Every shipped clip has provenance and applicable attribution; selected MP3 files stay below 250 KB.
 
-### Measurable Outcomes
+## Assumptions
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+Reduced motion shortens phase timings; audio reads current animation state. The full credits page is a separate mission; this mission ships credit text and updates its register. Initial speech before the first user gesture remains silent. Final subjective mix tuning may follow listening feedback.

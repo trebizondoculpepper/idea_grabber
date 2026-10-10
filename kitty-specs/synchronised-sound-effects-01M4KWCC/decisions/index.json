@@ -3,7 +3,7 @@
     {
       "created_at": "2026-10-10T21:44:46.797765Z",
       "decision_id": "01M4KWD3YD53RTV1QR6J9TSKHV",
-      "final_answer": null,
+      "final_answer": "Confirmed by user instruction to merge everything, return to main and start sound effects. Integrate downloaded cues with current machine, capsule and character animations and speech; support mute/reduced motion and track attribution. Music excluded. User explicitly requires working on main.",
       "input_key": "sound_effects_scope",
       "mission_id": "01M4KWCCWK8JX25CNX0BZA7RGR",
       "mission_slug": "synchronised-sound-effects-01M4KWCC",
@@ -13,10 +13,10 @@
       "other_answer": false,
       "question": "Confirm scope: select and integrate downloaded SFX for character speech, coin insertion, claw movement and grip/release, chute drop, ball rolling, rack arrival and overflow ejection, plus Coinie footsteps/jump/smoke and UI clicks; synchronise cues with animations, support mute and reduced motion, update attribution records, and exclude music. Capsule reveal/discard sounds apply only if those interactions exist at implementation time.",
       "rationale": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-10T21:46:29.997719Z",
       "resolved_by": null,
       "slot_key": "specify.scope.intent-summary",
-      "status": "open",
+      "status": "resolved",
       "step_id": null,
       "summary_json": null
     }

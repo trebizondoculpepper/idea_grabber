@@ -4,8 +4,9 @@
 - **Origin flow:** `specify`
 - **Slot key:** `specify.scope.intent-summary`
 - **Input key:** `sound_effects_scope`
-- **Status:** `open`
+- **Status:** `resolved`
 - **Created:** `2026-10-10T21:44:46.797765+00:00`
+- **Resolved:** `2026-10-10T21:46:29.997719+00:00`
 - **Opened by:** `cli`
 - **Other answer:** `false`
 
@@ -19,7 +20,7 @@ _(none)_
 
 ## Final answer
 
-_(none)_
+Confirmed by user instruction to merge everything, return to main and start sound effects. Integrate downloaded cues with current machine, capsule and character animations and speech; support mute/reduced motion and track attribution. Music excluded. User explicitly requires working on main.
 
 ## Rationale
 
@@ -28,3 +29,4 @@ _(none)_
 ## Change log
 
 - `2026-10-10T21:44:46.797765+00:00` — opened
+- `2026-10-10T21:46:29.997719+00:00` — resolved (final_answer="Confirmed by user instruction to merge everything, return to main and start sound effects. Integrate downloaded cues with current machine, capsule and character animations and speech; support mute/reduced motion and track attribution. Music excluded. User explicitly requires working on main.")
