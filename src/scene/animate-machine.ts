@@ -36,7 +36,8 @@ export function createMachineAnimation(
     claw.position.y = head.y - assembly.position.y;
     cable.scale.y = (assembly.position.y - head.y) / 1.08;
     fingers.forEach((finger) => {
-      finger.scale.x = 1 - closed * 0.32;
+      // Keep the inner finger edges outside the capsule radius, rather than crushing through it.
+      finger.scale.x = 1.5 - closed * 0.25;
     });
   }
   head.copy(rest);
@@ -106,7 +107,7 @@ export function createMachineAnimation(
           machine.updateMatrixWorld(true);
           ball.getWorldPosition(pickup);
           machine.worldToLocal(pickup);
-          pickup.y += 0.68;
+          pickup.y += 0.78;
           machine.attach(ball);
         }
       }
@@ -136,12 +137,12 @@ export function createMachineAnimation(
       if (ball) {
         if (['grabbing', 'lifting', 'carrying'].includes(phase)) {
           ball.position.copy(head);
-          ball.position.y -= 0.68;
+          ball.position.y -= 0.78;
         }
         if (phase === 'dropping') {
           ball.position.set(
             drop.x,
-            drop.y - 0.68 - progress * progress * 3,
+            drop.y - 0.78 - progress * progress * 3,
             drop.z,
           );
           ball.visible = progress < 0.65;

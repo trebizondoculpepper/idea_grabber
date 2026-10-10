@@ -15,3 +15,5 @@ The next interaction lets players click Coinie: he jumps into the slot, then a f
 The machine cycle now starts with an empty output tray. Coin insertion triggers claw descent, grab, lift, travel right, release into a hidden chute, and a slow capsule roll from the bottom left to the right. The claw parks before the replacement Coinie enters. Each cycle transfers one existing pit ball into the tray.
 
 The rack now operates as a five-ball FIFO. A full rack ejects its oldest (rightmost) capsule stage forwards out of view, shifts the remaining four right, then accepts the new capsule from the left. Offstage capsules recycle into the pit so insertion can continue indefinitely.
+
+At scene creation, the 25 pit balls receive distinct randomly shuffled emoji icons from the ingredient catalogue. Ball colour is sampled independently from a fixed 16-colour palette. Appearance stays with the ball through collection, rolling, FIFO exit and recycling. The claw fingers now close around the capsule surface, with the hub held above it.

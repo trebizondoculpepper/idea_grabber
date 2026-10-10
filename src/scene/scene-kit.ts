@@ -1,5 +1,6 @@
 import {
   BoxGeometry,
+  CanvasTexture,
   BufferGeometry,
   DoubleSide,
   EdgesGeometry,
@@ -79,6 +80,38 @@ export function createSceneKit() {
     materials.add(result);
     return result;
   }
+  function emoji(glyph: string): Material {
+    const key = `emoji:${glyph}`;
+    const cached = materialCache.get(key);
+    if (cached) return cached;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 128;
+    const context = canvas.getContext('2d')!;
+    context.fillStyle = palette.white;
+    context.strokeStyle = palette.ink;
+    context.lineWidth = 5;
+    context.beginPath();
+    context.arc(64, 64, 60, 0, Math.PI * 2);
+    context.fill();
+    context.stroke();
+    context.font =
+      '80px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(glyph, 64, 68);
+    const map = new CanvasTexture(canvas);
+    map.colorSpace = SRGBColorSpace;
+    map.magFilter = map.minFilter = NearestFilter;
+    map.generateMipmaps = false;
+    textures.add(map);
+    const surface = createPs1Material(
+      { map, side: DoubleSide, alphaTest: 0.1 },
+      true,
+    );
+    materials.add(surface);
+    materialCache.set(key, surface);
+    return surface;
+  }
   function group(parent: Object3D, name: string, x = 0, y = 0, z = 0) {
     const node = new Group();
     node.name = name;
@@ -126,6 +159,7 @@ export function createSceneKit() {
     panel,
     material,
     textured,
+    emoji,
     ownGeometry,
     dispose() {
       for (const geometry of geometries) geometry.dispose();

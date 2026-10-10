@@ -1,5 +1,6 @@
 import { IcosahedronGeometry, Mesh } from 'three';
 import type { Object3D } from 'three';
+import { createCapsuleAppearances } from '../game/capsule-appearance';
 import { palette } from './scene-kit';
 import type { SceneKit } from './scene-kit';
 
@@ -214,7 +215,8 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
   }
 
   const capsuleGeometry = kit.ownGeometry(new IcosahedronGeometry(0.43, 1));
-  const capsuleMaterial = kit.material(palette.teal);
+  const appearances = createCapsuleAppearances(25);
+  let appearanceIndex = 0;
   function capsule(
     parent: Object3D,
     name: string,
@@ -222,16 +224,19 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     y: number,
     z: number,
   ) {
-    const ball = new Mesh(capsuleGeometry, capsuleMaterial);
+    const appearance = appearances[appearanceIndex++];
+    const ball = new Mesh(capsuleGeometry, kit.material(appearance.colour));
+    ball.userData.ingredient = appearance.ingredient;
+    ball.userData.colour = appearance.colour;
     ball.name = name;
     ball.position.set(x, y, z);
     ball.rotation.y = Math.atan2(7, 11);
     kit.panel(
       ball,
-      'PlaceholderStar',
-      [0.43, 0.43],
+      'IngredientIcon',
+      [0.58, 0.58],
       [0, 0, 0.435],
-      kit.textured('claw-star', 1, 1, true),
+      kit.emoji(appearance.ingredient.emoji),
     );
     parent.add(ball);
     if (parent.name === 'CapsulePit') pitBalls.push(ball);
@@ -285,13 +290,7 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
       palette.yellow,
     );
   for (let i = 0; i < 5; i++) {
-    kit.group(
-      rack,
-      `CapsulePosition${i + 1}`,
-      -1.55 + i * 0.77,
-      -0.01,
-      0.35,
-    );
+    kit.group(rack, `CapsulePosition${i + 1}`, -1.55 + i * 0.77, -0.01, 0.35);
     // Positions begin empty; collected capsules fill them from the right.
   }
   const chute = kit.group(machine, 'Chute', -2.23, 1.55, 1.72);
