@@ -1,0 +1,722 @@
+[
+  {
+    "id": "platformer",
+    "label": "Platformer",
+    "category": "action-and-movement",
+    "emoji": "👟"
+  },
+  {
+    "id": "precision-platformer",
+    "label": "Precision platformer",
+    "category": "action-and-movement",
+    "emoji": "🎯"
+  },
+  {
+    "id": "action-platformer",
+    "label": "Action platformer",
+    "category": "action-and-movement",
+    "emoji": "⚔️"
+  },
+  {
+    "id": "runner",
+    "label": "Endless runner",
+    "category": "action-and-movement",
+    "emoji": "🏃"
+  },
+  {
+    "id": "parkour",
+    "label": "Parkour",
+    "category": "action-and-movement",
+    "emoji": "🤸"
+  },
+  {
+    "id": "beat-em-up",
+    "label": "Beat ’em up",
+    "category": "action-and-movement",
+    "emoji": "🥊"
+  },
+  {
+    "id": "hack-and-slash",
+    "label": "Hack and slash",
+    "category": "action-and-movement",
+    "emoji": "🗡️"
+  },
+  {
+    "id": "character-action",
+    "label": "Character action",
+    "category": "action-and-movement",
+    "emoji": "⚔️"
+  },
+  {
+    "id": "stealth",
+    "label": "Stealth",
+    "category": "action-and-movement",
+    "emoji": "🥷"
+  },
+  {
+    "id": "survival-action",
+    "label": "Survival action",
+    "category": "action-and-movement",
+    "emoji": "🛡️"
+  },
+  {
+    "id": "boss-rush",
+    "label": "Boss rush",
+    "category": "action-and-movement",
+    "emoji": "👑"
+  },
+  {
+    "id": "arena-combat",
+    "label": "Arena combat",
+    "category": "action-and-movement",
+    "emoji": "🥊"
+  },
+  {
+    "id": "first-person-shooter",
+    "label": "First-person shooter",
+    "category": "shooting-and-combat",
+    "emoji": "🎯"
+  },
+  {
+    "id": "third-person-shooter",
+    "label": "Third-person shooter",
+    "category": "shooting-and-combat",
+    "emoji": "🔫"
+  },
+  {
+    "id": "twin-stick-shooter",
+    "label": "Twin-stick shooter",
+    "category": "shooting-and-combat",
+    "emoji": "🕹️"
+  },
+  {
+    "id": "shoot-em-up",
+    "label": "Shoot ’em up",
+    "category": "shooting-and-combat",
+    "emoji": "🚀"
+  },
+  {
+    "id": "bullet-hell",
+    "label": "Bullet hell",
+    "category": "shooting-and-combat",
+    "emoji": "☄️"
+  },
+  {
+    "id": "rail-shooter",
+    "label": "Rail shooter",
+    "category": "shooting-and-combat",
+    "emoji": "🛤️"
+  },
+  {
+    "id": "tactical-shooter",
+    "label": "Tactical shooter",
+    "category": "shooting-and-combat",
+    "emoji": "🪖"
+  },
+  {
+    "id": "artillery",
+    "label": "Artillery game",
+    "category": "shooting-and-combat",
+    "emoji": "💣"
+  },
+  {
+    "id": "fighting",
+    "label": "Fighting game",
+    "category": "shooting-and-combat",
+    "emoji": "👊"
+  },
+  {
+    "id": "duelling",
+    "label": "Duelling",
+    "category": "shooting-and-combat",
+    "emoji": "⚔️"
+  },
+  {
+    "id": "parry-combat",
+    "label": "Parry combat",
+    "category": "shooting-and-combat",
+    "emoji": "🛡️"
+  },
+  {
+    "id": "auto-battler",
+    "label": "Auto battler",
+    "category": "shooting-and-combat",
+    "emoji": "♟️"
+  },
+  {
+    "id": "point-and-click",
+    "label": "Point-and-click adventure",
+    "category": "adventure-and-narrative",
+    "emoji": "👆"
+  },
+  {
+    "id": "graphic-adventure",
+    "label": "Graphic adventure",
+    "category": "adventure-and-narrative",
+    "emoji": "🚪"
+  },
+  {
+    "id": "text-adventure",
+    "label": "Text adventure",
+    "category": "adventure-and-narrative",
+    "emoji": "📖"
+  },
+  {
+    "id": "visual-novel",
+    "label": "Visual novel",
+    "category": "adventure-and-narrative",
+    "emoji": "💬"
+  },
+  {
+    "id": "interactive-fiction",
+    "label": "Interactive fiction",
+    "category": "adventure-and-narrative",
+    "emoji": "✍️"
+  },
+  {
+    "id": "walking-simulator",
+    "label": "Walking simulator",
+    "category": "adventure-and-narrative",
+    "emoji": "🚶"
+  },
+  {
+    "id": "mystery",
+    "label": "Mystery game",
+    "category": "adventure-and-narrative",
+    "emoji": "❓"
+  },
+  {
+    "id": "detective",
+    "label": "Detective game",
+    "category": "adventure-and-narrative",
+    "emoji": "🔎"
+  },
+  {
+    "id": "escape-room",
+    "label": "Escape room",
+    "category": "adventure-and-narrative",
+    "emoji": "🔐"
+  },
+  {
+    "id": "exploration-adventure",
+    "label": "Exploration adventure",
+    "category": "adventure-and-narrative",
+    "emoji": "🧭"
+  },
+  {
+    "id": "dialogue-driven",
+    "label": "Dialogue-driven play",
+    "category": "adventure-and-narrative",
+    "emoji": "🗨️"
+  },
+  {
+    "id": "branching-narrative",
+    "label": "Branching narrative",
+    "category": "adventure-and-narrative",
+    "emoji": "🔀"
+  },
+  {
+    "id": "action-rpg",
+    "label": "Action RPG",
+    "category": "role-playing-and-progression",
+    "emoji": "⚔️"
+  },
+  {
+    "id": "turn-based-rpg",
+    "label": "Turn-based RPG",
+    "category": "role-playing-and-progression",
+    "emoji": "⌛"
+  },
+  {
+    "id": "tactical-rpg",
+    "label": "Tactical RPG",
+    "category": "role-playing-and-progression",
+    "emoji": "♟️"
+  },
+  {
+    "id": "dungeon-crawler",
+    "label": "Dungeon crawler",
+    "category": "role-playing-and-progression",
+    "emoji": "🏰"
+  },
+  {
+    "id": "party-rpg",
+    "label": "Party RPG",
+    "category": "role-playing-and-progression",
+    "emoji": "🧙"
+  },
+  {
+    "id": "monster-collecting",
+    "label": "Monster collecting",
+    "category": "role-playing-and-progression",
+    "emoji": "👾"
+  },
+  {
+    "id": "loot-driven",
+    "label": "Loot-driven play",
+    "category": "role-playing-and-progression",
+    "emoji": "💎"
+  },
+  {
+    "id": "skill-tree",
+    "label": "Skill-tree progression",
+    "category": "role-playing-and-progression",
+    "emoji": "🌳"
+  },
+  {
+    "id": "class-based",
+    "label": "Class-based play",
+    "category": "role-playing-and-progression",
+    "emoji": "🎭"
+  },
+  {
+    "id": "roguelike",
+    "label": "Roguelike",
+    "category": "role-playing-and-progression",
+    "emoji": "💀"
+  },
+  {
+    "id": "roguelite",
+    "label": "Roguelite",
+    "category": "role-playing-and-progression",
+    "emoji": "🔁"
+  },
+  {
+    "id": "metroidvania",
+    "label": "Metroidvania",
+    "category": "role-playing-and-progression",
+    "emoji": "🗝️"
+  },
+  {
+    "id": "real-time-strategy",
+    "label": "Real-time strategy",
+    "category": "strategy-and-management",
+    "emoji": "⏱️"
+  },
+  {
+    "id": "turn-based-strategy",
+    "label": "Turn-based strategy",
+    "category": "strategy-and-management",
+    "emoji": "♟️"
+  },
+  {
+    "id": "grand-strategy",
+    "label": "Grand strategy",
+    "category": "strategy-and-management",
+    "emoji": "🌍"
+  },
+  {
+    "id": "four-x",
+    "label": "4X strategy",
+    "category": "strategy-and-management",
+    "emoji": "🪐"
+  },
+  {
+    "id": "tower-defence",
+    "label": "Tower defence",
+    "category": "strategy-and-management",
+    "emoji": "🏰"
+  },
+  {
+    "id": "city-builder",
+    "label": "City builder",
+    "category": "strategy-and-management",
+    "emoji": "🏙️"
+  },
+  {
+    "id": "colony-sim",
+    "label": "Colony simulation",
+    "category": "strategy-and-management",
+    "emoji": "🛖"
+  },
+  {
+    "id": "factory-automation",
+    "label": "Factory automation",
+    "category": "strategy-and-management",
+    "emoji": "🏭"
+  },
+  {
+    "id": "business-management",
+    "label": "Business management",
+    "category": "strategy-and-management",
+    "emoji": "🏪"
+  },
+  {
+    "id": "resource-management",
+    "label": "Resource management",
+    "category": "strategy-and-management",
+    "emoji": "⚖️"
+  },
+  {
+    "id": "deck-building",
+    "label": "Deck building",
+    "category": "strategy-and-management",
+    "emoji": "🃏"
+  },
+  {
+    "id": "worker-placement",
+    "label": "Worker placement",
+    "category": "strategy-and-management",
+    "emoji": "👷"
+  },
+  {
+    "id": "life-sim",
+    "label": "Life simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🏡"
+  },
+  {
+    "id": "farming-sim",
+    "label": "Farming simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🥕"
+  },
+  {
+    "id": "fishing-sim",
+    "label": "Fishing simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🎣"
+  },
+  {
+    "id": "cooking-game",
+    "label": "Cooking game",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🍳"
+  },
+  {
+    "id": "shopkeeping",
+    "label": "Shopkeeping",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🛍️"
+  },
+  {
+    "id": "pet-care",
+    "label": "Pet care",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🐾"
+  },
+  {
+    "id": "flight-sim",
+    "label": "Flight simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "✈️"
+  },
+  {
+    "id": "driving-sim",
+    "label": "Driving simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🚗"
+  },
+  {
+    "id": "space-sim",
+    "label": "Space simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🛸"
+  },
+  {
+    "id": "vehicle-building",
+    "label": "Vehicle building",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🔧"
+  },
+  {
+    "id": "physics-sandbox",
+    "label": "Physics sandbox",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "⚙️"
+  },
+  {
+    "id": "ecosystem-sim",
+    "label": "Ecosystem simulation",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🌿"
+  },
+  {
+    "id": "match-three",
+    "label": "Match three",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "💎"
+  },
+  {
+    "id": "falling-blocks",
+    "label": "Falling-block puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🧱"
+  },
+  {
+    "id": "sokoban",
+    "label": "Box-pushing puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "📦"
+  },
+  {
+    "id": "logic-puzzle",
+    "label": "Logic puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🧩"
+  },
+  {
+    "id": "word-game",
+    "label": "Word game",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🔤"
+  },
+  {
+    "id": "number-puzzle",
+    "label": "Number puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🔢"
+  },
+  {
+    "id": "spatial-puzzle",
+    "label": "Spatial puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🔷"
+  },
+  {
+    "id": "perspective-puzzle",
+    "label": "Perspective puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "👁️"
+  },
+  {
+    "id": "time-manipulation",
+    "label": "Time manipulation",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "⏪"
+  },
+  {
+    "id": "gravity-manipulation",
+    "label": "Gravity manipulation",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🧲"
+  },
+  {
+    "id": "programming-puzzle",
+    "label": "Programming puzzle",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🤖"
+  },
+  {
+    "id": "inventory-combination",
+    "label": "Inventory combination",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🔗"
+  },
+  {
+    "id": "arcade-racing",
+    "label": "Arcade racing",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🏎️"
+  },
+  {
+    "id": "kart-racing",
+    "label": "Kart racing",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🏁"
+  },
+  {
+    "id": "football",
+    "label": "Football",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "⚽"
+  },
+  {
+    "id": "basketball",
+    "label": "Basketball",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🏀"
+  },
+  {
+    "id": "skateboarding",
+    "label": "Skateboarding",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🛹"
+  },
+  {
+    "id": "extreme-sports",
+    "label": "Extreme sports",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🏂"
+  },
+  {
+    "id": "rhythm-game",
+    "label": "Rhythm game",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🎵"
+  },
+  {
+    "id": "rhythm-action",
+    "label": "Rhythm action",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🥁"
+  },
+  {
+    "id": "dance-game",
+    "label": "Dance game",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "💃"
+  },
+  {
+    "id": "party-game",
+    "label": "Party game",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🎉"
+  },
+  {
+    "id": "social-deduction",
+    "label": "Social deduction",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🕵️"
+  },
+  {
+    "id": "local-co-op",
+    "label": "Local co-op",
+    "category": "sports-rhythm-and-social-play",
+    "emoji": "🤝"
+  },
+  {
+    "id": "paper-cutout",
+    "label": "Paper cutout",
+    "category": "visual-styles",
+    "emoji": "✂️"
+  },
+  {
+    "id": "low-poly",
+    "label": "Low poly",
+    "category": "visual-styles",
+    "emoji": "🔷"
+  },
+  {
+    "id": "ps1-wobble",
+    "label": "PS1 wobble",
+    "category": "visual-styles",
+    "emoji": "🫨"
+  },
+  {
+    "id": "pixel-art",
+    "label": "Pixel art",
+    "category": "visual-styles",
+    "emoji": "👾"
+  },
+  {
+    "id": "cel-shaded",
+    "label": "Cel shaded",
+    "category": "visual-styles",
+    "emoji": "🖍️"
+  },
+  {
+    "id": "claymation",
+    "label": "Claymation",
+    "category": "visual-styles",
+    "emoji": "🗿"
+  },
+  {
+    "id": "comic-book",
+    "label": "Comic book",
+    "category": "visual-styles",
+    "emoji": "💥"
+  },
+  {
+    "id": "chalkboard",
+    "label": "Chalkboard",
+    "category": "visual-styles",
+    "emoji": "✏️"
+  },
+  {
+    "id": "watercolour",
+    "label": "Watercolour",
+    "category": "visual-styles",
+    "emoji": "🎨"
+  },
+  {
+    "id": "woodcut",
+    "label": "Woodcut",
+    "category": "visual-styles",
+    "emoji": "🪵"
+  },
+  {
+    "id": "neon-vector",
+    "label": "Neon vector",
+    "category": "visual-styles",
+    "emoji": "⚡"
+  },
+  {
+    "id": "rubber-hose",
+    "label": "Rubber-hose cartoon",
+    "category": "visual-styles",
+    "emoji": "🧤"
+  },
+  {
+    "id": "hip-hop",
+    "label": "Hip-hop",
+    "category": "musical-flavours",
+    "emoji": "🎤"
+  },
+  {
+    "id": "funk",
+    "label": "Funk",
+    "category": "musical-flavours",
+    "emoji": "🎸"
+  },
+  {
+    "id": "disco",
+    "label": "Disco",
+    "category": "musical-flavours",
+    "emoji": "🪩"
+  },
+  {
+    "id": "punk",
+    "label": "Punk",
+    "category": "musical-flavours",
+    "emoji": "🤘"
+  },
+  {
+    "id": "heavy-metal",
+    "label": "Heavy metal",
+    "category": "musical-flavours",
+    "emoji": "🔥"
+  },
+  {
+    "id": "jazz",
+    "label": "Jazz",
+    "category": "musical-flavours",
+    "emoji": "🎷"
+  },
+  {
+    "id": "ska",
+    "label": "Ska",
+    "category": "musical-flavours",
+    "emoji": "🎺"
+  },
+  {
+    "id": "reggae",
+    "label": "Reggae",
+    "category": "musical-flavours",
+    "emoji": "🔊"
+  },
+  {
+    "id": "synthwave",
+    "label": "Synthwave",
+    "category": "musical-flavours",
+    "emoji": "🌇"
+  },
+  {
+    "id": "techno",
+    "label": "Techno",
+    "category": "musical-flavours",
+    "emoji": "🎛️"
+  },
+  {
+    "id": "chiptune",
+    "label": "Chiptune",
+    "category": "musical-flavours",
+    "emoji": "👾"
+  },
+  {
+    "id": "orchestral",
+    "label": "Orchestral",
+    "category": "musical-flavours",
+    "emoji": "🎻"
+  }
+]
