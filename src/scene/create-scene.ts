@@ -3,6 +3,7 @@ import { createArcadeLighting } from './arcade-lighting';
 import type { Mesh } from 'three';
 import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
+import { createArcadeScreens } from './arcade-screens';
 import { createRat } from './create-rat';
 import { createMachineAnimation } from './animate-machine';
 import { createMachine } from './create-machine';
@@ -24,6 +25,7 @@ export function createScene() {
   const kit = createSceneKit();
   const environment = createEnvironment(scene, kit);
   const rat = createRat(environment, kit);
+  const screens = createArcadeScreens(environment);
   const parts = createMachine(scene, kit);
   const machine = createMachineAnimation(parts);
   const cabinetLights = createMachineLighting(parts.machine);
@@ -79,6 +81,7 @@ export function createScene() {
       return cycle.start(machine.full);
     },
     update(elapsed: number, delta = 0, reducedMotion = false) {
+      screens.update(elapsed, reducedMotion);
       rat.update(elapsed, reducedMotion);
       lighting.update(elapsed, reducedMotion);
       cabinetLights.update(elapsed, reducedMotion);

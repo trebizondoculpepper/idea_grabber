@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><rect width="256" height="256" fill="#0b0618"/><rect x="6" y="6" width="244" height="244" rx="6" fill="none" stroke="#56edb2" stroke-width="3"/><text x="128" y="30" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="15" fill="#56edb2">SPACE INVOICERS</text><text x="128" y="49" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="13" fill="#fff9e4">HIGH SCORES</text><svg x="82" y="59" width="92" height="92" viewBox="0 0 256 256">
+<rect width="256" height="256" fill="#0b0618"/>
+<defs><g id="i"><path d="M0 0h22l6 6v26H0z" fill="#fff9e4" stroke="#56edb2" stroke-width="2"/><path d="M4 10h14M4 16h18M4 22h10" stroke="#171023" stroke-width="2"/><path d="M-4 30l4-4M32 30l-4-4" stroke="#56edb2" stroke-width="3"/><text x="20" y="30" font-family="Arial Black,Arial,sans-serif" font-size="10" font-weight="900" fill="#ff545e">$</text></g></defs>
+<g><use href="#i" x="24" y="30"/><use href="#i" x="70" y="30"/><use href="#i" x="116" y="30"/><use href="#i" x="162" y="30"/><use href="#i" x="208" y="30"/>
+<use href="#i" x="46" y="76"/><use href="#i" x="92" y="76"/><use href="#i" x="138" y="76"/><use href="#i" x="184" y="76"/></g>
+<path d="M120 180v-30" stroke="#ffdf20" stroke-width="4"/>
+<g fill="#56edb2"><path d="M30 196h40v14H30zM108 196h40v14h-40zM186 196h40v14h-40z"/></g>
+<path d="M114 240h28v-10h-8v-8h-12v8h-8z" fill="#ff38a8"/>
+<text x="10" y="18" font-family="monospace" font-size="13" font-weight="700" fill="#fff9e4">BALANCE  -£1,980</text>
+</svg><text x="128" y="174" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="16" fill="#56edb2">1  VAT  098500</text><text x="128" y="194" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="16" fill="#fff9e4">2  TAX  081250</text><text x="128" y="214" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="16" fill="#fff9e4">3  PAY  064000</text><text x="128" y="239" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="14" fill="#ffdf20">INSERT COIN</text></svg>

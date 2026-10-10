@@ -32,6 +32,8 @@ Other effects were excerpted, converted and encoded for browser playback; see th
 - **Game artwork and models:** project-created SVG artwork and procedural Three.js models in [public/assets](public/assets/) and [src/scene](src/scene/), including Coinie, Bulbee, the grabber, parody arcade cabinets, posters, floor litter, rat and passers-by. Artwork uses Unicode emoji rendered by the player's platform fonts.
 - **Social preview:** generated with OpenAI imagegen using the project artwork as reference. [Image](public/social/idea-grabber-preview.jpg) and [generation prompt/provenance](docs/social-preview.md).
 
+Background arcade cabinets each have three attract-mode screens: the original gameplay view, a second stage and a themed high-score table. They change at staggered 7–10 second intervals and hold still with reduced motion. The project-created SVG variants can be regenerated with `python3 scripts/generate-arcade-screens.py`.
+
 ### Development tools
 
 The project uses [Vite](https://vite.dev/) (MIT), [TypeScript](https://www.typescriptlang.org/) (Apache-2.0), [Vitest](https://vitest.dev/) (MIT), [ESLint](https://eslint.org/) (MIT), [Prettier](https://prettier.io/) (MIT), [Node.js](https://nodejs.org/), and [Spec Kitty](https://github.com/Priivacy-ai/spec-kitty) for mission tracking. Dependency versions and transitive packages are recorded in [package.json](package.json) and [package-lock.json](package-lock.json); each package retains its own licence. The public game is hosted on [Fly.io](https://fly.io/).

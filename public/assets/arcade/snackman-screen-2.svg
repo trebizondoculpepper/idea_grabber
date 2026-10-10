@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<rect width="256" height="256" fill="#0b0618"/>
+<g fill="none" stroke="#ae8dd9" stroke-width="6" stroke-linejoin="round"><path d="M12 30h232v200H12z"/><path d="M50 70h50v30H50zM156 70h50v30h-50zM50 156h50v30H50zM156 156h50v30h-50zM118 60v50M118 146v50"/></g>
+<g fill="#fff9e4"><circle cx="32" cy="128" r="4"/><circle cx="56" cy="128" r="4"/><circle cx="80" cy="128" r="4"/><circle cx="104" cy="128" r="4"/><circle cx="32" cy="50" r="4"/><circle cx="32" cy="80" r="4"/><circle cx="32" cy="104" r="4"/><circle cx="224" cy="50" r="9"/></g>
+<text x="138" y="136" font-size="22" text-anchor="middle">🍔</text><text x="190" y="136" font-size="22" text-anchor="middle">🍩</text><text x="226" y="210" font-size="22" text-anchor="middle">🍕</text>
+<path d="M150 210l18-11a20 20 0 1 0 0 22z" fill="#ffdf20" transform="translate(-70 0)"/>
+<path d="M140 128l20-12a23 23 0 1 0 0 24z" fill="#ffdf20" transform="translate(44 0)"/>
+<g transform="translate(200 50)"><path d="M-12 12v-14a12 12 0 0 1 24 0v14l-4-4-4 4-4-4-4 4-4-4z" fill="#ff38a8"/><circle cx="-4" cy="-2" r="3" fill="#fff"/><circle cx="5" cy="-2" r="3" fill="#fff"/></g>
+<text x="16" y="22" font-family="monospace" font-size="14" font-weight="700" fill="#fff9e4">CALORIES 9001</text>
+<circle cx="32" cy="210" r="9" fill="#ffdf20"/><rect width="256" height="26" fill="#0b0618"/><text x="128" y="18" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="14" fill="#ffdf20">LEVEL 2  01280</text></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><g transform="rotate(42 128 128)">
+<rect width="256" height="256" fill="#000"/>
+<g fill="none" stroke="#fff9e4" stroke-width="3" stroke-linejoin="round">
+<path d="M30 40l26-10 22 12 4 26-20 22-28-6-10-22z"/><path d="M180 30l20 6 8 20-14 16-20-4-6-20z"/><path d="M200 170l28 6 10 28-18 24-28-6-8-28z"/><path d="M50 190l14 4 6 14-10 12-14-2-4-14z"/><path d="M150 120l10 3 4 10-7 8-10-2-2-10z"/>
+<path d="M124 128l16 40-16-8-16 8z" transform="rotate(30 124 140)"/>
+</g>
+<path d="M134 128l12-10M160 106l10-8" stroke="#fff9e4" stroke-width="3"/>
+<path d="M30 40l-12-8M78 42l10-12M58 90l-4 14" stroke="#ffdf20" stroke-width="2"/>
+<text x="12" y="248" font-family="monospace" font-size="13" font-weight="700" fill="#fff9e4">LATE FOR WORK x3</text>
+<text x="244" y="20" font-family="monospace" font-size="14" font-weight="700" fill="#fff9e4" text-anchor="end">HURRY!</text>
+</g><path d="M72 82l12-8M54 94l8-6" stroke="#fff9e4" stroke-width="3"/><rect width="256" height="26" fill="#0b0618"/><text x="128" y="18" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="14" fill="#fff9e4">SECTOR 2  01280</text></svg>

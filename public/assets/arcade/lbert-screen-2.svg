@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<rect width="256" height="256" fill="#0b0618"/>
+<defs><g id="c" stroke="#171023" stroke-width="2"><path d="M0 0l20-11 20 11-20 11z" fill="#ffdf20"/><path d="M0 0v24l20 11V11z" fill="#398aff"/><path d="M40 0v24L20 35V11z" fill="#1d4fa8"/></g><g id="d"><use href="#c"/><path d="M0 0l20-11 20 11-20 11z" fill="#20dccc" stroke="#171023" stroke-width="2"/></g></defs>
+<use href="#d" x="108" y="60"/>
+<use href="#d" x="88" y="94"/><use href="#c" x="128" y="94"/>
+<use href="#c" x="68" y="128"/><use href="#d" x="108" y="128"/><use href="#c" x="148" y="128"/>
+<use href="#d" x="48" y="162"/><use href="#c" x="88" y="162"/><use href="#d" x="128" y="162"/><use href="#c" x="168" y="162"/>
+<g transform="translate(150 80)"><circle r="13" fill="#ff7138" stroke="#171023" stroke-width="3"/><path d="M8 0q16 2 14 12-6 4-14-4z" fill="#ff7138" stroke="#171023" stroke-width="3"/><circle cx="-2" cy="-4" r="4" fill="#fff"/><circle cx="-1" cy="-4" r="2"/><path d="M-6 12v8h-5M4 12v8h5" stroke="#171023" stroke-width="4" fill="none"/></g>
+<path d="M170 20h76v32h-50l-12 12 2-12h-16z" fill="#fff9e4" stroke="#171023" stroke-width="3"/>
+<text x="208" y="44" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900" text-anchor="middle" fill="#c41f3a">@!#?@!</text>
+<text x="12" y="28" font-family="monospace" font-size="16" font-weight="700" fill="#ff7138">1UP 4370</text>
+<rect width="256" height="26" fill="#0b0618"/><text x="128" y="18" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="14" fill="#ff38a8">LEVEL 2  01280</text></svg>

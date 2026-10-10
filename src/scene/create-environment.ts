@@ -74,13 +74,18 @@ export function createEnvironment(
       [0, 3.14, 0.87],
       palette.ink,
     );
-    kit.panel(
+    const screen = kit.panel(
       neighbour,
       'ScreenGraphic',
       [1.98, 1.96],
       [0, 3.15, 0.96],
       kit.textured(`arcade/${art}-screen`),
     );
+    screen.userData.screenMaterials = [
+      screen.material,
+      kit.textured(`arcade/${art}-screen-2`),
+      kit.textured(`arcade/${art}-scores`),
+    ];
     kit.box(
       neighbour,
       'Console',
