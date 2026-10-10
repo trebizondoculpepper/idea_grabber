@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "mission_slug": "synchronised-sound-effects-01M4KWCC",
+  "mission_id": "01M4KWCCWK8JX25CNX0BZA7RGR",
+  "mission_branch": "kitty/mission-synchronised-sound-effects-01M4KWCC",
+  "target_branch": "main",
+  "lanes": [
+    {
+      "lane_id": "lane-a",
+      "wp_ids": [
+        "WP01"
+      ],
+      "write_scope": [
+        "docs/TODO.md",
+        "docs/resource-credits.json",
+        "docs/sound-effects.md",
+        "index.html",
+        "public/audio/sfx/**",
+        "public/licenses/three.txt",
+        "scripts/prepare-sfx.py",
+        "src/audio/**",
+        "src/rendering/start-scene.ts",
+        "src/styles/main.css",
+        "src/ui/bulbee-speech.ts",
+        "src/ui/coinie-speech.ts"
+      ],
+      "predicted_surfaces": [
+        "api",
+        "tracker-integration"
+      ],
+      "depends_on_lanes": [],
+      "parallel_group": 0
+    }
+  ],
+  "computed_at": "2026-10-10T21:54:45.582989+00:00",
+  "computed_from": "dependency_graph+ownership",
+  "planning_artifact_wps": [],
+  "planning_commit_sha": "f965647248e3cd028711b7672e8304f6ef3de725"
+}
