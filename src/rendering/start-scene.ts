@@ -1,6 +1,7 @@
 import { PerspectiveCamera, WebGLRenderer } from 'three';
 import { createScene } from '../scene/create-scene';
 import { ps1Uniforms } from './ps1-material';
+import { bindBulbeeSpeech } from '../ui/bulbee-speech';
 import { bindCoinieInput } from '../input/coinie-input';
 
 export function startScene(canvas: HTMLCanvasElement) {
@@ -18,6 +19,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     canvas.dataset.sceneGraph = JSON.stringify(names);
   }
   const input = bindCoinieInput(canvas, camera, world);
+  const speech = bindBulbeeSpeech(canvas, camera, world);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let elapsed = 0;
   let lastTime: number | undefined;
@@ -78,6 +80,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     world.scene.updateMatrixWorld();
     camera.updateMatrixWorld();
     input.update();
+    speech.update(delta);
     const renderStart = performance.now();
     renderer.render(world.scene, camera);
     if (reportPerformance) {
@@ -117,6 +120,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     observer.disconnect();
     document.removeEventListener('visibilitychange', resetTime);
     input.dispose();
+    speech.dispose();
     world.dispose();
     renderer.dispose();
   };

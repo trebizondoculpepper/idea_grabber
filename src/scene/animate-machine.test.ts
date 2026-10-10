@@ -38,6 +38,11 @@ describe('capsule collection', () => {
     machine.add(pit);
     const pitBalls = Array.from({ length: 6 }, (_, i) => {
       const ball = new Mesh();
+      ball.userData.ingredient = {
+        id: `ingredient-${i}`,
+        label: `Ingredient ${i}`,
+        emoji: '🎮',
+      };
       ball.position.set(0, i === 5 ? 0.2 : 2 + i * 0.2, 0);
       pit.add(ball);
       return ball;
@@ -79,6 +84,14 @@ describe('capsule collection', () => {
     expect(animation.delivered).toBe(5);
     expect(oldest.parent).toBe(pit);
     expect(oldest.position.y).toBeCloseTo(2.8);
+    expect(animation.landings).toBe(6);
+    expect(animation.ingredients.map((ingredient) => ingredient.id)).toEqual([
+      'ingredient-5',
+      'ingredient-0',
+      'ingredient-1',
+      'ingredient-2',
+      'ingredient-3',
+    ]);
     expect(sixth.position.x).toBeCloseTo(-1.96);
     expect(pitBalls[3].position.x).toBeCloseTo(1.12);
     for (let cycle = 0; cycle < 30; cycle++) {

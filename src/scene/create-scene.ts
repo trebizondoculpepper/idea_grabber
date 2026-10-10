@@ -31,6 +31,13 @@ export function createScene() {
   let replacement = 0;
   return {
     scene,
+    bulbee: bulbee.hero,
+    get landings() {
+      return machine.landings;
+    },
+    get ingredients() {
+      return machine.ingredients;
+    },
     get coinie() {
       return coinie.hero;
     },

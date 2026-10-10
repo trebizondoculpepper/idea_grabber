@@ -718,5 +718,11 @@
     "label": "Orchestral",
     "category": "musical-flavours",
     "emoji": "🎻"
+  },
+  {
+    "id": "lesbian",
+    "label": "Lesbian",
+    "category": "themes-and-representation",
+    "emoji": "👩‍❤️‍👩"
   }
 ]

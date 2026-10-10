@@ -86,3 +86,5 @@ Groups provide pivots for animation. Every ball is independently addressable; sh
 The expanded scene was verified in Chrome and Safari using the production preview (`npm run build` then `npm run preview`). Both browsers measured 59.9 fps across a ten-second visible-tab sample on this Mac; Chrome reported 169 draw calls and 3,246 triangles, with about 1.49 ms CPU render-submission time. These measurements are specific to this machine and scene. Desktop 1280 × 800 and portrait 390 × 844 screenshots are in `docs/references/arcade-world-*.png`. Independent source review found no blocking issues.
 
 Safari rendered the production preview correctly; its development-server page showed unstyled HTML without starting the scene, so production preview is the verified Safari route. This development-server limitation remains to investigate separately.
+
+Bulbee announces the current game idea in a speech bubble whenever a capsule settles in the rack. Newest ingredients come first, each name is emphasised, and only the current FIFO contents are included. The bubble follows Bulbee as the camera drifts and stays visible for ten seconds.

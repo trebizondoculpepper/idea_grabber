@@ -17,3 +17,5 @@ The machine cycle now starts with an empty output tray. Coin insertion triggers 
 The rack now operates as a five-ball FIFO. A full rack ejects its oldest (rightmost) capsule stage forwards out of view, shifts the remaining four right, then accepts the new capsule from the left. Offstage capsules recycle into the pit so insertion can continue indefinitely.
 
 At scene creation, the 25 pit balls receive distinct randomly shuffled emoji icons from the ingredient catalogue. Ball colour is sampled independently from a fixed 16-colour palette. Appearance stays with the ball through collection, rolling, FIFO exit and recycling. The claw fingers now close around the capsule surface, with the hub held above it.
+
+Bulbee speaks whenever a newly collected capsule settles, using rotating exuberant openings and the current rack ingredients newest-first. Ingredient names are emphasised in a camera-tracked speech bubble. Ejected ingredients leave the idea. Lesbian is now included as a theme ingredient, following the requested example.

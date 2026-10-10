@@ -14,6 +14,7 @@ export function createMachineAnimation(
   const head = new Vector3();
   let ball: Mesh | undefined;
   const tray: Mesh[] = [];
+  let landings = 0;
   const homes = new Map(
     pitBalls.map((candidate) => [
       candidate,
@@ -43,6 +44,12 @@ export function createMachineAnimation(
   head.copy(rest);
   poseHead(0);
   return {
+    get landings() {
+      return landings;
+    },
+    get ingredients() {
+      return tray.map((ball) => ball.userData.ingredient).reverse();
+    },
     get delivered() {
       return tray.length;
     },
@@ -158,6 +165,7 @@ export function createMachineAnimation(
         if (phase === 'returning' && lastPhase === 'rolling') {
           ball.position.set(1.12 - tray.length * 0.77, 0.83, 1.97);
           tray.push(ball);
+          landings += 1;
           ball = undefined;
         }
       }
