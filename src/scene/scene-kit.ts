@@ -74,7 +74,13 @@ export function createSceneKit() {
     textures.add(map);
     result = createPs1Material(
       { map, side: DoubleSide, alphaTest: cutout ? 0.1 : 0 },
-      true,
+      // Screens, signs and paper characters stay luminous; room surfaces receive the disco lights.
+      !(
+        name === 'checker-floor' ||
+        name === 'backdrop' ||
+        name.startsWith('posters/') ||
+        name.startsWith('litter/')
+      ),
     );
     materialCache.set(key, result);
     materials.add(result);

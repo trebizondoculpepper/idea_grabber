@@ -1,9 +1,12 @@
-import { AmbientLight, Color, DirectionalLight, Scene } from 'three';
+import { Scene } from 'three';
+import { createArcadeLighting } from './arcade-lighting';
 import type { Mesh } from 'three';
 import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
+import { createRat } from './create-rat';
 import { createMachineAnimation } from './animate-machine';
 import { createMachine } from './create-machine';
+import { createMachineLighting } from './machine-lighting';
 import { createHero } from './create-hero';
 import { createSlotSmoke } from './create-slot-smoke';
 import { createCoinieCycle } from '../game/coinie-cycle';
@@ -16,14 +19,13 @@ import {
 export function createScene() {
   const scene = new Scene();
   scene.name = 'ArcadeScene';
-  scene.background = new Color('#361477');
-  scene.add(new AmbientLight(0xffffff, 1.8));
-  const light = new DirectionalLight(0xffffff, 2.5);
-  light.position.set(3, 7, 5);
-  scene.add(light);
+  const lighting = createArcadeLighting(scene);
   const kit = createSceneKit();
-  createEnvironment(scene, kit);
-  const machine = createMachineAnimation(createMachine(scene, kit));
+  const environment = createEnvironment(scene, kit);
+  const rat = createRat(environment, kit);
+  const parts = createMachine(scene, kit);
+  const machine = createMachineAnimation(parts);
+  const cabinetLights = createMachineLighting(parts.machine);
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
   let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
   const cycle = createCoinieCycle(true);
@@ -69,6 +71,9 @@ export function createScene() {
       return cycle.start(machine.full);
     },
     update(elapsed: number, delta = 0, reducedMotion = false) {
+      rat.update(elapsed, reducedMotion);
+      lighting.update(elapsed, reducedMotion);
+      cabinetLights.update(elapsed, reducedMotion);
       smoke.update(delta, reducedMotion);
       cycle.advance(delta, reducedMotion);
       if (generation !== cycle.generation) {
@@ -96,6 +101,10 @@ export function createScene() {
         poseCoinieWalk(coinie.hero, cycle.progress, reducedMotion);
       else resetCoiniePose(coinie.hero);
     },
-    dispose: kit.dispose,
+    dispose() {
+      lighting.dispose();
+      cabinetLights.dispose();
+      kit.dispose();
+    },
   };
 }
