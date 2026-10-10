@@ -1,0 +1,20 @@
+project:
+  uuid: c5b5cc6c-9c35-4cc3-98a1-307844af142f
+  slug: idea-grabber
+  node_id: 5a2efa35fcb9
+  build_id: 6affff9e-cd45-57ef-869f-7e734cbf311a
+mission_type_activations:
+- software-dev
+- documentation
+- research
+- plan
+vcs:
+  type: git
+agents:
+  available:
+  - copilot
+  - claude
+  - opencode
+  - codex
+  auto_commit: true
+  lint_on_edit: false

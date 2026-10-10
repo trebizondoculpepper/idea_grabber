@@ -1,0 +1,192 @@
+IDEA GRABBER
+Browser game build brief — first playable version
+10 October 2026
+
+PURPOSE
+
+Build a cheerful, satirical browser claw machine that dispenses random game-design ingredients. The pleasure is tactile interaction, ridiculous optimism and satisfying animation. The machine always succeeds. Player aiming is theatrical; it does not determine the ingredient.
+
+For now, the entire game is the grab machine. The future concept is a generator that combines these ingredients into fictional game pitches, screenshots and reviews, but those features are outside this first build.
+
+VISUAL REFERENCE
+
+Use the latest approved Idea Grabber screenshot from this conversation as the principal art reference. It combines the original image's acid yellow, hot pink, turquoise and purple, bold black outlines and grinning mascots with option 2's chunky, three-quarter-view PS1 cabinet.
+
+The scene should feel like an original late-1990s paper-cartoon game: flat illustrated characters in a low-poly world, eccentric proportions, oversized expressions and punchy graphic textures. PaRappa the Rapper and Um Jammer Lammy are aesthetic references; create original characters and artwork.
+
+Display the title exactly as “Idea Grabber”.
+
+Use a fixed, slightly elevated three-quarter camera. Keep the claw, coin slot, chute and all five rack positions clearly visible. Frame the two mascots without obscuring controls. A simple arcade backdrop and wonky checkerboard floor are enough.
+
+Avoid polished realistic materials. The balls are colorful faceted capsules, the claw is angular, and the mascots are thin illustrated cutouts with articulated hands and feet. Glass should be mostly implied through a few graphic reflection marks rather than hiding the action behind a heavy transparent surface.
+
+PS1 RENDERING
+
+Create the look through actual geometry, textures and shaders:
+
+- Low-poly meshes and flat shading.
+- Low-resolution illustrated textures with nearest-neighbor sampling.
+- A low-resolution scene render, initially 640 × 480, enlarged without smoothing.
+- Adjustable screen-space vertex snapping to make moving polygon edges step and wobble.
+- Optional subtle ordered dithering and reduced color precision.
+- Affine-style texture warping as a later polish pass if needed.
+
+Vertex snapping should quantize projected x/y coordinates after perspective division and then reconstruct clip coordinates with the original w. This is motion-dependent positional snapping, not a random full-screen shake. Keep it restrained so the claw and rack remain legible.
+
+Keep essential HTML controls and ingredient text sharp. Add a small settings panel for pixel scale, wobble strength, reduced motion and mute. Reduced motion should disable wobble and simplify celebratory movement.
+
+THE TWO MASCOTS
+
+Coin: an unhinged commercial optimist. Every insertion is certainly the start of a AAA hit. He has arms, legs, a broad smile and relentless confidence.
+
+Examples:
+“This is the one! I can feel the franchise!”
+“Next stop: Game of the Year!”
+“We’re going to need a bigger awards cabinet.”
+“That one can be DLC!” — when an old ball falls off.
+
+Lightbulb: thinks every idea is brilliant. He flashes, bounces and celebrates every reveal. He never doubts a combination.
+
+Examples:
+“Brilliant! Absolutely essential!”
+“Of course! That’s what it was missing!”
+“Oh boy! I can’t wait to play a Lesbian Vampire Deckbuilding American Football game!”
+“Brilliant! We’ve cut scope!” — when an ingredient is discarded.
+
+All messages are canned: fixed local lines or simple local sentence templates. There is no backend AI service. No model calls or synthesized dialogue are required. Speech bubbles and short musical/gibberish sound effects are sufficient. Avoid immediate repetition and let only one bubble dominate at a time.
+
+CORE PLAY LOOP
+
+1. A coin character waits beside the machine.
+2. The player picks him up and drags him into the coin slot. Highlight the valid drop area. He beams, delivers an optimistic line and disappears into the slot.
+3. A new coin immediately walks in from the right and waits in the same pickup spot.
+4. One insertion activates one claw turn. The player can move the grabber left and right, then press down to initiate the descent.
+5. The claw lowers, closes and always catches a capsule, regardless of its horizontal position.
+6. The claw lifts the capsule, moves to the chute and drops it.
+7. The capsule travels down the chute and appears in the output rack.
+8. The player clicks or taps the capsule to pop it open and reveal a game-design ingredient. Keep a colored ball/token in that position, showing its icon and label.
+9. The bulb celebrates. Repeat as many times as desired.
+
+Down commits the grab. Descent, lift, transfer, drop and return are automatic. This interpretation is the proposed version-one control scheme.
+
+Coins are free and unlimited. There is no score, payment, timer or fail condition.
+
+To keep the first build simple, accept one active turn at a time. The replacement coin still walks in immediately, but inserting him while the current turn is running produces a friendly “One brilliant idea at a time!” cue and returns him to the pickup spot. No turn queue.
+
+If a coin is released outside the slot, he springs back to his waiting position. Valid insertion must occur exactly once even if pointer events repeat.
+
+THE FIVE-BALL RACK
+
+The rack can hold at most five capsules, including unopened ones.
+
+New capsules enter from the left and push existing capsules to the right. When full, the oldest capsule pops off the right end and falls out of view with a satisfying plop. Remove its ingredient from the current selection, whether it was revealed or not.
+
+Allow the player to discard an unwanted capsule using a clear small discard control after selecting it. Remaining capsules slide together to close the gap. This is a proposed desktop/touch-friendly implementation of the previously agreed discard option.
+
+A rack counter shows 0 / 5 through 5 / 5. Never permit six capsules to settle in the rack. Overflow is an animation transition, not an extra stored slot.
+
+Random ingredient assignment is independent of claw position and decorative balls in the pit. Choose and store the result once per successful turn; clicking to reveal must not reroll it.
+
+Keep ingredients unique within the current rack when the available pool permits. Discarded or ejected ingredients can appear again later. This is a default implementation choice, not a compatibility filter.
+
+INGREDIENTS
+
+Use one mixed hopper for version one. It can contain mechanics, subjects, themes, moods, visual styles and musical styles. Categories are metadata for future use, not separate machines.
+
+Suggested starter list:
+Deckbuilding; American football; soccer; architecture; factory building;
+tower defense; roguelike; pet simulator; rhythm game; detective mystery;
+making deliveries; Morse code; vampires; lesbians; cyberpunk; medieval fantasy;
+space opera; gardening; bureaucracy; haunted house; cozy; romantic; bleak;
+absurdist; pixel art; PS1 graphics; paper cutouts; chiptune; symphonic;
+jazz; survival; fishing.
+
+Give each ingredient a stable ID, readable label, category, simple illustrated icon and optional phrase for the bulb's sentence template. Do not use platform emoji as the final icon system.
+
+Awkward combinations are the point. Do not remove an ingredient because it seems incompatible with another. Treat identities and romance as ordinary themes.
+
+INPUT AND FEEDBACK
+
+Desktop: drag the coin; left/right arrows or A/D move the claw; down arrow or Space commits the grab. Also provide clickable on-screen left, right and down controls.
+
+Touch: drag the coin and use large on-screen buttons. Keep the interaction area free of accidental page scrolling during a drag.
+
+Provide an accessible “Insert coin” button as an alternative to dragging. Keyboard users can reach insertion, claw controls, revealed ingredient information and discard actions. Mirror essential game state in HTML; announce new ingredients and ejections through a polite live region.
+
+Use short effects for coin insertion, claw motor, capsule pickup, chute rattle, rack arrival, reveal and overflow. Begin audio only after a user gesture. Include mute. Music is optional and must be original or appropriately licensed.
+
+TECHNOLOGY DEFAULT
+
+Use TypeScript, Vite and Three.js with WebGLRenderer. Use plain HTML/CSS for the readable interface and speech bubbles. React is optional and unnecessary for this small first version.
+
+Build the cabinet, claw and capsules from procedural geometry. Create original mascot and icon textures as editable SVG or small raster assets. Use textured planes for the paper characters; simple pose swaps and grouped limbs are enough.
+
+Use a finite-state machine and scripted animation paths rather than a physics engine. A state sequence can be:
+idle → inserting → aiming → descending → grabbing → lifting → transferring
+→ dropping → rack arrival → returning → idle.
+
+Replacement-coin walk-in is a separate short character animation. Capsule reveals and discards are available when they do not conflict with rack movement.
+
+Separate ingredient selection, rack logic, input handling, scene construction, animation, rendering and dialogue into small modules. Keep data separate from visuals so another reveal machine or future AI feature can reuse it.
+
+Use frame-rate-independent motion. Pause or safely resume when the browser tab loses focus. Map pointer coordinates using the displayed canvas bounds, including letterboxing. Derive rack membership and count from one authoritative data model.
+
+The build produces static files. It requires no backend, login, API key, database or network request during play. It can be hosted as a small static site, including on Fly.io using a simple static server. Hosting choice does not change the game architecture.
+
+Keep the code in a normal Git project with reproducible install, development and production build commands. Pin compatible dependency versions when implementing.
+
+BUILD ORDER
+
+1. Establish the composition: cabinet, mascots, claw, chute and five-slot rack.
+2. Make one complete insertion-to-capsule loop work with placeholder art.
+3. Add reveal, discard, rack overflow and ingredient data.
+4. Replace placeholders with the approved cartoon palette and cutout artwork.
+5. Add vertex snapping, low-resolution rendering, dialogue and sound.
+6. Check keyboard/touch input, resizing, reduced motion and repeated turns.
+
+Preserve visual character throughout. The target is a playable cartoon machine, not a dashboard containing a claw-machine thumbnail.
+
+ACCEPTANCE CHECKS
+
+- Dragging the coin into the slot activates exactly one turn.
+- Missing the slot returns the coin without activating a turn.
+- A replacement coin walks in from the right after each accepted insertion.
+- The claw moves left/right within bounds and always retrieves a capsule.
+- The capsule visibly travels from claw to chute to rack.
+- First five turns fill the rack; the sixth ejects the oldest capsule.
+- Clicking a capsule reveals its stored ingredient without rerolling.
+- Discarding closes the gap and frees a position.
+- Repeated rapid input cannot duplicate coins, balls or turns.
+- Random outcomes are independent of claw position.
+- Pixelation and moving-edge wobble are visible while labels remain readable.
+- Muting, resizing and switching tabs do not break the turn.
+- Desktop keyboard and touch controls complete the same loop.
+
+Add focused automated checks for selection uniqueness, rack ordering/overflow
+and one-turn-per-insertion state transitions. Verify the visual loop manually
+in current desktop Chrome and Safari, plus a touch viewport. Aim for smooth
+animation on ordinary laptops; avoid an elaborate asset pipeline.
+
+OUTSIDE VERSION ONE
+
+AI treatments, image generation, OpenRouter integration, API-key storage,
+pretend reviews/focus groups, other randomizer machines, multiplayer,
+accounts and server-side persistence. Do not implement these yet.
+
+The wider premise can be preserved in the data model and module boundaries.
+There is no need to build speculative infrastructure.
+
+FIRST INSTRUCTION TO THE CODING AGENT
+
+Build the first playable version of Idea Grabber using this brief and the
+approved screenshot as the visual target. Start with the complete interactive
+claw-machine loop, then apply the original bold cartoon art direction and PS1
+rendering. Use the technology defaults above unless a concrete implementation
+constraint justifies a change. Treat the machine's guaranteed success and
+the five-ball overflow behavior as essential. Deliver runnable source,
+development/build instructions, and evidence that the acceptance checks pass.
+
+TECHNICAL REFERENCES
+
+Three.js documentation: https://threejs.org/docs/
+Vite guide: https://vite.dev/guide/
