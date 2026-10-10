@@ -14,8 +14,7 @@ export function bindCoinieInput(
   let lastPhase = world.coiniePhase;
   let lastPointer: { x: number; y: number } | undefined;
 
-  function hitCoinie(x: number, y: number) {
-    if (!world.canInsertCoinie) return false;
+  function aim(x: number, y: number) {
     const bounds = canvas.getBoundingClientRect();
     if (bounds.width === 0 || bounds.height === 0) return false;
     pointer.set(
@@ -23,13 +22,30 @@ export function bindCoinieInput(
       (-(y - bounds.top) / bounds.height) * 2 + 1,
     );
     raycaster.setFromCamera(pointer, camera);
+    return true;
+  }
+  function hitCoinie(x: number, y: number) {
+    if (!world.canInsertCoinie || !aim(x, y)) return false;
     return raycaster.intersectObject(world.coinie, true).length > 0;
+  }
+  // Tray balls can be thrown away while the machine is idle.
+  function hitTrayBall(x: number, y: number) {
+    if (!world.canInsertCoinie || !aim(x, y)) return undefined;
+    const hit = raycaster.intersectObjects(world.trayBalls, true)[0];
+    return world.trayBalls.find(
+      (ball) => hit && (hit.object === ball || hit.object.parent === ball),
+    );
   }
   const insert = () => {
     world.activateCoinie();
   };
   const click = (event: MouseEvent) => {
-    if (event.button === 0 && hitCoinie(event.clientX, event.clientY)) insert();
+    if (event.button !== 0) return;
+    if (hitCoinie(event.clientX, event.clientY)) insert();
+    else {
+      const ball = hitTrayBall(event.clientX, event.clientY);
+      if (ball) world.discardBall(ball);
+    }
   };
   const move = (event: PointerEvent) => {
     lastPointer = { x: event.clientX, y: event.clientY };
@@ -50,9 +66,11 @@ export function bindCoinieInput(
       canvas.dataset.coinieGeneration = String(world.coinieGeneration);
       if (button) button.disabled = !world.canInsertCoinie;
       if (lastPointer)
-        canvas.style.cursor = hitCoinie(lastPointer.x, lastPointer.y)
-          ? 'pointer'
-          : '';
+        canvas.style.cursor =
+          hitCoinie(lastPointer.x, lastPointer.y) ||
+          hitTrayBall(lastPointer.x, lastPointer.y)
+            ? 'pointer'
+            : '';
       if (lastPhase !== world.coiniePhase) {
         if (announcement)
           announcement.textContent =

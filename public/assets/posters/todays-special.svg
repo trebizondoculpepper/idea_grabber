@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" fill="#2a3a2a" stroke="#8a6328" stroke-width="12"/>
+<g font-family="Comic Sans MS,Marker Felt,sans-serif" font-weight="700" text-anchor="middle" fill="#fff9e4">
+<text x="100" y="52" font-size="24">TODAY'S</text><text x="100" y="80" font-size="24">SPECIAL</text>
+<text x="100" y="140" font-size="20">Pizza</text><text x="100" y="166" font-size="18">with extra</text><text x="100" y="196" font-size="24" fill="#ffdf20">PIZZA</text></g>
+<path d="M40 92h120M44 210q56 12 112 0" stroke="#fff9e4" stroke-width="3" fill="none"/>
+<path d="M150 230l14-26 14 26z" fill="#ffb52e" stroke="#fff9e4" stroke-width="2"/>
+</svg>

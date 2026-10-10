@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#20dccc"/>
+<path d="M100 20v40" stroke="#171023" stroke-width="6"/>
+<rect x="76" y="58" width="48" height="30" fill="#b1a9c6" stroke="#171023" stroke-width="4"/>
+<g fill="none" stroke="#b1a9c6" stroke-width="10" stroke-linecap="round"><path d="M82 88l-24 40 12 26"/><path d="M118 88l24 40-12 26"/></g>
+<g fill="none" stroke="#171023" stroke-width="3"><path d="M82 88l-24 40 12 26"/><path d="M118 88l24 40-12 26"/></g>
+<circle cx="88" cy="72" r="5"/><circle cx="112" cy="72" r="5"/>
+<path d="M60 168h80l-6 20H66z" fill="#ffb52e" stroke="#171023" stroke-width="3"/>
+<text x="100" y="214" font-size="16" fill="#fff9e4" stroke-width="5" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">PLEASE DO NOT</text>
+<text x="100" y="244" font-size="20" fill="#ff38a8" stroke-width="5" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">FEED THE CLAW</text>
+</svg>

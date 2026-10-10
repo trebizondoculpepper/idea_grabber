@@ -1,6 +1,10 @@
 import { expect, it } from 'vitest';
 import catalogue from '../../docs/ingredient-catalogue.json';
-import { capsuleColours, createCapsuleAppearances } from './capsule-appearance';
+import {
+  capsuleColours,
+  createCapsuleAppearances,
+  createRecycledAppearance,
+} from './capsule-appearance';
 
 it('gives the initial 25 balls distinct catalogue glyphs and a 16-colour palette', () => {
   const appearances = createCapsuleAppearances(25);
@@ -31,4 +35,22 @@ it('chooses colours independently after shuffling icons', () => {
   expect(new Set(second.map((ball) => ball.colour))).toEqual(
     new Set([capsuleColours[15]]),
   );
+});
+
+it('recycles a ball as a random new ingredient, never the one thrown away', () => {
+  const [discarded, ...others] = catalogue;
+  for (const sample of [0, 0.5, 0.999]) {
+    const recycled = createRecycledAppearance(
+      discarded,
+      [discarded, ...others.slice(0, 20)],
+      () => sample,
+    );
+    expect(recycled.ingredient.id).not.toBe(discarded.id);
+    expect(recycled.ingredient.emoji).not.toBe(discarded.emoji);
+    expect(
+      others.slice(0, 20).map((ingredient) => ingredient.emoji),
+    ).not.toContain(recycled.ingredient.emoji);
+  }
+  const everything = createRecycledAppearance(discarded, catalogue, () => 0);
+  expect(everything.ingredient.id).not.toBe(discarded.id);
 });

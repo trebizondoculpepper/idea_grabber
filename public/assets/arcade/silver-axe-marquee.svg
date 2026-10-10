@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#b1a9c6"/><stop offset=".55" stop-color="#6d6680"/><stop offset="1" stop-color="#e4e0ef"/></linearGradient></defs>
+<rect x="4" y="4" width="552" height="92" fill="#c41f3a" stroke="#171023" stroke-width="8"/>
+<path d="M20 50l40-26v52zM540 50l-40-26v52z" fill="#ffb52e" stroke="#171023" stroke-width="4"/>
+<text x="280" y="74" font-size="58" fill="url(#s)" stroke-width="10" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">SILVER AXE</text>
+</svg>

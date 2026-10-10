@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" fill="#171023" stroke="#ff38a8" stroke-width="6"/>
+<text x="100" y="38" font-size="22" fill="#ffdf20" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">HIGH SCORES</text>
+<text x="24" y="72" font-family="monospace" font-size="17" font-weight="700" fill="#20dccc">1. AAA 090863</text>
+<text x="24" y="95" font-family="monospace" font-size="17" font-weight="700" fill="#fff9e4">2. AAA 081726</text>
+<text x="24" y="118" font-family="monospace" font-size="17" font-weight="700" fill="#20dccc">3. AAA 072589</text>
+<text x="24" y="141" font-family="monospace" font-size="17" font-weight="700" fill="#fff9e4">4. AAA 063452</text>
+<text x="24" y="164" font-family="monospace" font-size="17" font-weight="700" fill="#20dccc">5. AAA 054315</text>
+<text x="24" y="187" font-family="monospace" font-size="17" font-weight="700" fill="#fff9e4">6. AAA 045178</text>
+<text x="24" y="210" font-family="monospace" font-size="17" font-weight="700" fill="#20dccc">7. AAA 036041</text>
+<text x="24" y="233" font-family="monospace" font-size="17" font-weight="700" fill="#fff9e4">8. AAA 026904</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<rect x="4" y="4" width="552" height="92" fill="#ff545e" stroke="#171023" stroke-width="8"/>
+<g fill="#8a6328" stroke="#171023" stroke-width="4"><ellipse cx="44" cy="50" rx="20" ry="26"/><ellipse cx="516" cy="50" rx="20" ry="26"/></g>
+<path d="M28 40h32M28 60h32M500 40h32M500 60h32" stroke="#171023" stroke-width="4"/>
+<text x="280" y="72" font-size="56" fill="#ffb52e" stroke-width="10" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">BONKEY-KUNG</text>
+</svg>

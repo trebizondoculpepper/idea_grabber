@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#56edb2"/>
+<g stroke="#171023" stroke-width="3"><ellipse cx="50" cy="60" rx="20" ry="26" fill="#ff38a8"/><ellipse cx="150" cy="56" rx="20" ry="26" fill="#ffdf20"/><ellipse cx="100" cy="44" rx="18" ry="24" fill="#398aff"/><path d="M50 86v40M150 82v44M100 68v40" fill="none"/></g>
+<rect x="56" y="126" width="88" height="50" fill="#fd89cd" stroke="#171023" stroke-width="4"/><path d="M56 140q11 10 22 0t22 0 22 0 22 0" stroke="#fff9e4" stroke-width="5" fill="none"/>
+<path d="M80 126v-14M100 126v-14M120 126v-14" stroke="#ffdf20" stroke-width="5"/>
+<text x="100" y="204" font-size="22" fill="#ff38a8" stroke-width="5" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">BIRTHDAYS!</text>
+<text x="100" y="228" font-size="13" fill="#171023" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">Ask about our</text>
+<text x="100" y="246" font-size="15" fill="#7842ef" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">COINIE PACKAGE</text>
+</svg>

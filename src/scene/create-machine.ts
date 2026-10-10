@@ -1,6 +1,9 @@
 import { IcosahedronGeometry, Mesh } from 'three';
 import type { Object3D } from 'three';
-import { createCapsuleAppearances } from '../game/capsule-appearance';
+import {
+  createCapsuleAppearances,
+  createRecycledAppearance,
+} from '../game/capsule-appearance';
 import { palette } from './scene-kit';
 import type { SceneKit } from './scene-kit';
 
@@ -333,5 +336,17 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
   const rail = carriage.getObjectByName('Rail')!;
   machine.updateMatrixWorld(true);
   machine.attach(rail);
-  return { machine, assembly, claw, cable, pitBalls, rack };
+  function recycle(ball: Mesh) {
+    const appearance = createRecycledAppearance(
+      ball.userData.ingredient,
+      pitBalls.map((candidate) => candidate.userData.ingredient),
+    );
+    ball.material = kit.material(appearance.colour);
+    (ball.getObjectByName('IngredientIcon') as Mesh).material = kit.emoji(
+      appearance.ingredient.emoji,
+    );
+    ball.userData.ingredient = appearance.ingredient;
+    ball.userData.colour = appearance.colour;
+  }
+  return { machine, assembly, claw, cable, pitBalls, rack, recycle };
 }

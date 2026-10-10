@@ -7,7 +7,7 @@ const smooth = (t: number) => t * t * (3 - 2 * t);
 export function createMachineAnimation(
   parts: ReturnType<typeof createMachine>,
 ) {
-  const { machine, assembly, claw, cable, pitBalls } = parts;
+  const { machine, assembly, claw, cable, pitBalls, recycle } = parts;
   const rest = new Vector3(-0.45, 4.75, 0.5);
   const pickup = new Vector3();
   const drop = new Vector3(1.05, 4.75, -0.7);
@@ -26,6 +26,7 @@ export function createMachineAnimation(
     ]),
   );
   let outgoing: Mesh | undefined;
+  let incoming: Mesh | undefined;
   const shiftStarts = new Map<Mesh, number>();
   let lastPhase: CoiniePhase = 'ready';
   const fingers = claw.children.filter((child) =>
@@ -41,9 +42,54 @@ export function createMachineAnimation(
       finger.scale.x = 1.5 - closed * 0.25;
     });
   }
+  // u runs 0..1: fall from under the ceiling, then a small bounce on landing.
+  function poseDrop(target: Mesh, u: number) {
+    const home = homes.get(target)!;
+    target.position.copy(home.position);
+    target.quaternion.copy(home.quaternion);
+    if (u < 0.625) {
+      const fall = u / 0.625;
+      target.position.y += (3.3 - home.position.y) * (1 - fall * fall);
+      target.rotateX((1 - fall) * 5);
+    } else if (u < 1) {
+      target.position.y += Math.sin(((u - 0.625) / 0.375) * Math.PI) * 0.22;
+    }
+  }
+  function recycleIntoPit(target: Mesh) {
+    recycle(target);
+    homes.get(target)!.parent.add(target);
+    target.visible = true;
+  }
+  // A clicked tray ball rolls forwards off the rack while the others pack in.
+  let discarding:
+    | { ball: Mesh; x: number; elapsed: number; starts: Map<Mesh, number> }
+    | undefined;
+  let discardDrop: { ball: Mesh; elapsed: number } | undefined;
   head.copy(rest);
   poseHead(0);
   return {
+    get trayBalls() {
+      return [...tray];
+    },
+    get busy() {
+      return discarding !== undefined || discardDrop !== undefined;
+    },
+    discard(target: Mesh) {
+      const index = tray.indexOf(target);
+      if (lastPhase !== 'ready' || this.busy || index < 0) return false;
+      tray.splice(index, 1);
+      discarding = {
+        ball: target,
+        x: target.position.x,
+        elapsed: 0,
+        starts: new Map(
+          tray
+            .slice(index)
+            .map((candidate) => [candidate, candidate.position.x]),
+        ),
+      };
+      return true;
+    },
     get landings() {
       return landings;
     },
@@ -56,7 +102,7 @@ export function createMachineAnimation(
     get full() {
       return tray.length >= 5;
     },
-    update(phase: CoiniePhase, progress: number) {
+    update(phase: CoiniePhase, progress: number, delta = 0) {
       const t = smooth(progress);
       if (phase === 'ejecting' && lastPhase !== phase) {
         outgoing = tray.shift();
@@ -99,12 +145,40 @@ export function createMachineAnimation(
           candidate.rotation.z -= (end - candidate.position.x) / 0.43;
           candidate.position.x = end;
         });
-        const home = homes.get(outgoing)!;
-        home.parent.add(outgoing);
-        outgoing.position.copy(home.position);
-        outgoing.quaternion.copy(home.quaternion);
-        outgoing.visible = true;
+        // The thrown-away ball returns as a different ingredient, dropped in from the top.
+        recycleIntoPit(outgoing);
+        incoming = outgoing;
         outgoing = undefined;
+      }
+      if (phase === 'rolling' && incoming) {
+        poseDrop(incoming, progress / 0.4);
+        if (progress >= 1) incoming = undefined;
+      }
+      if (discarding) {
+        discarding.elapsed += delta;
+        const { ball: leaving, x, elapsed, starts } = discarding;
+        starts.forEach((start, candidate) => {
+          const nextX = start + 0.77 * smooth(Math.min(elapsed / 0.6, 1));
+          candidate.rotation.z -= (nextX - candidate.position.x) / 0.43;
+          candidate.position.x = nextX;
+        });
+        if (elapsed < 0.45) {
+          const u = smooth(elapsed / 0.45);
+          leaving.position.set(x, 0.83 - u * 0.37, 1.97 + u * 0.95);
+        } else {
+          const u = smooth(Math.min((elapsed - 0.45) / 1.15, 1));
+          leaving.position.set(x, 0.46, 2.92 + u * 23 + u ** 8 * 100);
+        }
+        leaving.rotation.x = elapsed * 15;
+        if (elapsed >= 1.6) {
+          recycleIntoPit(leaving);
+          discardDrop = { ball: leaving, elapsed: 0 };
+          discarding = undefined;
+        }
+      } else if (discardDrop) {
+        discardDrop.elapsed += delta;
+        poseDrop(discardDrop.ball, discardDrop.elapsed / 1.28);
+        if (discardDrop.elapsed >= 1.28) discardDrop = undefined;
       }
       if (phase === 'lowering' && lastPhase !== phase) {
         ball = pitBalls

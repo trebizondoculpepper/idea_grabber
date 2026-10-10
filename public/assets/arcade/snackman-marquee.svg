@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<rect x="4" y="4" width="552" height="92" fill="#171023" stroke="#398aff" stroke-width="8"/>
+<path d="M60 50L88 34A32 32 0 1 0 88 66z" fill="#ffdf20"/>
+<g fill="#fff9e4"><circle cx="110" cy="50" r="5"/><circle cx="450" cy="50" r="5"/><circle cx="480" cy="50" r="5"/></g>
+<text x="280" y="74" font-size="62" fill="#ffdf20" stroke-width="10" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">SNACK-MAN</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#be68f4"/>
+<rect x="56" y="34" width="88" height="200" fill="#fff9e4" stroke="#171023" stroke-width="4"/>
+<g stroke="#171023" stroke-width="3">
+<rect x="64" y="42" width="72" height="56" fill="#398aff"/><circle cx="100" cy="72" r="18" fill="#ffdf20"/><path d="M90 78q10 8 20 0" fill="none"/>
+<rect x="64" y="106" width="72" height="56" fill="#ff38a8"/><circle cx="92" cy="136" r="18" fill="#ffdf20"/><circle cx="116" cy="134" r="16" fill="#ffb52e"/>
+<rect x="64" y="170" width="72" height="56" fill="#20dccc"/><circle cx="100" cy="196" r="20" fill="#ffdf20"/><path d="M86 206q14 14 28 0z" fill="#171023"/></g>
+<text x="28" y="140" font-size="16" fill="#fff9e4" stroke-width="4" transform="rotate(-90 28 140)" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">TOP GRABBER</text>
+<text x="172" y="140" font-size="16" fill="#fff9e4" stroke-width="4" transform="rotate(90 172 140)" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">OF THE WEEK</text>
+</svg>

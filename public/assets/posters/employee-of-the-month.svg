@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#ffb52e"/>
+<rect x="40" y="60" width="120" height="120" fill="#fff9e4" stroke="#171023" stroke-width="5"/>
+<circle cx="100" cy="120" r="44" fill="#ffdf20" stroke="#171023" stroke-width="5"/><circle cx="100" cy="120" r="34" fill="none" stroke="#c9a400" stroke-width="3"/>
+<circle cx="86" cy="110" r="9" fill="#fff" stroke="#171023" stroke-width="3"/><circle cx="114" cy="110" r="9" fill="#fff" stroke="#171023" stroke-width="3"/><circle cx="88" cy="112" r="4"/><circle cx="112" cy="112" r="4"/>
+<path d="M82 134q18 16 36 0z" fill="#171023"/>
+<text x="100" y="34" font-size="15" fill="#171023" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">EMPLOYEE OF</text><text x="100" y="52" font-size="15" fill="#171023" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">THE MONTH</text>
+<text x="100" y="212" font-size="28" fill="#fff9e4" stroke-width="6" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">COINIE</text>
+<text x="100" y="240" font-size="13" fill="#171023" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">47 MONTHS RUNNING</text>
+</svg>

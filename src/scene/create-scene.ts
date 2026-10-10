@@ -1,4 +1,5 @@
 import { AmbientLight, Color, DirectionalLight, Scene } from 'three';
+import type { Mesh } from 'three';
 import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
 import { createMachineAnimation } from './animate-machine';
@@ -55,9 +56,16 @@ export function createScene() {
       return machine.delivered;
     },
     get canInsertCoinie() {
-      return cycle.phase === 'ready';
+      return cycle.phase === 'ready' && !machine.busy;
+    },
+    get trayBalls() {
+      return machine.trayBalls;
+    },
+    discardBall(ball: Mesh) {
+      return machine.discard(ball);
     },
     activateCoinie() {
+      if (machine.busy) return false;
       return cycle.start(machine.full);
     },
     update(elapsed: number, delta = 0, reducedMotion = false) {
@@ -70,7 +78,7 @@ export function createScene() {
         coinie.hero.visible = false;
         generation = cycle.generation;
       }
-      machine.update(cycle.phase, cycle.progress);
+      machine.update(cycle.phase, cycle.progress, delta);
       if (cycle.phase === 'walking' && replacement !== generation) {
         coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
         replacement = generation;

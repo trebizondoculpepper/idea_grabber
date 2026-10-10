@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<rect x="4" y="4" width="552" height="92" fill="#171023" stroke="#39c3ff" stroke-width="8"/>
+<g fill="#fff9e4"><circle cx="40" cy="20" r="3"/><circle cx="520" cy="80" r="3"/><circle cx="110" cy="84" r="2"/><circle cx="460" cy="16" r="2"/></g>
+<text x="280" y="66" font-size="50" fill="#56edb2" stroke-width="9" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">SPACE INVOICERS</text>
+<text x="280" y="90" font-size="16" fill="#ffdf20" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">PAYMENT IS DUE · INSERT COIN</text>
+</svg>

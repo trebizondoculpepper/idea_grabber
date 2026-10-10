@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#ffdf20"/>
+<rect x="44" y="40" width="112" height="140" fill="#ff38a8" stroke="#171023" stroke-width="5"/>
+<rect x="56" y="54" width="88" height="80" fill="#20dccc" stroke="#171023" stroke-width="4"/>
+<g fill="#ffb52e" stroke="#171023" stroke-width="2"><circle cx="70" cy="122" r="9"/><circle cx="88" cy="124" r="9"/><circle cx="130" cy="122" r="9"/></g>
+<path d="M98 120l12-40h14l-6 20 14 18" fill="#398aff" stroke="#171023" stroke-width="3"/><circle cx="117" cy="72" r="9" fill="#f0c890" stroke="#171023" stroke-width="3"/>
+<path d="M30 30l140 160M170 30L30 190" stroke="#c41f3a" stroke-width="10" opacity=".85"/>
+<text x="100" y="214" font-size="15" fill="#171023" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">PLEASE DO NOT</text>
+<text x="100" y="242" font-size="15" fill="#c41f3a" stroke-width="0" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">CLIMB INSIDE</text>
+</svg>

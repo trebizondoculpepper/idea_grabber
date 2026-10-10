@@ -37,3 +37,23 @@ export function createCapsuleAppearances(count: number, random = Math.random) {
     colour: capsuleColours[Math.floor(random() * capsuleColours.length)],
   }));
 }
+
+type Ingredient = (typeof catalogue)[number];
+
+// A recycled ball takes a fresh random ingredient, never the one just thrown
+// away, and avoids glyphs already showing in the machine where possible.
+export function createRecycledAppearance(
+  discarded: Ingredient,
+  inUse: Ingredient[],
+  random = Math.random,
+) {
+  const shown = new Set(inUse.map((ingredient) => ingredient.emoji));
+  shown.add(discarded.emoji);
+  let choices = catalogue.filter((entry) => !shown.has(entry.emoji));
+  if (choices.length === 0)
+    choices = catalogue.filter((entry) => entry.id !== discarded.id);
+  return {
+    ingredient: choices[Math.floor(random() * choices.length)],
+    colour: capsuleColours[Math.floor(random() * capsuleColours.length)],
+  };
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<rect x="4" y="4" width="552" height="92" fill="#572299" stroke="#171023" stroke-width="8"/>
+<path d="M40 30l20-11 20 11-20 11zM40 30v22l20 11V41zM80 30v22L60 63V41z" fill="#ff7138" stroke="#171023" stroke-width="3"/>
+<path d="M480 30l20-11 20 11-20 11zM480 30v22l20 11V41zM520 30v22l-20 11V41z" fill="#20dccc" stroke="#171023" stroke-width="3"/>
+<text x="280" y="78" font-size="68" fill="#ff7138" stroke-width="12" font-family="Arial Black,Arial,sans-serif" font-weight="900" stroke="#171023" stroke-linejoin="round" paint-order="stroke" text-anchor="middle">L-BERT</text>
+</svg>

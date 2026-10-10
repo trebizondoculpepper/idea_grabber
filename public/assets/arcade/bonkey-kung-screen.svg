@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<rect width="256" height="256" fill="#0b0618"/>
+<g fill="#ff38a8" stroke="#171023" stroke-width="2"><path d="M10 230h236v10H10z"/><path d="M10 172l236 -12v10L10 182z"/><path d="M10 112l236 12v10L10 122z"/><path d="M10 62h150v10H10z"/></g>
+<g stroke="#39c3ff" stroke-width="3"><path d="M200 230v-64M214 230v-64M200 214h14M200 198h14M200 182h14"/><path d="M40 176v-58M54 176v-58M40 160h14M40 144h14M40 130h14"/></g>
+<g transform="translate(60 40)" stroke="#171023" stroke-width="3"><ellipse rx="22" ry="20" fill="#8a6328"/><ellipse cy="6" rx="12" ry="9" fill="#e8a070"/><circle cx="-7" cy="-6" r="3" fill="#fff"/><circle cx="7" cy="-6" r="3" fill="#fff"/><path d="M-22 0l-14 14M22 0l14 14" stroke-width="7"/></g>
+<g fill="#8a6328" stroke="#171023" stroke-width="2"><ellipse cx="130" cy="108" rx="10" ry="8"/><ellipse cx="90" cy="164" rx="10" ry="8"/></g>
+<g transform="translate(120 218)"><rect x="-6" y="-8" width="12" height="16" fill="#398aff"/><circle cy="-13" r="6" fill="#e8a070"/><path d="M-7-17h14v-4h-14z" fill="#ff545e"/></g>
+<text x="128" y="56" font-size="18" text-anchor="middle" fill="#ff38a8" font-family="Arial Black,Arial,sans-serif" font-weight="900">HELP!</text>
+<text x="190" y="40" font-size="14" font-family="monospace" font-weight="700" fill="#fff9e4">BONK!</text>
+</svg>

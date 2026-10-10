@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="100" viewBox="0 0 560 100">
+<rect x="4" y="4" width="552" height="92" fill="#171023" stroke="#fff9e4" stroke-width="8"/>
+<path d="M30 30l20-8 18 10 2 22-16 18-22-6-8-18z M520 40l14 4 6 16-12 14-16-4-4-16z" fill="none" stroke="#fff9e4" stroke-width="4"/>
+<text x="280" y="72" font-size="60" fill="#fff9e4" stroke="#398aff" stroke-width="6" paint-order="stroke" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" font-style="italic">HASTEROIDS</text>
+</svg>

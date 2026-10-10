@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+<rect x="3" y="3" width="194" height="254" stroke="#171023" stroke-width="6" fill="#ff38a8"/>
+<path d="M60 90h80l-10 130H70z" fill="#398aff" stroke="#171023" stroke-width="5"/>
+<path d="M60 90h80v-10H60z" fill="#fff9e4" stroke="#171023" stroke-width="4"/>
+<path d="M104 80V40l30-14" fill="none" stroke="#fff9e4" stroke-width="9"/><path d="M104 80V40l30-14" fill="none" stroke="#ff545e" stroke-width="4" stroke-dasharray="6 6"/>
+<path d="M72 120h56M74 150h52" stroke="#fff9e4" stroke-width="5"/>
+<text x="100" y="186" font-size="22" fill="#ffdf20" stroke-width="5" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">FREE</text>
+<text x="96" y="248" font-size="30" fill="#ffdf20" stroke-width="6" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">REFILLS</text>
+<text x="176" y="236" font-size="60" fill="#fff9e4" stroke-width="6" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" stroke="#171023" stroke-linejoin="round" paint-order="stroke">*</text>
+</svg>
