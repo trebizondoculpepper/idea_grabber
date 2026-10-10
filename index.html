@@ -14,14 +14,41 @@
         aria-label="Idea Grabber: a colourful 3D claw machine with colourful capsules with game-genre icons, Bulbee the lightbulb and Coinie the coin, in a cartoon arcade."
       ></canvas>
       <h1 class="visually-hidden">Idea Grabber</h1>
-      <button
-        id="mute-sound"
-        class="sound-toggle"
-        type="button"
-        aria-pressed="false"
-      >
-        Mute sound
-      </button>
+      <div class="audio-controls" role="group" aria-label="Audio controls">
+        <button
+          id="music-toggle"
+          class="music-control"
+          type="button"
+          aria-label="Stop music"
+          data-playing="false"
+        >
+          <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#159447" d="M5 3v18l16-9z" />
+          </svg>
+          <svg class="stop-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#000" d="M4 4h16v16H4z" />
+          </svg>
+        </button>
+        <button
+          id="music-next"
+          class="music-control"
+          type="button"
+          aria-label="Next song"
+          title="Next song"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#000" d="M4 3v18l13-9zM18 3h3v18h-3z" />
+          </svg>
+        </button>
+        <button
+          id="mute-sound"
+          class="sound-toggle"
+          type="button"
+          aria-pressed="false"
+        >
+          Mute sound
+        </button>
+      </div>
       <button id="insert-coinie" class="keyboard-action" type="button">
         Insert Coinie
       </button>

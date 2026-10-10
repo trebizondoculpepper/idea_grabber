@@ -146,6 +146,19 @@
       "requirements": "Attribution optional; include creator and source as courtesy when used.",
       "evidence": "assets/audio/sources/xathien-steampunk-voices/SOURCE.json",
       "used_files": []
+    },
+    {
+      "id": "generated-arcade-bgm",
+      "name": "Arcade background music \u2014 40 tracks",
+      "creator": "Music generation LLM (delivery; provider/model not recorded)",
+      "source": "docs/prompts/music-generation.md",
+      "license": "Not recorded in delivery",
+      "status": "used",
+      "credit_required": null,
+      "requirements": "Retain track titles and delivered reference metadata for the credits mission. Confirm generation provenance and usage terms before publication.",
+      "evidence": "public/audio/bgm/manifest.json",
+      "outputs": ["public/audio/bgm/*.mp3"],
+      "notes": "BPM metadata retained; Space Snack Attack and Raccoon Tail Romp have unknown BPM."
     }
   ]
 }

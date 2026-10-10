@@ -5,6 +5,7 @@ import { bindCoinieSpeech } from '../ui/coinie-speech';
 import { bindBulbeeSpeech } from '../ui/bulbee-speech';
 import { bindCoinieInput } from '../input/coinie-input';
 import { bindSound } from '../audio/bind-sound';
+import { createMusicDance } from '../scene/music-dance';
 
 export function startScene(canvas: HTMLCanvasElement) {
   const renderer = new WebGLRenderer({ canvas, antialias: false });
@@ -24,6 +25,7 @@ export function startScene(canvas: HTMLCanvasElement) {
   const speech = bindBulbeeSpeech(canvas, camera, world);
   const coinieSpeech = bindCoinieSpeech(canvas, camera, world);
   const sound = bindSound();
+  const dance = createMusicDance(world.scene);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let elapsed = 0;
   let lastTime: number | undefined;
@@ -80,7 +82,16 @@ export function startScene(canvas: HTMLCanvasElement) {
     );
     camera.lookAt(0, 2.85, 0);
     ps1Uniforms.snapPixels.value = reducedMotion.matches ? 0 : 1;
+    dance.restore();
     world.update(elapsed, delta, reducedMotion.matches);
+    const music = sound.musicTiming;
+    dance.update(
+      music.beats,
+      music.playing && !sound.diagnostics.muted && !reducedMotion.matches,
+      world.coiniePhase === 'ready'
+        ? [world.bulbee, world.coinie]
+        : [world.bulbee],
+    );
     world.scene.updateMatrixWorld();
     camera.updateMatrixWorld();
     input.update();
