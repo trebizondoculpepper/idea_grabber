@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "created_at": "2026-10-10T21:36:33.927975Z",
+      "decision_id": "01M4KVY2M79DQN6RVZAMB9P9W3",
+      "final_answer": "The user confirmed a credits page listing and linking all resources used, and added a cover version of Toto\u2019s Dune (1984) closing theme as credits music. Preserve game session and maintain attribution records; cover production and permission evidence remain tracked prerequisites.",
+      "input_key": "credits_scope",
+      "mission_id": "01M4KVWVX8GF1N6R2N2EK74RNW",
+      "mission_slug": "credits-and-resource-attribution-01M4KVWV",
+      "opened_by": "cli",
+      "options": [],
+      "origin_flow": "specify",
+      "other_answer": false,
+      "question": "Confirm mission scope: players can open an accessible credits page from the game and return without losing their session; it links all third-party resources actually used, includes required attribution and licence notices, and uses a maintained register distinguishing downloaded candidates from shipped resources.",
+      "rationale": null,
+      "resolved_at": "2026-10-10T21:38:45.412084Z",
+      "resolved_by": null,
+      "slot_key": "specify.scope.intent-summary",
+      "status": "resolved",
+      "step_id": null,
+      "summary_json": null
+    }
+  ],
+  "mission_id": "01M4KVWVX8GF1N6R2N2EK74RNW",
+  "version": 1
+}

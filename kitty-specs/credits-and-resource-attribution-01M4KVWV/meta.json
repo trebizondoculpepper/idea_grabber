@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-10T21:35:54.305524+00:00",
+  "flattened": false,
+  "friendly_name": "Credits and resource attribution",
+  "mid8": "01M4KVWV",
+  "mission_id": "01M4KVWVX8GF1N6R2N2EK74RNW",
+  "mission_number": null,
+  "mission_slug": "credits-and-resource-attribution-01M4KVWV",
+  "mission_type": "software-dev",
+  "purpose_context": "Players should be able to see and follow links to the engine and resource creators whose work appears in Idea Grabber. Contributors need a maintained source register that distinguishes downloaded candidates from shipped resources and preserves required attribution.",
+  "purpose_tldr": "Add a credits page and maintain a record of third-party resources and attribution requirements.",
+  "slug": "credits-and-resource-attribution-01M4KVWV",
+  "target_branch": "feat/arcade-world",
+  "topology": "single_branch"
+}

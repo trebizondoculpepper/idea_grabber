@@ -1,0 +1,442 @@
+{
+  "author": "xathien",
+  "source": "https://opengameart.org/content/steampunk-fantasy-voices",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "Crossbowman_See_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_See_001_0.wav",
+      "sha256": "14ef723e0a11d83adbb1dd3e0f8dff5901b651c66a949173f06581c583501922"
+    },
+    {
+      "file": "Alligator_Attack_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Alligator_Attack_001.wav",
+      "sha256": "bd70ec15a2a4184a8ce224219a052e010d41bd98b603c4c5de4721219e45f0c1"
+    },
+    {
+      "file": "Alligator_Kill_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Alligator_Kill_001.wav",
+      "sha256": "fd8d81fa3cd2aa981bb4041c8b65a9f1dead770b2770f16ce04a94b59fb3a523"
+    },
+    {
+      "file": "Archer_Attack_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Attack_001.wav",
+      "sha256": "c366088f82fe7b5ce17ee043f67dbe569a7c296e71f61c204be25c5467d86324"
+    },
+    {
+      "file": "Archer_Attack_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Attack_002.wav",
+      "sha256": "f6235db31711d31dc0a7b8a05775ae8cb4367a2ebeafc47c5cdc4fcdb093e491"
+    },
+    {
+      "file": "Archer_Die_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Die_001.wav",
+      "sha256": "04535661961b20fc3e0b887fdfd658abf724d6a525a4c7fbfb7998971ed01a67"
+    },
+    {
+      "file": "Archer_Kill_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Kill_001.wav",
+      "sha256": "25bef5f78d592d0eee1fca76ecc643c8314ce5f67a1f5ae6f6bd0b75e0e19716"
+    },
+    {
+      "file": "Archer_Kill_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Kill_002.wav",
+      "sha256": "535ec9ae1a2b14be8b4109fefe0ee49bf32ccd460430c63ed7d1ca79f40abdf6"
+    },
+    {
+      "file": "Archer_See_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_See_001.wav",
+      "sha256": "8276707e7481674012d017e0b139bc33676b831e534a690306b091d99a35aeb1"
+    },
+    {
+      "file": "Archer_Taunt_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Archer_Taunt_001.wav",
+      "sha256": "13be04c2470c958a1cca18d7503dcccb0ba68f48a5728b61bded45b14ca8cac1"
+    },
+    {
+      "file": "Cow_Die_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Cow_Die_001.wav",
+      "sha256": "58b1d6da56d3048bd111d8c511cd3c46629271598d1a53cb5fc09771c5a2f8cf"
+    },
+    {
+      "file": "Cow_Hurt_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Cow_Hurt_001.wav",
+      "sha256": "f016e5fa6b269c8da178c5a7f08279a2a3afa034170acc6395f9f0761c3d0cf7"
+    },
+    {
+      "file": "Cow_Hurt_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Cow_Hurt_002.wav",
+      "sha256": "91e88d8a7bfdae3ce5abc05696a0a2336c0004c004f5c2eebbcf9c922f150e1b"
+    },
+    {
+      "file": "Cow_See_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Cow_See_001.wav",
+      "sha256": "e01739081b8b4e04913e319dc9c4e9e4a3731f9d1848bfa9ca4227ad2271ab0e"
+    },
+    {
+      "file": "Crossbowman_Attack_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Attack_001.wav",
+      "sha256": "c583285ca6fd4238483c8b6f3af1d33c9e8380fe09a1ca6feaf16027f61e0246"
+    },
+    {
+      "file": "Crossbowman_Attack_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Attack_002.wav",
+      "sha256": "01cf25b13cdcb503fab02bb6d97d536104b1efc7d591f1d58846768a0d27a4c3"
+    },
+    {
+      "file": "Crossbowman_Die_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Die_001.wav",
+      "sha256": "5ea19459a52c768093b522e4e0376cef5617cd15cc98696a1ca958f18f480dae"
+    },
+    {
+      "file": "Crossbowman_Kill_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Kill_001.wav",
+      "sha256": "63e1f08c330f7dfe26b09a0da8c41dae7087dc58bbefb03fc0d0bfeb671bf395"
+    },
+    {
+      "file": "Crossbowman_Kill_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Kill_002.wav",
+      "sha256": "d5ae1123083b5b08ac248395b2fb76fff9fcd44179e76374b945ff1355041634"
+    },
+    {
+      "file": "Crossbowman_Overwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Overwhelmed_001_0.wav",
+      "sha256": "ce09ac38085b3fcdd97241bf6e23d664197d708727487c95d22e2d3795a04322"
+    },
+    {
+      "file": "Crossbowman_Semiwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Semiwhelmed_001_0.wav",
+      "sha256": "cc03d2d995b5b092e838554d6364a886f652de0e9f5bf863bd663e48c811436b"
+    },
+    {
+      "file": "Crossbowman_Taunt_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Crossbowman_Taunt_001_0.wav",
+      "sha256": "03d89108f06983810aca128b601649afd4e9715ec9807b3a7902b1b575f5f39b"
+    },
+    {
+      "file": "Dragon_Kill_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Dragon_Kill_001_0.wav",
+      "sha256": "f705b28fccfc489f69b95193e417a769af91e9e1077ce26229b137af75af0bf8"
+    },
+    {
+      "file": "Dragon_See_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Dragon_See_001_0.wav",
+      "sha256": "829d60302745c3ce01075533ce6fb8b5b65e3696bb7faf13def1b86e885856d1"
+    },
+    {
+      "file": "Dragon_See_002_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Dragon_See_002_0.wav",
+      "sha256": "f705acb3cac53ee943516d0ddcf1d096a87d3a2cfaa154386e452d6e9e42765d"
+    },
+    {
+      "file": "Dragon_Taunt_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Dragon_Taunt_001_0.wav",
+      "sha256": "273b0668598ef52ea0a94f50ba1ddc2040e1d6b4d8ccd21d3b5ce9fb241810b9"
+    },
+    {
+      "file": "Guard_Attack_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Guard_Attack_001_0.wav",
+      "sha256": "3db8016b20029bdede11a1a69652bdbe278f3ce9cbaef6e7b8096ae79753eeec"
+    },
+    {
+      "file": "Guard_Die_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Guard_Die_001_0.wav",
+      "sha256": "85dc50f2afa866506b4cb837b9acd752aea2959e225ded9b261277bec297c833"
+    },
+    {
+      "file": "Guard_Kill_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Guard_Kill_001_0.wav",
+      "sha256": "a406273392b6da9de312869d7968f3f5b23480818400b4fc94f8d6ffbec09d9e"
+    },
+    {
+      "file": "Guard_See_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Guard_See_001_0.wav",
+      "sha256": "5dbb66773375ae9317c867559dd24d4d108a0781e92c516a9ca6901d5a596421"
+    },
+    {
+      "file": "Guard_See_002_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Guard_See_002_0.wav",
+      "sha256": "1c58ece291326bda49f56837630ca6a49f13d7a6faf3b1ade4cffbe1b57ace13"
+    },
+    {
+      "file": "Hero_Attack_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Attack_001_0.wav",
+      "sha256": "5da51c4203fbc0e89396dcb6de316964221d1be8b444e6e90482002a797266cd"
+    },
+    {
+      "file": "Hero_Attack_002_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Attack_002_0.wav",
+      "sha256": "e05e51cf0eea3870d11365cdac573ba9673fe961e4281899ef33df88243e418a"
+    },
+    {
+      "file": "Hero_Attack_003_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Attack_003_0.wav",
+      "sha256": "361b27cfc781e4a6f8cddfc6609f2f9e1524cdf4a00e8f30647f78fe10b4ce7f"
+    },
+    {
+      "file": "Hero_Bomb_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Bomb_001_0.wav",
+      "sha256": "a2029454380775bc7da100ec5acebcb35171ebe511b83dce559f45a91ec0b197"
+    },
+    {
+      "file": "Hero_Die_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Die_001_0.wav",
+      "sha256": "4846bde899be28e63c2733860f1e4f723677035d6bddb886ad11767f817c971c"
+    },
+    {
+      "file": "Hero_Kill_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Kill_001_0.wav",
+      "sha256": "e415262bc2b453c1392ab14af969c54ff128b24f54f72155192b409bf68e633f"
+    },
+    {
+      "file": "Hero_Overwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Overwhelmed_001_0.wav",
+      "sha256": "f5efed1ddd813111690acbb4fe07d9d9fbc8402ec419cef40ba3511308f395fb"
+    },
+    {
+      "file": "Hero_See_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_See_001_0.wav",
+      "sha256": "ef21b89b2d258855f72f7602f9679d6944f9050b33faa137ae7524c7edca6a54"
+    },
+    {
+      "file": "Hero_Semiwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Semiwhelmed_001_0.wav",
+      "sha256": "5be21f828060222310ef3d45eaefec3e749f7b52bef0adeb879aa4083b71f9b5"
+    },
+    {
+      "file": "Hero_Taunt_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Hero_Taunt_001_0.wav",
+      "sha256": "87730132a644ce9c10dfe24f09be507d3bc75b67f1cb8011c9d34439306f33db"
+    },
+    {
+      "file": "Knight_Attack_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Attack_001_0.wav",
+      "sha256": "847fd5eaa9905bf53038542f1bcd264bd39eea3ecc4bb7fee26bf8323a70f2b7"
+    },
+    {
+      "file": "Knight_Attack_002_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Attack_002_0.wav",
+      "sha256": "2fd8f5e40ed2cfe16322a5650daf440a245d50dce431b4528f2a0655c0d4b3e2"
+    },
+    {
+      "file": "Knight_Bomb_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Bomb_001_0.wav",
+      "sha256": "533a1348731b8693754d2b9fbf6c0e3e633308aed4db7b811f76f668b9afd4ff"
+    },
+    {
+      "file": "Knight_Die_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Die_001_0.wav",
+      "sha256": "d3f5479f01b63efa00d1b08ef6ce1b760fb053ffd035f35d3620b8088ef5c387"
+    },
+    {
+      "file": "Knight_Kill_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Kill_001_0.wav",
+      "sha256": "efe9f52450e71abd2aea251d2fa52e4ad39d2c1402a0d67873de4aac282e09b6"
+    },
+    {
+      "file": "Knight_Overwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Overwhelmed_001_0.wav",
+      "sha256": "4deeae9370750a394aaefba866c2e10f5c9b4a765df1b2bef76869764939fe94"
+    },
+    {
+      "file": "Knight_Resurrect_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Resurrect_001_0.wav",
+      "sha256": "994b562e02389926df9bd8c3f4102ffe3b37fc697488bd103e9ffbfaef1d9d2d"
+    },
+    {
+      "file": "Knight_See_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_See_001_0.wav",
+      "sha256": "337d23e768404587fb1edda6afe0da151e60124464f5c382cf8944d5df1157ae"
+    },
+    {
+      "file": "Knight_Semiwhelmed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Semiwhelmed_001_0.wav",
+      "sha256": "9788adbfa2439d88606fd026897373411702b403c7b20b05a0019cc678322e93"
+    },
+    {
+      "file": "Knight_Taunt_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Knight_Taunt_001_0.wav",
+      "sha256": "202781003520ccc83780bdc5754b8298ac8c435fe659c086510dbe9863cf2e7f"
+    },
+    {
+      "file": "Minion_Attack_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Attack_001_0.wav",
+      "sha256": "13bca5db70be299758b2d6b14a3a895d12356f3c0074c4df4bd350dd82c07880"
+    },
+    {
+      "file": "Minion_Blind_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Blind_001_0.wav",
+      "sha256": "a42cfbbe2a7e38d8ce63f8c9e54f5df9e378a0c76f4bc9f302e7bab75d145cdf"
+    },
+    {
+      "file": "Minion_Attack_002_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Attack_002_0.wav",
+      "sha256": "34badbac1aecb53e0908ea77fef400116081a3e71afce26411765dca41cc0ac3"
+    },
+    {
+      "file": "Minion_Bombed_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Bombed_001_0.wav",
+      "sha256": "0ed41b51b8607e63e066b40d8f8df3bf9b4fb259c2720c8e5c5de39220aca20e"
+    },
+    {
+      "file": "Minion_DieAcid_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieAcid_001_0.wav",
+      "sha256": "a450c34d55af6814163e84cb00d3f5cea4ff877769455c2120ffa1cd1a0fbedf"
+    },
+    {
+      "file": "Minion_DieCliff_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieCliff_001_0.wav",
+      "sha256": "cd7276bf3f4b4b07b1a085e8ffd14ffd40d46c3e1484f1f40143c25ecc18f045"
+    },
+    {
+      "file": "Minion_DieCrushing_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieCrushing_001_0.wav",
+      "sha256": "b61471c8df9bcbaf24e0a9c25b76fb8053e975c9016cffc2381a6508936c9e2c"
+    },
+    {
+      "file": "Minion_DieImpact_001_0.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieImpact_001_0.wav",
+      "sha256": "f89a33587432542d2a7418b65f78f75683958c2049854d872399b5079c28e573"
+    },
+    {
+      "file": "Minion_DiePaladin_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DiePaladin_001.wav",
+      "sha256": "0c8c0cef2b68b8301793eb9c7c5d4bce7c6a78f12834f11b2b49f500738b4458"
+    },
+    {
+      "file": "Minion_DieSpike_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieSpike_001.wav",
+      "sha256": "6cce7cb20ae2fff121df290b840026f4c0f8c3b2a79ab976b458ebd49cd1dd6f"
+    },
+    {
+      "file": "Minion_DieSpike_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieSpike_002.wav",
+      "sha256": "195bcc09182710d8119477fe9b5d3ac74937f192893fdc73b1ac276da2aceaad"
+    },
+    {
+      "file": "Minion_DieSword_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_DieSword_001.wav",
+      "sha256": "b5498d8b5db52ecbdd1a1e20149fe4a3f294ac1fb63f7a05588fd9bfb97e41bb"
+    },
+    {
+      "file": "Minion_Drunk_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Drunk_001.wav",
+      "sha256": "8f4b79cc0a7baa3b163975baf26a2783f9e1d071b8f307cd4c8b7dbdecfaf9b1"
+    },
+    {
+      "file": "Minion_Feared_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Feared_001.wav",
+      "sha256": "80f1b10afe3766109b33f09b38faa66bf800412b2ec3ce785eb6f76d1592135d"
+    },
+    {
+      "file": "Minion_FixTrap_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_FixTrap_001.wav",
+      "sha256": "12665d0125acc960fe9599c10eae9545562dc0a22959868941dd9d58192c59eb"
+    },
+    {
+      "file": "Minion_Medkit_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Medkit_001.wav",
+      "sha256": "a60a03ec9a1b4c511b684b470eefd91ef78dcecbb3926b59d61c2deb38472e70"
+    },
+    {
+      "file": "Minion_OnFire_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_OnFire_001.wav",
+      "sha256": "ad09cdf33729c9c1320057909b19fa0b5e30858e58092311891cbda24b17ace9"
+    },
+    {
+      "file": "Minion_OnFire_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_OnFire_002.wav",
+      "sha256": "582a7f75acc7cdaaf9a20ccecea0a1c0d576869498c238b55a2d2a11d762e937"
+    },
+    {
+      "file": "Minion_Resurrect_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Resurrect_001.wav",
+      "sha256": "bc2f4bfb9e23a0d12a4903e020563fc805013ec4cc5d2443dbb6cccccb4f1be5"
+    },
+    {
+      "file": "Minion_Sword_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Sword_001.wav",
+      "sha256": "fca9d7caae94118cd479f26f29cc017c5ed27d14254157a24dfae588a36fb37d"
+    },
+    {
+      "file": "Minion_Sword_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Sword_002.wav",
+      "sha256": "c7ecc8316b73a26cf95fc4ab08acc89d6b4dcfc0a845ae111520d70715431bf3"
+    },
+    {
+      "file": "Minion_Sword_003.wav",
+      "download": "https://opengameart.org/sites/default/files/Minion_Sword_003.wav",
+      "sha256": "fcc1425384a223fb7d695c3a40205bdb79bd3c4aa761ab1b4ca51ab19dcd2171"
+    },
+    {
+      "file": "Paladin_Attack_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Attack_001.wav",
+      "sha256": "cf3ea7bb8e70de6db445723a01c52bcdfcbc277a3822729f764bbd43429a2150"
+    },
+    {
+      "file": "Paladin_Kill_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Kill_001.wav",
+      "sha256": "a1f13f6a3ac9a75b0bd30ce1cd5b88125684a7eed3d7ee45a76058ed90dd7086"
+    },
+    {
+      "file": "Paladin_Kill_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Kill_002.wav",
+      "sha256": "281a96cfbf324c70221084e2589a859c55e88ccef5e86056740179a7628cec94"
+    },
+    {
+      "file": "Paladin_See_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_See_001.wav",
+      "sha256": "dcac447116e8b2f416b0a97d55e311d542684f46f906f02ea6021b184a6d1df6"
+    },
+    {
+      "file": "Paladin_Sleepy_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Sleepy_001.wav",
+      "sha256": "2b029badd857e12f0af63936427991dd71b535f365821f826a283c97b3021811"
+    },
+    {
+      "file": "Paladin_Taunt_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Taunt_001.wav",
+      "sha256": "99b5a88269f64996e3d0f2134da9d40f1a75140b85f812db7b51c234b75d2a1e"
+    },
+    {
+      "file": "Paladin_Tired_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Paladin_Tired_001.wav",
+      "sha256": "2dec9fc5212fcd41842ade56e6013e8d6484f7b6caee93ba038198e84612a606"
+    },
+    {
+      "file": "Pikeman_Attack_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Attack_001.wav",
+      "sha256": "017b697b3150b867994c9604621e51706643adc6e1755a1c581453afdd4d7ec6"
+    },
+    {
+      "file": "Pikeman_Bomb_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Bomb_001.wav",
+      "sha256": "4dd821ab1d7d5fe01c0d770d3fea8038c19c83d3a5d40dc50ac7edf314ce3a0e"
+    },
+    {
+      "file": "Pikeman_Bomb_002.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Bomb_002.wav",
+      "sha256": "58b9884985effb97bcad569d9f65db251be2d30c2aea78ca1c056afc43336bba"
+    },
+    {
+      "file": "Pikeman_Die_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Die_001.wav",
+      "sha256": "6ddddb261cf389187add54cc661fb83d4294b1510f20ee5edf669274444d195b"
+    },
+    {
+      "file": "Pikeman_Kill_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Kill_001.wav",
+      "sha256": "14ba318da92154144e07a0c16e4b54fc430a59808068ab42c68b00fba3d8b26a"
+    },
+    {
+      "file": "Pikeman_See_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_See_001.wav",
+      "sha256": "25831dfd224e7141c724e22e611ebf2af833fb7dcdd2b68902a4d8eb902f73e8"
+    },
+    {
+      "file": "Pikeman_Taunt_001.wav",
+      "download": "https://opengameart.org/sites/default/files/Pikeman_Taunt_001.wav",
+      "sha256": "f5fd68e10ac5139c5cdace172bc65290c9b3dd3868706fb6829b5278ae597a3b"
+    }
+  ]
+}

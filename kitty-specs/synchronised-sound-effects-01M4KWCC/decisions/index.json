@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "created_at": "2026-10-10T21:44:46.797765Z",
+      "decision_id": "01M4KWD3YD53RTV1QR6J9TSKHV",
+      "final_answer": null,
+      "input_key": "sound_effects_scope",
+      "mission_id": "01M4KWCCWK8JX25CNX0BZA7RGR",
+      "mission_slug": "synchronised-sound-effects-01M4KWCC",
+      "opened_by": "cli",
+      "options": [],
+      "origin_flow": "specify",
+      "other_answer": false,
+      "question": "Confirm scope: select and integrate downloaded SFX for character speech, coin insertion, claw movement and grip/release, chute drop, ball rolling, rack arrival and overflow ejection, plus Coinie footsteps/jump/smoke and UI clicks; synchronise cues with animations, support mute and reduced motion, update attribution records, and exclude music. Capsule reveal/discard sounds apply only if those interactions exist at implementation time.",
+      "rationale": null,
+      "resolved_at": null,
+      "resolved_by": null,
+      "slot_key": "specify.scope.intent-summary",
+      "status": "open",
+      "step_id": null,
+      "summary_json": null
+    }
+  ],
+  "mission_id": "01M4KWCCWK8JX25CNX0BZA7RGR",
+  "version": 1
+}
