@@ -7,9 +7,7 @@
   "lanes": [
     {
       "lane_id": "lane-a",
-      "wp_ids": [
-        "WP01"
-      ],
+      "wp_ids": ["WP01"],
       "write_scope": [
         "README.md",
         "docs/**",
@@ -19,9 +17,7 @@
         "src/scene/**",
         "src/styles/**"
       ],
-      "predicted_surfaces": [
-        "api"
-      ],
+      "predicted_surfaces": ["api"],
       "depends_on_lanes": [],
       "parallel_group": 0
     }

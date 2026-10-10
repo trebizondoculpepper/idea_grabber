@@ -20,25 +20,24 @@ Each WP file **MUST** use YAML frontmatter:
 
 ```yaml
 ---
-work_package_id: "WP01"
-title: "Work Package Title"
+work_package_id: 'WP01'
+title: 'Work Package Title'
 dependencies: []
-planning_base_branch: "feat/arcade-world"
-merge_target_branch: "feat/arcade-world"
-branch_strategy: "Planning artifacts were generated on feat/arcade-world; completed changes must merge back into feat/arcade-world."
+planning_base_branch: 'feat/arcade-world'
+merge_target_branch: 'feat/arcade-world'
+branch_strategy: 'Planning artifacts were generated on feat/arcade-world; completed changes must merge back into feat/arcade-world.'
 subtasks:
-  - "T001"
-  - "T002"
-phase: "Phase 1 - Setup"
-assignee: ""
-agent: ""
-shell_pid: ""
+  - 'T001'
+  - 'T002'
+phase: 'Phase 1 - Setup'
+assignee: ''
+agent: ''
+shell_pid: ''
 history:
-  - timestamp: "2025-01-01T00:00:00Z"
-    agent: "system"
-    action: "Prompt generated via /spec-kitty.tasks"
+  - timestamp: '2025-01-01T00:00:00Z'
+    agent: 'system'
+    action: 'Prompt generated via /spec-kitty.tasks'
 ---
-
 # Work Package Prompt: WP01 – Work Package Title
 
 [Content follows...]
@@ -54,6 +53,7 @@ spec-kitty agent tasks move-task <WPID> --to <lane>
 ```
 
 Example:
+
 ```bash
 spec-kitty agent tasks move-task WP01 --to doing
 ```
