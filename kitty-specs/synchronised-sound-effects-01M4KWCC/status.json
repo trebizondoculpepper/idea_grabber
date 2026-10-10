@@ -27,6 +27,9 @@
       "last_event_id": "01M4KX35EDE86Y14TQQJYZBM4S",
       "last_transition_at": "2026-10-10T21:56:49.229753+00:00",
       "model": "__resolved_model_absent__",
+      "notes": [
+        "Implementation 839d653 on main; 21 tests, lint and build pass; 24 clips decoded in Chrome; validation.md records evidence."
+      ],
       "provider": "__resolved_provider_absent__",
       "role": "implementer",
       "subtasks": {
