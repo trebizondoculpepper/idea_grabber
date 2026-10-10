@@ -159,6 +159,17 @@
       "evidence": "public/audio/bgm/manifest.json",
       "outputs": ["public/audio/bgm/*.mp3"],
       "notes": "BPM metadata retained; Space Snack Attack and Raccoon Tail Romp have unknown BPM."
+    },
+    {
+      "id": "generated-social-preview",
+      "name": "Coinie and Bulbee social preview",
+      "creator": "Generated with OpenAI imagegen using project artwork",
+      "source": "docs/social-preview.md",
+      "status": "used",
+      "credit_required": false,
+      "requirements": "Record generation provenance and retain credits applicable to the underlying project artwork.",
+      "evidence": "docs/social-preview.md",
+      "outputs": ["public/social/idea-grabber-preview.jpg"]
     }
   ]
 }
