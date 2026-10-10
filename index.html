@@ -14,6 +14,17 @@
         aria-label="Idea Grabber: a colourful 3D claw machine with identical capsules, Bulbee the lightbulb and Coinie the coin, in a cartoon arcade."
       ></canvas>
       <h1 class="visually-hidden">Idea Grabber</h1>
+      <button id="insert-coinie" class="keyboard-action" type="button">
+        Insert Coinie
+      </button>
+      <p
+        id="coinie-status"
+        class="visually-hidden"
+        role="status"
+        aria-live="polite"
+      >
+        Click Coinie to insert a coin.
+      </p>
       <p id="error" role="alert" hidden></p>
     </main>
     <script type="module" src="/src/main.ts"></script>

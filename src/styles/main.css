@@ -42,3 +42,22 @@ canvas {
   background: #171023;
   color: white;
 }
+
+.keyboard-action {
+  position: absolute;
+  left: -10000px;
+}
+.keyboard-action:focus-visible {
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.7rem 1rem;
+  border: 3px solid #171023;
+  border-radius: 0.4rem;
+  background: #ffdf20;
+  color: #171023;
+  font:
+    bold 1rem system-ui,
+    sans-serif;
+  outline: 3px solid #20dccc;
+  outline-offset: 3px;
+}

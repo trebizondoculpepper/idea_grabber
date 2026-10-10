@@ -1,6 +1,7 @@
 import { PerspectiveCamera, WebGLRenderer } from 'three';
 import { createScene } from '../scene/create-scene';
 import { ps1Uniforms } from './ps1-material';
+import { bindCoinieInput } from '../input/coinie-input';
 
 export function startScene(canvas: HTMLCanvasElement) {
   const renderer = new WebGLRenderer({ canvas, antialias: false });
@@ -16,6 +17,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     });
     canvas.dataset.sceneGraph = JSON.stringify(names);
   }
+  const input = bindCoinieInput(canvas, camera, world);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let elapsed = 0;
   let lastTime: number | undefined;
@@ -72,7 +74,10 @@ export function startScene(canvas: HTMLCanvasElement) {
     );
     camera.lookAt(0, 2.85, 0);
     ps1Uniforms.snapPixels.value = reducedMotion.matches ? 0 : 1;
-    world.update(elapsed);
+    world.update(elapsed, delta, reducedMotion.matches);
+    world.scene.updateMatrixWorld();
+    camera.updateMatrixWorld();
+    input.update();
     const renderStart = performance.now();
     renderer.render(world.scene, camera);
     if (reportPerformance) {
@@ -111,6 +116,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     renderer.setAnimationLoop(null);
     observer.disconnect();
     document.removeEventListener('visibilitychange', resetTime);
+    input.dispose();
     world.dispose();
     renderer.dispose();
   };

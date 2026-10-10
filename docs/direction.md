@@ -9,3 +9,5 @@ The visual demo camera will drift very slowly back and forth across approximatel
 PS1 rendering should include low-resolution rendering, nearest-neighbour textures and restrained screen-space vertex snapping. Evaluate subtle dithering/reduced colour precision and optional affine-style texture warping. Keep the machine and mascots legible.
 
 The original build brief describes the later playable version. Its gameplay settings and controls are outside the visual demo scope.
+
+The next interaction lets players click Coinie: he jumps into the slot, then a fresh Coinie walks in from the right. Further clicks are ignored until the replacement arrives.

@@ -3,6 +3,12 @@ import { createSceneKit } from './scene-kit';
 import { createEnvironment } from './create-environment';
 import { createMachine } from './create-machine';
 import { createHero } from './create-hero';
+import { createCoinieCycle } from '../game/coinie-cycle';
+import {
+  poseCoinieJump,
+  poseCoinieWalk,
+  resetCoiniePose,
+} from './animate-coinie';
 
 export function createScene() {
   const scene = new Scene();
@@ -16,12 +22,40 @@ export function createScene() {
   createEnvironment(scene, kit);
   createMachine(scene, kit);
   const bulbee = createHero(scene, kit, 'Bulbee', -3.55, 2.5);
-  const coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
+  let coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
+  const cycle = createCoinieCycle();
+  let generation = cycle.generation;
   return {
     scene,
-    update(elapsed: number) {
+    get coinie() {
+      return coinie.hero;
+    },
+    get coiniePhase() {
+      return cycle.phase;
+    },
+    get coinieGeneration() {
+      return cycle.generation;
+    },
+    activateCoinie: cycle.start,
+    update(elapsed: number, delta = 0, reducedMotion = false) {
+      cycle.advance(delta, reducedMotion);
+      if (generation !== cycle.generation) {
+        scene.remove(coinie.hero);
+        coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
+        generation = cycle.generation;
+      }
       bulbee.update(elapsed);
-      coinie.update(elapsed);
+      coinie.update(
+        elapsed,
+        cycle.phase === 'walking' && !reducedMotion
+          ? cycle.progress
+          : undefined,
+      );
+      if (cycle.phase === 'jumping')
+        poseCoinieJump(coinie.hero, cycle.progress, reducedMotion);
+      else if (cycle.phase === 'walking')
+        poseCoinieWalk(coinie.hero, cycle.progress, reducedMotion);
+      else resetCoiniePose(coinie.hero);
     },
     dispose: kit.dispose,
   };

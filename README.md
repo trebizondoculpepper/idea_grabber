@@ -1,6 +1,6 @@
 # Idea Grabber
 
-A browser claw-machine game with bold cartoon art and PS1 rendering. The current visual demo contains the cabinet, claw, chute, five-position rack, identical faceted capsules, and the paper-cutout heroes Bulbee and Coinie. Gameplay follows in later missions.
+A browser claw-machine game with bold cartoon art and PS1 rendering. The current demo contains the cabinet, claw, chute, five-position rack, identical faceted capsules, and the paper-cutout heroes Bulbee and Coinie. Click Coinie to make him jump into the slot; a new Coinie walks in from the right.
 
 ## Run locally
 
@@ -48,7 +48,7 @@ The Spec Kitty configuration was moved from `my-project/` to this root. The orig
 
 The scene uses original editable SVG artwork for the cabinet, marquee, floor, backdrop and paper-cutout hero bodies, hands and feet. All capsules share one faceted geometry and turquoise material with the same star decal. Textures use nearest-neighbour filtering without mipmaps. The canvas renders within a 640 × 480 pixel budget and scales with CSS pixelation while HTML text stays sharp.
 
-`src/rendering/ps1-material.ts` extends the standard material shader to blend projected vertices 35% toward a one-pixel grid while preserving depth and clip w. This keeps polygon instability visible without making slow motion appear to run at a low frame rate. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops animation. Affine texture warping is not implemented in this prototype.
+`src/rendering/ps1-material.ts` extends the standard material shader to blend projected vertices 35% toward a one-pixel grid while preserving depth and clip w. This keeps polygon instability visible without making slow motion appear to run at a low frame rate. A subtle 2 × 2 ordered dither reduces colour to 32 levels per channel. The camera drifts over an 11.25-degree total arc every 48 seconds; there are no camera controls. Reduced motion disables vertex snapping and stops ambient animation; Coinie uses brief transitions. Affine texture warping is not implemented in this prototype.
 
 ### Frame-rate diagnostics
 
@@ -77,7 +77,7 @@ ArcadeScene
 └── Coinie → Body / LeftArm / RightArm / LeftLeg / RightLeg
 ```
 
-Groups provide pivots for future animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. Rack contents are decorative, not game state. No gameplay or camera controls are implemented. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
+Groups provide pivots for animation. Every ball is independently addressable; sharing geometry/material does not couple transforms. Rack contents are decorative. Coinie's click cycle ignores further clicks until his replacement finishes walking in. Keyboard users can Tab to the Insert Coinie button and press Enter. Reduced motion uses brief transitions instead of the jump and walk. There are no camera controls. The title is drawn on the machine, with an HTML heading and canvas description for accessibility. In development, the canvas `data-scene-graph` lists named objects.
 
 `docs/ingredient-catalogue.json` contains 120 future ingredients with Unicode emoji suggestions; current balls remain identical.
 
