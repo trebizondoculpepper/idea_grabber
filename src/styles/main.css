@@ -47,6 +47,26 @@ canvas {
   position: absolute;
   left: -10000px;
 }
+
+.sound-toggle {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  right: 12px;
+  padding: 0.55rem 0.8rem;
+  border: 2px solid #ffdf20;
+  border-radius: 0.5rem;
+  background: #171023;
+  color: #ffdf20;
+  font:
+    bold 0.8rem system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+.sound-toggle:focus-visible {
+  outline: 3px solid #20dccc;
+  outline-offset: 3px;
+}
 .keyboard-action:focus-visible {
   left: 1rem;
   bottom: 1rem;

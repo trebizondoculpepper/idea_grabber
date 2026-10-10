@@ -13,6 +13,9 @@ export function bindBulbeeSpeech(
   let landing = 0;
   let remaining = 0;
   return {
+    get speechKey() {
+      return bubble.hidden ? undefined : landing;
+    },
     update(delta: number) {
       if (landing !== world.landings) {
         landing = world.landings;

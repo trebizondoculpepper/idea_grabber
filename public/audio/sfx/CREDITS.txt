@@ -1,0 +1,35 @@
+Idea Grabber — sound-effect credits
+
+Marble Roll (HQ preview) by JuandreSound
+https://freesound.org/people/JuandreSound/sounds/490913/
+Licence: CC0-1.0
+Attribution optional; include creator and source as courtesy when used.
+
+Casino Audio by Kenney
+https://kenney.nl/assets/casino-audio
+Licence: CC0-1.0
+Attribution optional; include creator and source as courtesy when used.
+
+Impact Sounds by Kenney
+https://kenney.nl/assets/impact-sounds
+Licence: CC0-1.0
+Attribution optional; include creator and source as courtesy when used.
+
+Interface Sounds by Kenney
+https://kenney.nl/assets/interface-sounds
+Licence: CC0-1.0
+Attribution optional; include creator and source as courtesy when used.
+
+Sci Fi Sounds by Kenney
+https://kenney.nl/assets/sci-fi-sounds
+Licence: CC0-1.0
+Attribution optional; include creator and source as courtesy when used.
+
+Talking Synthesizer by tcarisland
+https://opengameart.org/content/talking-synthesizer
+Licence: CC-BY-4.0
+Credit tcarisland, link source and CC BY 4.0 licence, and describe modifications when used.
+
+Talking Synthesizer by tcarisland:
+https://creativecommons.org/licenses/by/4.0/
+Modified for Coinie and Bulbee: short excerpts, different pitch and speed, mono conversion, fades and MP3 encoding. Exact source excerpts and processing are recorded in sources.json.

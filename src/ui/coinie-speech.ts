@@ -14,6 +14,9 @@ export function bindCoinieSpeech(
   let spokenGeneration = -1;
   let remaining = 0;
   return {
+    get speechKey() {
+      return bubble.hidden ? undefined : spokenGeneration;
+    },
     update(delta: number) {
       const onstage =
         world.coiniePhase === 'ready' ||

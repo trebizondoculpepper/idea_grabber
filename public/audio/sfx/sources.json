@@ -1,0 +1,362 @@
+[
+  {
+    "file": "coin.mp3",
+    "source_pack": "kenney-casino-audio",
+    "original_file": "Audio/chips-collide-1.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/casino-audio",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.4,
+      "pitch_and_speed": 1.2,
+      "filters": "aresample=44100,asetrate=52920,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.30833333333333335:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "grip.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/switch_002.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.3,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.27499999999999997:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "release.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/switch_003.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.3,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.27499999999999997:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "drop.mp3",
+    "source_pack": "kenney-impact-sounds",
+    "original_file": "Audio/impactWood_light_000.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.4,
+      "pitch_and_speed": 0.85,
+      "filters": "aresample=44100,asetrate=37485,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.4455882352941177:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "rack-1.mp3",
+    "source_pack": "kenney-casino-audio",
+    "original_file": "Audio/chip-lay-1.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/casino-audio",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.35,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.32499999999999996:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "rack-2.mp3",
+    "source_pack": "kenney-casino-audio",
+    "original_file": "Audio/chip-lay-2.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/casino-audio",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.35,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.32499999999999996:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "plop.mp3",
+    "source_pack": "kenney-impact-sounds",
+    "original_file": "Audio/impactGeneric_light_000.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.4,
+      "pitch_and_speed": 0.7,
+      "filters": "aresample=44100,asetrate=30870,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.5464285714285715:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "step-1.mp3",
+    "source_pack": "kenney-impact-sounds",
+    "original_file": "Audio/footstep_wood_000.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.3,
+      "pitch_and_speed": 1.3,
+      "filters": "aresample=44100,asetrate=57330,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.20576923076923076:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "step-2.mp3",
+    "source_pack": "kenney-impact-sounds",
+    "original_file": "Audio/footstep_wood_001.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.3,
+      "pitch_and_speed": 1.3,
+      "filters": "aresample=44100,asetrate=57330,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.20576923076923076:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "click.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/click_001.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.25,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.225:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "jump.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/select_004.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.4,
+      "pitch_and_speed": 1.2,
+      "filters": "aresample=44100,asetrate=52920,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.30833333333333335:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "puff.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/scratch_001.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.25,
+      "pitch_and_speed": 0.9,
+      "filters": "aresample=44100,asetrate=39690,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.25277777777777777:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "eject.mp3",
+    "source_pack": "kenney-interface-sounds",
+    "original_file": "Audio/scroll_001.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 0,
+      "duration_seconds": 0.4,
+      "pitch_and_speed": 0.75,
+      "filters": "aresample=44100,asetrate=33075,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.5083333333333333:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "motor.mp3",
+    "source_pack": "kenney-sci-fi-sounds",
+    "original_file": "Audio/engineCircular_000.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 1,
+      "duration_seconds": 2,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=1.975:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "hum.mp3",
+    "source_pack": "kenney-sci-fi-sounds",
+    "original_file": "Audio/spaceEngineLow_000.ogg",
+    "creator": "Kenney",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 1,
+      "duration_seconds": 2,
+      "pitch_and_speed": 1,
+      "filters": "aresample=44100,asetrate=44100,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=1.975:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "rolling.mp3",
+    "source_pack": "juandresound-marble-roll",
+    "original_file": "marble-roll-preview.mp3",
+    "creator": "JuandreSound",
+    "source": "https://freesound.org/people/JuandreSound/sounds/490913/",
+    "license": "CC0-1.0",
+    "edits": {
+      "start_seconds": 5,
+      "duration_seconds": 2,
+      "pitch_and_speed": 0.9,
+      "filters": "aresample=44100,asetrate=39690,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=2.1972222222222224:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "coinie-1.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 0.3,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 1.35,
+      "filters": "aresample=44100,asetrate=59535,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.11574074074074073:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "coinie-2.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 0.8,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 1.35,
+      "filters": "aresample=44100,asetrate=59535,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.11574074074074073:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "coinie-3.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 1.35,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 1.35,
+      "filters": "aresample=44100,asetrate=59535,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.11574074074074073:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "coinie-4.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 2.2,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 1.35,
+      "filters": "aresample=44100,asetrate=59535,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.11574074074074073:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "bulbee-1.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 4.6,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 0.85,
+      "filters": "aresample=44100,asetrate=37485,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.1985294117647059:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "bulbee-2.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 5.3,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 0.85,
+      "filters": "aresample=44100,asetrate=37485,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.1985294117647059:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "bulbee-3.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 6,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 0.85,
+      "filters": "aresample=44100,asetrate=37485,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.1985294117647059:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  },
+  {
+    "file": "bulbee-4.mp3",
+    "source_pack": "tcarisland-talking-synthesizer",
+    "original_file": "talkingsynth.wav",
+    "creator": "tcarisland",
+    "source": "https://opengameart.org/content/talking-synthesizer",
+    "license": "CC-BY-4.0",
+    "edits": {
+      "start_seconds": 7,
+      "duration_seconds": 0.19,
+      "pitch_and_speed": 0.85,
+      "filters": "aresample=44100,asetrate=37485,aresample=44100,afade=t=in:d=0.008,afade=t=out:st=0.1985294117647059:d=0.025",
+      "encoding": "mono 44.1 kHz MP3, 96 kbps"
+    }
+  }
+]

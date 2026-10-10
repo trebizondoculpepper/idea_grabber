@@ -4,6 +4,7 @@ import { ps1Uniforms } from './ps1-material';
 import { bindCoinieSpeech } from '../ui/coinie-speech';
 import { bindBulbeeSpeech } from '../ui/bulbee-speech';
 import { bindCoinieInput } from '../input/coinie-input';
+import { bindSound } from '../audio/bind-sound';
 
 export function startScene(canvas: HTMLCanvasElement) {
   const renderer = new WebGLRenderer({ canvas, antialias: false });
@@ -22,6 +23,7 @@ export function startScene(canvas: HTMLCanvasElement) {
   const input = bindCoinieInput(canvas, camera, world);
   const speech = bindBulbeeSpeech(canvas, camera, world);
   const coinieSpeech = bindCoinieSpeech(canvas, camera, world);
+  const sound = bindSound();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let elapsed = 0;
   let lastTime: number | undefined;
@@ -84,6 +86,19 @@ export function startScene(canvas: HTMLCanvasElement) {
     input.update();
     speech.update(delta);
     coinieSpeech.update(delta);
+    sound.update(
+      {
+        phase: world.coiniePhase,
+        progress: world.coinieProgress,
+        landings: world.landings,
+        coinieSpeech: coinieSpeech.speechKey,
+        bulbeeSpeech: speech.speechKey,
+        reducedMotion: reducedMotion.matches,
+      },
+      delta,
+    );
+    if (import.meta.env.DEV)
+      canvas.dataset.audio = JSON.stringify(sound.diagnostics);
     const renderStart = performance.now();
     renderer.render(world.scene, camera);
     if (reportPerformance) {
@@ -125,6 +140,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     input.dispose();
     speech.dispose();
     coinieSpeech.dispose();
+    sound.dispose();
     world.dispose();
     renderer.dispose();
   };
