@@ -352,6 +352,17 @@
     }
   },
   {
+    "id": "warfare",
+    "label": "Warfare",
+    "category": "shooting-and-combat",
+    "emoji": "🪖",
+    "words": {
+      "verbs": ["besiege", "bombard"],
+      "nouns": ["battlefield", "fortress"],
+      "adjectives": ["military"]
+    }
+  },
+  {
     "id": "fetch-quest",
     "label": "Fetch quest",
     "category": "adventure-and-narrative",
@@ -1045,6 +1056,17 @@
     }
   },
   {
+    "id": "virtual-reality",
+    "label": "Virtual reality",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🥽",
+    "words": {
+      "verbs": ["simulate", "immerse yourself in"],
+      "nouns": ["headset", "virtual world"],
+      "adjectives": ["virtual"]
+    }
+  },
+  {
     "id": "match-three",
     "label": "Match three",
     "category": "puzzles-and-unusual-interactions",
@@ -1174,6 +1196,28 @@
       "verbs": ["flip", "launch"],
       "nouns": ["ball", "bumper"],
       "adjectives": ["bouncy"]
+    }
+  },
+  {
+    "id": "programming",
+    "label": "Programming",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "💻",
+    "words": {
+      "verbs": ["program", "debug"],
+      "nouns": ["code", "computer"],
+      "adjectives": ["programmable"]
+    }
+  },
+  {
+    "id": "mathematics",
+    "label": "Mathematics",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "🧮",
+    "words": {
+      "verbs": ["calculate", "factorise"],
+      "nouns": ["equation", "triangle"],
+      "adjectives": ["mathematical"]
     }
   },
   {
@@ -1350,6 +1394,39 @@
       "verbs": ["bite", "terrify"],
       "nouns": ["vampire", "castle"],
       "adjectives": ["vampiric"]
+    }
+  },
+  {
+    "id": "naval",
+    "label": "Naval",
+    "category": "subjects-and-themes",
+    "emoji": "⚓",
+    "words": {
+      "verbs": ["sail", "torpedo"],
+      "nouns": ["fleet", "warship"],
+      "adjectives": ["naval"]
+    }
+  },
+  {
+    "id": "police",
+    "label": "Police",
+    "category": "subjects-and-themes",
+    "emoji": "🚓",
+    "words": {
+      "verbs": ["arrest", "patrol"],
+      "nouns": ["suspect", "police station"],
+      "adjectives": ["undercover"]
+    }
+  },
+  {
+    "id": "spy",
+    "label": "Spy",
+    "category": "subjects-and-themes",
+    "emoji": "🕵️",
+    "words": {
+      "verbs": ["infiltrate", "spy on"],
+      "nouns": ["agent", "secret"],
+      "adjectives": ["clandestine"]
     }
   }
 ]
