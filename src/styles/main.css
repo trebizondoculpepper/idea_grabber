@@ -9,7 +9,7 @@ body {
 }
 body {
   background: #361477;
-  color: #ffdb24;
+  color: #ffdf20;
   font-family: system-ui, sans-serif;
 }
 #app {
@@ -22,32 +22,94 @@ canvas {
   display: block;
   width: 100%;
   height: 100%;
+  image-rendering: pixelated;
 }
-header {
+.visually-hidden {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  pointer-events: none;
-}
-h1 {
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  text-shadow: 3px 3px #15101d;
-}
-header p {
-  color: #fff;
-  margin-top: 0.4rem;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 #error {
   position: absolute;
   inset: 40% 1.5rem auto;
   padding: 1rem;
-  background: #15101d;
+  background: #171023;
   color: white;
 }
 
-canvas {
-  image-rendering: pixelated;
+.keyboard-action {
+  position: absolute;
+  left: -10000px;
+}
+.keyboard-action:focus-visible {
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.7rem 1rem;
+  border: 3px solid #171023;
+  border-radius: 0.4rem;
+  background: #ffdf20;
+  color: #171023;
+  font:
+    bold 1rem system-ui,
+    sans-serif;
+  outline: 3px solid #20dccc;
+  outline-offset: 3px;
+}
+
+.speech-bubble {
+  position: absolute;
+  z-index: 2;
+  width: max-content;
+  max-width: min(400px, calc(100% - 24px));
+  margin: 0;
+  padding: 16px 20px;
+  border: 4px solid #171023;
+  border-radius: 24px 28px 22px 26px;
+  background: #fff9e4;
+  color: #171023;
+  box-shadow: 5px 5px 0 #ff38a8;
+  font:
+    800 clamp(16px, 1.6vw, 22px)/1.3 system-ui,
+    sans-serif;
+  pointer-events: none;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  left: var(--tail-left, 50%);
+  bottom: -16px;
+  width: 24px;
+  height: 24px;
+  background: #fff9e4;
+  border-right: 4px solid #171023;
+  border-bottom: 4px solid #171023;
+  transform: translateX(-50%) rotate(45deg);
+}
+.speech-bubble strong {
+  color: #572299;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: #ff38a8;
+  text-decoration-thickness: 3px;
+}
+
+.coinie-bubble {
+  background: #ffdf20;
+  box-shadow: 5px 5px 0 #20dccc;
+}
+.coinie-bubble::after {
+  background: #ffdf20;
+}
+@media (max-width: 600px) {
+  .coinie-bubble::after {
+    top: -16px;
+    bottom: auto;
+    transform: translateX(-50%) rotate(225deg);
+  }
 }

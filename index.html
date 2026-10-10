@@ -11,12 +11,36 @@
       <canvas
         id="scene"
         role="img"
-        aria-label="A textured low-poly capsule on a colourful checkerboard stage"
+        aria-label="Idea Grabber: a colourful 3D claw machine with colourful capsules with game-genre icons, Bulbee the lightbulb and Coinie the coin, in a cartoon arcade."
       ></canvas>
-      <header>
-        <h1>Idea Grabber</h1>
-        <p>PS1 texture &amp; shader study</p>
-      </header>
+      <h1 class="visually-hidden">Idea Grabber</h1>
+      <button id="insert-coinie" class="keyboard-action" type="button">
+        Insert Coinie
+      </button>
+      <p
+        id="coinie-status"
+        class="visually-hidden"
+        role="status"
+        aria-live="polite"
+      >
+        Coinie is walking in from the right.
+      </p>
+      <p
+        id="bulbee-speech"
+        class="speech-bubble"
+        role="status"
+        aria-live="polite"
+        aria-label="Bulbee says"
+        hidden
+      ></p>
+      <p
+        id="coinie-speech"
+        class="speech-bubble coinie-bubble"
+        role="status"
+        aria-live="polite"
+        aria-label="Coinie says"
+        hidden
+      ></p>
       <p id="error" role="alert" hidden></p>
     </main>
     <script type="module" src="/src/main.ts"></script>

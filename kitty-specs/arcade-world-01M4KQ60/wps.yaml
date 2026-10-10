@@ -1,0 +1,37 @@
+work_packages:
+  - id: WP01
+    title: Arcade composition and heroes
+    dependencies: []
+    owned_files:
+      [
+        'src/scene/**',
+        'src/rendering/**',
+        'src/styles/**',
+        'public/assets/**',
+        'index.html',
+        'README.md',
+        'docs/**',
+      ]
+    requirement_refs:
+      [
+        FR-001,
+        FR-002,
+        FR-003,
+        FR-004,
+        FR-005,
+        FR-006,
+        FR-007,
+        NFR-001,
+        NFR-002,
+        NFR-003,
+        C-001,
+        C-002,
+        C-003,
+        C-004,
+      ]
+    plan_concern_refs: [IC-01, IC-02, IC-03]
+    subtasks: [T001, T002, T003, T004, T005]
+    prompt_file: tasks/WP01-arcade-scene.md
+    agent_profile: frontend-freddy
+    role: implementer
+    agent: codex

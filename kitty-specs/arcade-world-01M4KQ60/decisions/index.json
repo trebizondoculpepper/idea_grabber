@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "created_at": "2026-10-10T20:14:40.468643Z",
+      "decision_id": "01M4KQ84AM1SVECQC57HVET21Q",
+      "final_answer": "Visual-only arcade scene with machine, Bulbee, Coinie, identical capsules, named scene groups, existing PS1 renderer and 11.25-degree automatic camera arc. No controls or gameplay. At least 30 fps on tested desktops.",
+      "input_key": "intent-summary",
+      "mission_id": "01M4KQ60MXWR29DJ3FB61JDN0P",
+      "mission_slug": "arcade-world-01M4KQ60",
+      "opened_by": "codex",
+      "options": [],
+      "origin_flow": "specify",
+      "other_answer": false,
+      "question": "Confirm the visual demo scope already agreed in this conversation.",
+      "rationale": "User explicitly confirmed the scene mission and camera scope in preceding messages and now instructed starting implementation.",
+      "resolved_at": "2026-10-10T20:15:15.150086Z",
+      "resolved_by": "user",
+      "slot_key": null,
+      "status": "resolved",
+      "step_id": "specify",
+      "summary_json": null
+    }
+  ],
+  "mission_id": "01M4KQ60MXWR29DJ3FB61JDN0P",
+  "version": 1
+}
