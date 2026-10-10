@@ -1,15 +1,15 @@
 # Music delivery proposal
 
-The generation brief is [../docs/prompts/music-generation.md](../docs/prompts/music-generation.md). It requests twenty 20–40 second chiptune renditions, each covering one famous game theme, drawing on the 1980s–1990s range represented by OutRun, Zelda and Frogger. Shuffled playback of these separate renditions creates the medley.
+The generation brief is [docs/prompts/music-generation.md](../../docs/prompts/music-generation.md). It requests forty 20–40 second chiptune snippets. Each one is a pastiche of a single notable 1980s–1990s game theme, ranging from OutRun, Zelda and Frogger to Streets of Rage 2, Chrono Trigger and Banjo-Kazooie. Shuffled playback of these separate snippets creates the medley.
 
-Use MP3 at 192 kbps stereo for the initial web release. Keep lossless WAV masters outside `public/` for editing and later re-encoding. A 30-second MP3 is about 720 KB; twenty average-length tracks total roughly 14.4 MB, excluding metadata. Load the current track and preload the next rather than downloading the entire bank at startup. Opus can be a later smaller alternative, with a supported container and MP3 fallback if needed. Browser codec/container support matters separately from the musical style. [MDN audio codec guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Audio_codecs)
+Use MP3 at 192 kbps stereo for the initial web release. Keep lossless WAV masters outside `public/` for editing and later re-encoding. A 30-second MP3 is about 720 KB; forty average-length tracks total roughly 29 MB, excluding metadata. Load the current track and preload the next rather than downloading the entire bank at startup. Opus can be a later smaller alternative, with a supported container and MP3 fallback if needed. Browser codec/container support matters separately from the musical style. [MDN audio codec guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Audio_codecs)
 
-Files in `public/audio/bgm/` will be served as static assets. Resolve the manifest and tracks using Vite's deployed base URL. The proposed manifest identifies tracks and gives measured duration, tempo, source game/theme and filenames. Files in `assets/audio-masters/bgm/` are editing sources and are not copied into the public build.
+Files in `public/audio/bgm/` will be served as static assets. Resolve the manifest and tracks using Vite's deployed base URL. The proposed manifest identifies tracks and gives measured duration, tempo, the game and theme each track is a pastiche of, and filenames. Files in `assets/audio-masters/bgm/` are editing sources and are not copied into the public build.
 
 The future BGM player should:
 
 1. Unlock sound through a player gesture, such as the first Coinie click or a dedicated sound button. Coinie's automatic entrance cannot reliably unlock audible autoplay. Handle a rejected play request gracefully. [MDN autoplay guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay)
-2. Shuffle a bag of twenty tracks, playing each once before refilling it; avoid repeating the last track at the start of the next bag.
+2. Shuffle a bag of forty tracks, playing each once before refilling it; avoid repeating the last track at the start of the next bag.
 3. Use two reusable HTML audio elements, one playing and one preparing the next track. Route them through Web Audio gain nodes to crossfade over about 0.75 seconds. A media element can feed Web Audio for processing. [MDN MediaElementAudioSourceNode](https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode)
 4. Advance by musical snippet, independently of the claw cycle. A BGM change should not restart when Coinie is clicked or when a ball lands.
 5. Provide mute and music volume, remembering the preference. Keep a separate sound-effects bus so future voices and machine sounds can be balanced independently.

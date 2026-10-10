@@ -1,0 +1,101 @@
+{
+  "policy": "Track every third-party resource here when acquired; mark used and record specific files when integrated. Publish used resources on the credits page, preserving mandatory licence notices separately.",
+  "resources": [
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "creator": "three.js authors",
+      "source": "https://threejs.org/",
+      "license": "MIT",
+      "status": "used",
+      "credit_required": true,
+      "requirements": "Retain full copyright and MIT licence text with distributed copies. Include source link on credits page.",
+      "evidence": "node_modules/three/LICENSE",
+      "version": "0.186.1"
+    },
+    {
+      "id": "juandresound-marble-roll",
+      "name": "juandresound-marble-roll",
+      "creator": "JuandreSound",
+      "source": "https://freesound.org/people/JuandreSound/sounds/490913/",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/juandresound-marble-roll/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "kenney-casino-audio",
+      "name": "kenney-casino-audio",
+      "creator": "Kenney",
+      "source": "https://kenney.nl/assets/casino-audio",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/kenney-casino-audio/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "kenney-impact-sounds",
+      "name": "kenney-impact-sounds",
+      "creator": "Kenney",
+      "source": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/kenney-impact-sounds/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "kenney-interface-sounds",
+      "name": "kenney-interface-sounds",
+      "creator": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/kenney-interface-sounds/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "kenney-sci-fi-sounds",
+      "name": "kenney-sci-fi-sounds",
+      "creator": "Kenney",
+      "source": "https://kenney.nl/assets/sci-fi-sounds",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/kenney-sci-fi-sounds/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "tcarisland-talking-synthesizer",
+      "name": "tcarisland-talking-synthesizer",
+      "creator": "tcarisland",
+      "source": "https://opengameart.org/content/talking-synthesizer",
+      "license": "CC-BY-4.0",
+      "status": "downloaded-candidate",
+      "credit_required": true,
+      "requirements": "Credit tcarisland, link source and CC BY 4.0 licence, and describe modifications when used.",
+      "evidence": "assets/audio/sources/tcarisland-talking-synthesizer/SOURCE.json",
+      "used_files": []
+    },
+    {
+      "id": "xathien-steampunk-voices",
+      "name": "xathien-steampunk-voices",
+      "creator": "xathien",
+      "source": "https://opengameart.org/content/steampunk-fantasy-voices",
+      "license": "CC0-1.0",
+      "status": "downloaded-candidate",
+      "credit_required": false,
+      "requirements": "Attribution optional; include creator and source as courtesy when used.",
+      "evidence": "assets/audio/sources/xathien-steampunk-voices/SOURCE.json",
+      "used_files": []
+    }
+  ]
+}

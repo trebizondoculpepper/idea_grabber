@@ -1,0 +1,22 @@
+{
+  "author": "tcarisland",
+  "source": "https://opengameart.org/content/talking-synthesizer",
+  "license": "CC-BY-4.0",
+  "files": [
+    {
+      "file": "talkingsynth.wav",
+      "download": "https://opengameart.org/sites/default/files/talkingsynth.wav",
+      "sha256": "54ac8ef4db3c3231906203078fb977941d4a3ca035ec61df286c20dd586a377e"
+    },
+    {
+      "file": "talkingsynth_0.mp3",
+      "download": "https://opengameart.org/sites/default/files/talkingsynth_0.mp3",
+      "sha256": "afad8a51efa521762530ea72e67595e02f4b044d909852469f3a024091694cae"
+    },
+    {
+      "file": "phoneconversation.wav",
+      "download": "https://opengameart.org/sites/default/files/phoneconversation.wav",
+      "sha256": "71310e5b98bd8d46a3f03b0e9b9bd6fdac6e0c844028252a388ebd2606c596c7"
+    }
+  ]
+}
