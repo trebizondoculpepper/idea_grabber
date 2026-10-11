@@ -165,24 +165,24 @@
     }
   },
   {
-    "id": "first-person-shooter",
-    "label": "First-person shooter",
-    "category": "shooting-and-combat",
+    "id": "first-person",
+    "label": "First-person",
+    "category": "perspective",
     "emoji": "🎯",
     "words": {
-      "verbs": ["shoot", "aim at"],
-      "nouns": ["target", "rifle"],
+      "verbs": ["look at", "peer at"],
+      "nouns": ["view", "viewpoint"],
       "adjectives": ["first-person"]
     }
   },
   {
-    "id": "third-person-shooter",
-    "label": "Third-person shooter",
-    "category": "shooting-and-combat",
-    "emoji": "🔫",
+    "id": "third-person",
+    "label": "Third-person",
+    "category": "perspective",
+    "emoji": "🎥",
     "words": {
-      "verbs": ["shoot", "take cover behind"],
-      "nouns": ["target", "barricade"],
+      "verbs": ["follow", "watch"],
+      "nouns": ["camera", "character"],
       "adjectives": ["third-person"]
     }
   },
