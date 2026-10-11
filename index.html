@@ -128,6 +128,44 @@
         aria-label="Coinie says"
         hidden
       ></p>
+      <button id="share-idea" class="share-launch" type="button" disabled>
+        ↗ Share idea
+      </button>
+      <dialog id="share-dialog" aria-labelledby="share-heading">
+        <div class="share-heading">
+          <h2 id="share-heading">Share your stupid idea</h2>
+          <button id="share-close" type="button" aria-label="Close sharing">
+            ×
+          </button>
+        </div>
+        <img
+          id="share-preview"
+          alt="Coinie and Bulbee in front of the Idea Grabber, with your idea in a speech bubble"
+          hidden
+        />
+        <p id="share-status" role="status" aria-live="polite"></p>
+        <div class="share-actions">
+          <button id="share-native" type="button" disabled>Share image…</button>
+          <a id="share-twitter" target="_blank" rel="noopener noreferrer"
+            >X / Twitter</a
+          >
+          <button id="share-instagram" type="button" disabled>Instagram</button>
+          <a
+            id="share-download"
+            download="idea-grabber-my-stupid-idea.png"
+            hidden
+            >Save image</a
+          >
+          <button id="share-copy" type="button">Copy caption</button>
+        </div>
+        <label for="share-caption">Caption</label
+        ><textarea id="share-caption" rows="3" readonly></textarea>
+        <p class="share-note">
+          For X/Twitter, save and attach the image to your draft. Instagram and
+          other apps can receive the image through your device’s share menu when
+          supported.
+        </p>
+      </dialog>
       <p id="error" role="alert" hidden></p>
     </main>
     <script type="module" src="/src/main.ts"></script>

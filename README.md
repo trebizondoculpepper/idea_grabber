@@ -40,6 +40,12 @@ Each genre in [the catalogue](docs/ingredient-catalogue.json) has a `words` obje
 
 After 18–30 seconds of quiet time, Coinie or Bulbee may combine a verb and noun from different genres currently on the rack, optionally adding an adjective from a third. For example: “I can't wait to extract the garden!” Existing entrance and capsule announcements take priority. The feature uses fixed templates and random choices locally; it makes no AI requests.
 
+### Sharing and camera shots
+
+After a capsule lands and Coinie returns, **Share idea** prepares a square PNG of the scene with both characters, the machine and a readable speech bubble. The preview includes a caption, device sharing, an X/Twitter draft link, Instagram sharing or image download, and a copy-caption button. X/Twitter drafts require attaching the downloaded screenshot. Installed apps can receive the PNG through the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) where file sharing is supported; download and copy remain available otherwise. Images are composed locally and are not uploaded by the game.
+
+While the machine is idle, the camera occasionally cuts through two or three short shots: machine close-up, claw detail, either character, a rack/coin-slot feature or a Dutch angle. It returns to the default view after the sequence or when a coin cycle starts. Reduced motion holds the default camera. Share screenshots always use the default framing.
+
 ### Development tools
 
 The project uses [Vite](https://vite.dev/) (MIT), [TypeScript](https://www.typescriptlang.org/) (Apache-2.0), [Vitest](https://vitest.dev/) (MIT), [ESLint](https://eslint.org/) (MIT), [Prettier](https://prettier.io/) (MIT), [Node.js](https://nodejs.org/), and [Spec Kitty](https://github.com/Priivacy-ai/spec-kitty) for mission tracking. Dependency versions and transitive packages are recorded in [package.json](package.json) and [package-lock.json](package-lock.json); each package retains its own licence. The public game is hosted on [Fly.io](https://fly.io/).
