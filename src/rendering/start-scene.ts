@@ -141,11 +141,13 @@ export function startScene(canvas: HTMLCanvasElement) {
       delta,
       reducedMotion.matches,
       world.canInsertCoinie,
+      world.coiniePhase,
     );
     const framing = Math.max(1, 1 / camera.aspect);
     if (shot !== 'default') {
       if (shot === 'claw') {
         world.scene.getObjectByName('Claw')!.getWorldPosition(shotTarget);
+        shotTarget.y -= 0.4;
         camera.position
           .copy(shotTarget)
           .add(new Vector3(1.6, 0.8, 2.8).multiplyScalar(framing));
@@ -159,7 +161,12 @@ export function startScene(canvas: HTMLCanvasElement) {
           .add(new Vector3(2, 0.6, 4.2).multiplyScalar(framing));
         camera.fov = 36;
       } else if (shot === 'feature') {
-        if (world.trayCount > 0) shotTarget.set(0, 0.9, 1.97);
+        if (
+          world.trayCount > 0 ||
+          world.coiniePhase === 'rolling' ||
+          world.coiniePhase === 'ejecting'
+        )
+          shotTarget.set(0, 0.9, 1.97);
         else world.coinSlot.getWorldPosition(shotTarget);
         camera.position
           .copy(shotTarget)
