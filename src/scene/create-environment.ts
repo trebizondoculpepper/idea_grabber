@@ -43,19 +43,23 @@ export function createEnvironment(
     { art: 'mortgage-kombat', body: '#ffb52e' },
   ];
   const spots = [
+    // Keep the original six spots first; extra neighbours fill the left edge.
     { x: -10.6, z: 0.2, turn: 0.75 },
     { x: -12.8, z: -6.4, turn: 0.25 },
     { x: -8.6, z: -2.8, turn: 0.6 },
     { x: 3.9, z: -6.6, turn: -0.1 },
     { x: 7.0, z: -0.8, turn: -0.55 },
     { x: 7.6, z: -6.2, turn: -0.2 },
+    { x: -14.0, z: 1.0, turn: 1.65 },
+    { x: -17.1, z: 1.0, turn: 2.4 },
+    { x: -20.2, z: 1.0, turn: 0.35 },
   ];
   for (let i = cabinets.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));
     [cabinets[i], cabinets[j]] = [cabinets[j], cabinets[i]];
   }
   const placed = spots.map((spot, index) => ({
-    ...cabinets[index],
+    ...cabinets[index % cabinets.length],
     ...spot,
   }));
   const joystickShaft = kit.ownGeometry(

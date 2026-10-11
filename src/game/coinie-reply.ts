@@ -1,8 +1,12 @@
 import { createBulbeeLine, type Ingredient } from './bulbee-line';
 import type { CoiniePhase } from './coinie-cycle';
 import type { WordIngredient } from './rack-humour';
+import { createGameMashup } from './game-mashup';
 
-export type ReplyIngredient = Ingredient & { words?: WordIngredient['words'] };
+export type ReplyIngredient = Ingredient & {
+  words?: WordIngredient['words'];
+  examples?: readonly string[];
+};
 
 const reactions: Record<string, string> = {
   platformer: "That's so 1990s.",
@@ -207,6 +211,10 @@ export function createCoinieReplies(random = Math.random) {
     const names = createBulbeeLine(ingredients, landing).names.join(' ');
     const idea = `${names.charAt(0).toUpperCase()}${names.slice(1)} game`;
     const turn = Math.max(0, landing - 1);
+    if (turn % 4 === 2) {
+      const mashup = createGameMashup(ingredients, random);
+      if (mashup) return mashup;
+    }
     if (turn % 4 === 0) {
       const reaction =
         reactions[ingredients[0].id] ??

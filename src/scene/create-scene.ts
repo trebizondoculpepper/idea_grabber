@@ -48,6 +48,9 @@ export function createScene() {
     get landings() {
       return machine.landings;
     },
+    get marqueeFlickers() {
+      return cabinetLights.marqueeFlickers;
+    },
     get ingredients() {
       return machine.ingredients;
     },

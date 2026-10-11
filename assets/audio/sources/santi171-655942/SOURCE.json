@@ -1,0 +1,18 @@
+{
+  "id": "santi171-655942",
+  "name": "Arcade Ambience FX.wav (HQ preview)",
+  "creator": "Santi171",
+  "source": "https://freesound.org/people/Santi171/sounds/655942/",
+  "preview_url": "https://cdn.freesound.org/previews/655/655942_13802401-hq.mp3",
+  "license": "CC0-1.0",
+  "status": "used",
+  "credit_required": false,
+  "requirements": "Attribution optional; include creator and source as courtesy.",
+  "evidence": "assets/audio/sources/santi171-655942/SOURCE.json",
+  "used_files": [
+    "preview.mp3"
+  ],
+  "outputs": [
+    "public/audio/sfx/arcade-ambience.mp3"
+  ]
+}

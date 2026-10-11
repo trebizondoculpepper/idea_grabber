@@ -1,0 +1,18 @@
+{
+  "id": "samwd-457438",
+  "name": "flourescent light (HQ preview)",
+  "creator": "samwd",
+  "source": "https://freesound.org/people/samwd/sounds/457438/",
+  "preview_url": "https://cdn.freesound.org/previews/457/457438_2677090-hq.mp3",
+  "license": "CC0-1.0",
+  "status": "used",
+  "credit_required": false,
+  "requirements": "Attribution optional; include creator and source as courtesy.",
+  "evidence": "assets/audio/sources/samwd-457438/SOURCE.json",
+  "used_files": [
+    "preview.mp3"
+  ],
+  "outputs": [
+    "public/audio/sfx/fluorescent.mp3"
+  ]
+}

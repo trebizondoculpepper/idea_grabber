@@ -30,7 +30,7 @@ it('plays contacts once and runs loops only while their objects move', () => {
   const landed = { ...ready, phase: 'returning' as const, landings: 1 };
   expect(sound.update(landed, 0.1, true).shots).toEqual(['rack']);
   expect(sound.update(landed, 0.1, true).shots).toEqual([]);
-  expect(sound.update(ready, 0.1, true).loops).toEqual(['hum']);
+  expect(sound.update(ready, 0.1, true).loops).toEqual(['hum', 'arcade']);
 });
 
 it('times overflow at the tray lip and omits it during ordinary rolling', () => {
@@ -100,4 +100,26 @@ it('handles reduced motion contacts and suppresses animated footsteps', () => {
   ).toEqual(['grip']);
   sound.hush();
   expect(sound.update(reduced, 0.1, false).loops).toEqual([]);
+});
+
+it('plays the starter once per sign fault without replaying muted faults', () => {
+  const sound = createSoundDirector();
+  sound.update({ ...ready, marqueeFlickers: 0 }, 0, true);
+  const fault = { ...ready, marqueeFlickers: 1 };
+  expect(sound.update(fault, 0.1, true).shots).toEqual(['fluorescent']);
+  expect(sound.update(fault, 0.1, true).shots).toEqual([]);
+  sound.update({ ...fault, marqueeFlickers: 2 }, 0.1, false);
+  expect(
+    sound.update({ ...fault, marqueeFlickers: 2 }, 0.1, true).shots,
+  ).toEqual([]);
+});
+
+it('loops continuous arcade ambience and stops it when inaudible', () => {
+  const sound = createSoundDirector();
+  const quiet = { ...ready, coinieTalking: false, bulbeeTalking: false };
+  expect(sound.update(quiet, 4, true).loops).toContain('arcade');
+  expect(
+    sound.update({ ...quiet, coinieTalking: true }, 1, true).loops,
+  ).toContain('arcade');
+  expect(sound.update(quiet, 100, false).loops).toEqual([]);
 });

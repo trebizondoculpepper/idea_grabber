@@ -55,6 +55,25 @@ canvas {
   right: 12px;
   display: flex;
   gap: 6px;
+  align-items: center;
+  max-width: calc(100% - 24px);
+}
+.music-title {
+  min-width: 0;
+  max-width: min(300px, 35vw);
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #171023;
+  color: #fff9e4;
+  font:
+    700 13px/1.25 system-ui,
+    sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.audio-controls button {
+  flex-shrink: 0;
 }
 .sound-toggle {
   padding: 0.55rem 0.8rem;

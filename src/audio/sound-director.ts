@@ -16,7 +16,9 @@ export type SoundCue =
   | 'bulbee'
   | 'motor'
   | 'rolling'
-  | 'hum';
+  | 'hum'
+  | 'fluorescent'
+  | 'arcade';
 export type Voice = 'coinie' | 'bulbee';
 export interface SoundSnapshot {
   phase: CoiniePhase;
@@ -26,6 +28,7 @@ export interface SoundSnapshot {
   bulbeeSpeech: number | undefined;
   coinieTalking?: boolean;
   bulbeeTalking?: boolean;
+  marqueeFlickers?: number;
   reducedMotion: boolean;
 }
 export interface SoundFrame {
@@ -70,6 +73,11 @@ export function createSoundDirector() {
       if (state.phase === 'dropping' && crossed(0.65)) shot('drop');
       if (state.phase === 'ejecting' && crossed(0.3)) shot('plop');
       if (previous && state.landings > previous.landings) shot('rack');
+      if (
+        previous &&
+        (state.marqueeFlickers ?? 0) > (previous.marqueeFlickers ?? 0)
+      )
+        shot('fluorescent');
       if (state.phase === 'walking' && !state.reducedMotion)
         for (const at of [0.2, 0.5, 0.8]) if (crossed(at)) shot('step');
 
@@ -101,6 +109,7 @@ export function createSoundDirector() {
       }
       if (audible) {
         frame.loops.push('hum');
+        frame.loops.push('arcade');
         if (
           ['lowering', 'lifting', 'carrying', 'returning'].includes(state.phase)
         )

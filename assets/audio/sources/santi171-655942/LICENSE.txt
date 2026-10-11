@@ -1,0 +1,5 @@
+Arcade Ambience FX.wav by Santi171
+https://freesound.org/people/Santi171/sounds/655942/
+Creative Commons CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Modified: excerpt, filtering, loudness adjustment and MP3 encoding.

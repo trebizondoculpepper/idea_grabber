@@ -1,0 +1,5 @@
+Lights Flicker On.wav by mmaruska
+https://freesound.org/people/mmaruska/sounds/232447/
+Licensed under Creative Commons CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+Modified: first 2.4 seconds of the HQ preview, high-pass filter, fades, mono MP3 encoding.

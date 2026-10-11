@@ -23,6 +23,8 @@ const sounds: Record<SoundCue, { files: string[]; gain: number }> = {
   motor: { files: ['motor'], gain: 0.1 },
   rolling: { files: ['rolling'], gain: 0.2 },
   hum: { files: ['hum'], gain: 0.025 },
+  fluorescent: { files: ['fluorescent'], gain: 0.18 },
+  arcade: { files: ['arcade-ambience'], gain: 0.14 },
 };
 
 interface PlayingSound {

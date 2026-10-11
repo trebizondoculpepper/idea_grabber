@@ -16,6 +16,7 @@ export function bindSound() {
   const music = createMusicPlayer(undefined, undefined, undefined, musicWanted);
   const transport = document.querySelector<HTMLButtonElement>('#music-toggle');
   const next = document.querySelector<HTMLButtonElement>('#music-next');
+  const songTitle = document.querySelector<HTMLElement>('#music-title');
   const toggleMusic = () => {
     music.toggle();
     try {
@@ -34,6 +35,11 @@ export function bindSound() {
   };
   function refreshMusic() {
     const state = music.timing;
+    const label = state.playing ? state.track.title : '♫ Music paused ♫';
+    if (songTitle && songTitle.textContent !== label) {
+      songTitle.textContent = label;
+      songTitle.title = state.track.title;
+    }
     transport?.setAttribute(
       'aria-label',
       state.playing ? 'Stop music' : 'Play music',

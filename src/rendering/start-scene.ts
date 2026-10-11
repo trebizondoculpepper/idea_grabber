@@ -229,6 +229,7 @@ export function startScene(canvas: HTMLCanvasElement) {
         bulbeeSpeech: speech.speechKey,
         coinieTalking: coinieSpeech.talking,
         bulbeeTalking: speech.talking,
+        marqueeFlickers: world.marqueeFlickers,
         reducedMotion: reducedMotion.matches,
       },
       delta,

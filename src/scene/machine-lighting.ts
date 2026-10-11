@@ -1,5 +1,6 @@
 import { BoxGeometry, Color, Mesh, MeshBasicMaterial, PointLight } from 'three';
 import type { Object3D } from 'three';
+import { createMarqueeFlicker } from './marquee-flicker';
 
 const hues = ['#ff38a8', '#20dccc', '#ffdf20', '#a070ff'].map(
   (hex) => new Color(hex),
@@ -17,6 +18,11 @@ function hueAt(position: number, target: Color) {
 /** Coloured lights chasing around inside the claw cabinet, with visible bulbs. */
 export function createMachineLighting(machine: Object3D) {
   const star = machine.getObjectByName('Star') as Mesh | undefined;
+  const title = machine.getObjectByName('Title') as Mesh | undefined;
+  const titleMaterial = title?.material as MeshBasicMaterial | undefined;
+  const titleColour = titleMaterial?.color.clone();
+  const flicker = createMarqueeFlicker();
+  let previousElapsed = 0;
   const lights = [
     { x: -1.9, y: 4.6, z: 0.9, offset: 0 },
     { x: -0.4, y: 3.1, z: 1.1, offset: 1.33 },
@@ -40,6 +46,13 @@ export function createMachineLighting(machine: Object3D) {
     return bulb;
   });
   function update(elapsed: number, reducedMotion: boolean) {
+    const brightness = flicker.update(
+      Math.max(0, elapsed - previousElapsed),
+      reducedMotion,
+    );
+    previousElapsed = elapsed;
+    if (titleMaterial && titleColour)
+      titleMaterial.color.copy(titleColour).multiplyScalar(brightness);
     const time = reducedMotion ? 0 : elapsed * 0.6;
     if (star) {
       const colour = (star.material as MeshBasicMaterial).color;
@@ -63,6 +76,9 @@ export function createMachineLighting(machine: Object3D) {
   update(0, false);
   return {
     update,
+    get marqueeFlickers() {
+      return flicker.starts;
+    },
     dispose() {
       lights.forEach(({ light }) => machine.remove(light));
       bulbs.forEach((bulb) => {

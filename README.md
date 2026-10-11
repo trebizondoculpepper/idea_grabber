@@ -15,18 +15,22 @@ Play at [idea-grabber.fly.dev](https://idea-grabber.fly.dev/). The bottom-right 
 
 ### Sound effects
 
-| Resource                                                                             | Creator      | Licence                                                   | Use                                                    |
-| ------------------------------------------------------------------------------------ | ------------ | --------------------------------------------------------- | ------------------------------------------------------ |
-| [Casino Audio](https://kenney.nl/assets/casino-audio)                                | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Coin insertion and capsules landing in the rack        |
-| [Impact Sounds](https://kenney.nl/assets/impact-sounds)                              | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Footsteps and capsule impacts                          |
-| [Interface Sounds](https://kenney.nl/assets/interface-sounds)                        | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Clicks, claw grip/release, jumping, smoke and ejection |
-| [Sci Fi Sounds](https://kenney.nl/assets/sci-fi-sounds)                              | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Claw motor and cabinet hum                             |
-| [Marble Roll](https://freesound.org/people/JuandreSound/sounds/490913/) (HQ preview) | JuandreSound | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Rolling capsules                                       |
-| [Talking Synthesizer](https://opengameart.org/content/talking-synthesizer)           | tcarisland   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Coinie and Bulbee speech                               |
+| Resource                                                                                    | Creator      | Licence                                                   | Use                                                    |
+| ------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- | ------------------------------------------------------ |
+| [Casino Audio](https://kenney.nl/assets/casino-audio)                                       | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Coin insertion and capsules landing in the rack        |
+| [Impact Sounds](https://kenney.nl/assets/impact-sounds)                                     | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Footsteps and capsule impacts                          |
+| [Interface Sounds](https://kenney.nl/assets/interface-sounds)                               | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Clicks, claw grip/release, jumping, smoke and ejection |
+| [Sci Fi Sounds](https://kenney.nl/assets/sci-fi-sounds)                                     | Kenney       | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Claw motor and cabinet hum                             |
+| [flourescent light](https://freesound.org/people/samwd/sounds/457438/) (HQ preview)         | samwd        | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Fluorescent starter buzz during marquee faults         |
+| [Marble Roll](https://freesound.org/people/JuandreSound/sounds/490913/) (HQ preview)        | JuandreSound | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Rolling capsules                                       |
+| [Talking Synthesizer](https://opengameart.org/content/talking-synthesizer)                  | tcarisland   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Coinie and Bulbee speech                               |
+| [Arcade Ambience FX.wav](https://freesound.org/people/Santi171/sounds/655942/) (HQ preview) | Santi171     | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Continuous background arcade ambience                  |
 
 **Talking Synthesizer attribution:** Talking Synthesizer by tcarisland, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified for Coinie and Bulbee using short excerpts, different pitch and speed, mono conversion, fades and MP3 encoding. [Original resource](https://opengameart.org/content/talking-synthesizer), [exact source excerpts and processing](public/audio/sfx/sources.json), and [preserved licence notices](public/audio/sfx/licenses/).
 
 Other effects were excerpted, converted and encoded for browser playback; see the same processing manifest for details. Downloaded audition candidates are recorded in [the resource register](docs/resource-credits.json) and are not included in the game credits unless used.
+
+The Idea Grabber marquee occasionally suffers a short fluorescent brownout, with a starter recording timed to the fault. It stays steady with reduced motion. A quiet stereo arcade-room recording loops continuously behind the music and voices, alongside the existing cabinet hum. Its ends are crossfaded for a smooth loop. The current song title appears beside Play/Stop and updates when skipping tracks.
 
 ### Music and artwork
 
@@ -43,6 +47,8 @@ Each genre in [the catalogue](docs/ingredient-catalogue.json) has a `words` obje
 After 18–30 seconds of quiet time, Coinie or Bulbee may combine a verb and noun from different genres currently on the rack, optionally adding an adjective from a third. For example: “I can't wait to extract the garden!” Existing entrance and capsule announcements take priority. The feature uses fixed templates and random choices locally; it makes no AI requests.
 
 With an empty rack, the characters instead take turns complaining about running out of ideas. A shuffled collection of 28 lines includes industry jokes and random game references such as “We need the next new Minecraft. Preferably by Friday.” Complaints stop when a ball is present, and removing the last ball starts a fresh quiet-time wait.
+
+Every catalogue item also carries an `examples` list of games; [browse all genre examples](docs/genre-examples.md). Coinie occasionally compares two or three examples drawn from distinct genres currently on the rack, using phrases such as “mashed up with” or “with the mechanics of”. Game references are local curated data and do not require AI.
 
 ### Sharing and camera shots
 
