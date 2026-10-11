@@ -1428,5 +1428,27 @@
       "nouns": ["agent", "secret"],
       "adjectives": ["clandestine"]
     }
+  },
+  {
+    "id": "surgery",
+    "label": "Surgery",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🩺",
+    "words": {
+      "verbs": ["operate on", "stitch up"],
+      "nouns": ["patient", "scalpel"],
+      "adjectives": ["surgical", "sterile"]
+    }
+  },
+  {
+    "id": "mechanic",
+    "label": "Mechanic",
+    "category": "simulation-and-everyday-systems",
+    "emoji": "🔧",
+    "words": {
+      "verbs": ["repair", "tune"],
+      "nouns": ["engine", "gearbox"],
+      "adjectives": ["mechanical", "greasy"]
+    }
   }
 ]
