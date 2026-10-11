@@ -1450,5 +1450,16 @@
       "nouns": ["engine", "gearbox"],
       "adjectives": ["mechanical", "greasy"]
     }
+  },
+  {
+    "id": "match-4",
+    "label": "Match-4",
+    "category": "puzzles-and-unusual-interactions",
+    "emoji": "💠",
+    "words": {
+      "verbs": ["match", "swap"],
+      "nouns": ["tile", "gem"],
+      "adjectives": ["colourful", "matching"]
+    }
   }
 ]
