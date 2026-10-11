@@ -1,5 +1,7 @@
 # Idea Grabber
 
+**[Play Idea Grabber live](https://idea-grabber.fly.dev/)**
+
 A browser claw-machine game with bold cartoon art and PS1 rendering. The current demo contains the cabinet, claw, chute, five-position rack, faceted capsules with distinct catalogue icons and independently random colours, and the paper-cutout heroes Bulbee and Coinie. The tray starts empty. Click Coinie to make him jump into the slot: the claw collects a capsule, carries it right and drops it through a hidden chute. The capsule emerges at the bottom left and rolls slowly right. After the capsule settles and the claw parks, a new Coinie walks in from the right.
 
 ## Credits and resources
@@ -49,6 +51,12 @@ While the machine is idle, the camera occasionally cuts through two or three sho
 ### Development tools
 
 The project uses [Vite](https://vite.dev/) (MIT), [TypeScript](https://www.typescriptlang.org/) (Apache-2.0), [Vitest](https://vitest.dev/) (MIT), [ESLint](https://eslint.org/) (MIT), [Prettier](https://prettier.io/) (MIT), [Node.js](https://nodejs.org/), and [Spec Kitty](https://github.com/Priivacy-ai/spec-kitty) for mission tracking. Dependency versions and transitive packages are recorded in [package.json](package.json) and [package-lock.json](package-lock.json); each package retains its own licence. The public game is hosted on [Fly.io](https://fly.io/).
+
+## Hosting and costs
+
+The live site uses one shared-CPU Fly machine with 256 MB of RAM in London. [fly.toml](fly.toml) enables automatic stopping and starting with zero machines kept running; deployments use `--ha=false` to avoid creating a second machine. [Fly checks for idle capacity every few minutes](https://docs.fly.io/launch/autostop-autostart), and the next request wakes the machine, so the first visit after an idle period may take a little longer. There is no built-in eight-hour idle timer; keeping the existing shorter idle period saves more compute time.
+
+Stopped machines incur no CPU or RAM charges, although [root filesystem storage and outbound traffic still have costs](https://docs.fly.io/about/pricing). Browser caching and gzip reduce repeat asset transfers: fingerprinted bundles are cached for a year, artwork for an hour, and audio is revalidated so unchanged recordings need not be downloaded again. Original WAV masters remain in the repository but are excluded from deployment uploads; the game serves MP3s.
 
 ## Run locally
 
