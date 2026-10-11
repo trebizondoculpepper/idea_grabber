@@ -16,6 +16,7 @@ function hueAt(position: number, target: Color) {
 
 /** Coloured lights chasing around inside the claw cabinet, with visible bulbs. */
 export function createMachineLighting(machine: Object3D) {
+  const star = machine.getObjectByName('Star') as Mesh | undefined;
   const lights = [
     { x: -1.9, y: 4.6, z: 0.9, offset: 0 },
     { x: -0.4, y: 3.1, z: 1.1, offset: 1.33 },
@@ -40,6 +41,12 @@ export function createMachineLighting(machine: Object3D) {
   });
   function update(elapsed: number, reducedMotion: boolean) {
     const time = reducedMotion ? 0 : elapsed * 0.6;
+    if (star) {
+      const colour = (star.material as MeshBasicMaterial).color;
+      hueAt(time * 1.1 + 2, colour);
+      if (!reducedMotion)
+        colour.multiplyScalar(0.88 + Math.sin(elapsed * Math.PI * 1.6) * 0.12);
+    }
     for (const { light, offset } of lights) {
       hueAt(time + offset, light.color);
       light.intensity = reducedMotion

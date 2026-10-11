@@ -35,7 +35,7 @@ export function createEnvironment(
   const cabinets = [
     { art: 'silver-axe', body: '#c41f3a' },
     { art: 'lbert', body: palette.purple },
-    { art: 'bogger', body: '#3f7d2a' },
+    { art: 'vlogger', body: '#bf2746' },
     { art: 'invoicers', body: '#1d4fa8' },
     { art: 'snackman', body: '#398aff' },
     { art: 'bonkey-kung', body: '#ff545e' },

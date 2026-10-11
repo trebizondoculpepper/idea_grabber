@@ -16,6 +16,8 @@ import {
   poseCoinieJump,
   poseCoinieWalk,
   resetCoiniePose,
+  createCoinieJumps,
+  type CoinieJump,
 } from './animate-coinie';
 
 export function createScene() {
@@ -38,6 +40,8 @@ export function createScene() {
   const talking = { bulbee: false, coinie: false };
   let generation = cycle.generation;
   let replacement = 0;
+  const nextJump = createCoinieJumps();
+  let jump: CoinieJump = 'default';
   return {
     scene,
     bulbee: bulbee.hero,
@@ -55,6 +59,9 @@ export function createScene() {
     },
     get coinieProgress() {
       return cycle.progress;
+    },
+    get coinieJump() {
+      return jump;
     },
     get coiniePhase() {
       return cycle.phase;
@@ -81,7 +88,9 @@ export function createScene() {
     },
     activateCoinie() {
       if (machine.busy) return false;
-      return cycle.start(machine.full);
+      const accepted = cycle.start(machine.full);
+      if (accepted) jump = nextJump();
+      return accepted;
     },
     update(elapsed: number, delta = 0, reducedMotion = false) {
       screens.update(elapsed, reducedMotion);
@@ -117,7 +126,7 @@ export function createScene() {
         reducedMotion,
       );
       if (cycle.phase === 'jumping')
-        poseCoinieJump(coinie.hero, cycle.progress, reducedMotion);
+        poseCoinieJump(coinie.hero, cycle.progress, reducedMotion, jump);
       else if (cycle.phase === 'walking')
         poseCoinieWalk(coinie.hero, cycle.progress, reducedMotion);
       else resetCoiniePose(coinie.hero);

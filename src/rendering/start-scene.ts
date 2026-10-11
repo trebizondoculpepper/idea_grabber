@@ -161,8 +161,12 @@ export function startScene(canvas: HTMLCanvasElement) {
         camera.fov = 34;
       } else if (shot === 'bulbee' || shot === 'coinie') {
         const hero = shot === 'bulbee' ? world.bulbee : world.coinie;
-        hero.getWorldPosition(shotTarget);
-        shotTarget.y += 1.4;
+        if (shot === 'coinie')
+          hero.getObjectByName('Body')!.getWorldPosition(shotTarget);
+        else {
+          hero.getWorldPosition(shotTarget);
+          shotTarget.y += 1.4;
+        }
         camera.position
           .copy(shotTarget)
           .add(new Vector3(2, 0.6, 4.2).multiplyScalar(framing));
@@ -191,7 +195,10 @@ export function startScene(canvas: HTMLCanvasElement) {
     }
     camera.updateProjectionMatrix();
     camera.updateMatrixWorld();
-    if (import.meta.env.DEV) canvas.dataset.cameraShot = shot;
+    if (import.meta.env.DEV) {
+      canvas.dataset.cameraShot = shot;
+      canvas.dataset.coinieJump = world.coinieJump;
+    }
     share.update();
     input.update();
     speech.update(delta);

@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1] / 'public/assets/arcade'
 GAMES = {
     'silver-axe': ('SILVER AXE', '#ffb52e', 'STAGE 2', ['AXE', 'ELF', 'ORC']),
     'lbert': ('L-BERT', '#ff38a8', 'LEVEL 2', ['LBT', 'HOP', 'POP']),
-    'bogger': ('BOGGER', '#69e649', 'ROUND 2', ['BOG', 'LOG', 'MUD']),
+    'vlogger': ('VLOGGER', '#ff545e', 'VIRAL UPLOAD', ['PIX', 'VIR', 'LOL']),
     'invoicers': ('SPACE INVOICERS', '#56edb2', 'WAVE 2', ['VAT', 'TAX', 'PAY']),
     'snackman': ('SNACK-MAN', '#ffdf20', 'LEVEL 2', ['YUM', 'NOM', 'BUN']),
     'bonkey-kung': ('BONKEY KUNG', '#ff545e', 'ROUND 2', ['BNK', 'APE', 'BAN']),
@@ -27,8 +27,8 @@ for game, (title, color, stage, initials) in GAMES.items():
         body += '<path d="M28 198l8-45 24 8 18 34-23-9-12 12z" fill="#69e649" stroke="#171023" stroke-width="4"/><circle cx="46" cy="164" r="4" fill="#ffdf20"/>'
     elif game == 'lbert':
         body = body.replace('#ff38a8', '#20dccc').replace('translate(128', 'translate(88')
-    elif game == 'bogger':
-        body = body.replace('translate(128 240)', 'translate(202 133)').replace('x="30" y="148"', 'x="85" y="148"').replace('x="90" y="192"', 'x="15" y="192"')
+    elif game == 'vlogger':
+        body = body.replace('LIVE VIEWERS: 1,284', 'YOUTUBE VIEWS: 985K').replace('ON AIR', 'VIRAL!').replace('#20dccc', '#ffdf20')
     elif game == 'invoicers':
         body = body.replace('x="24" y="30"', 'x="16" y="42"').replace('x="116" y="30"', 'x="110" y="100"').replace('x="184" y="76"', 'x="184" y="112"')
         body += '<path d="M188 162v20M64 120v18" stroke="#ff545e" stroke-width="4"/>'
@@ -50,8 +50,8 @@ for game, (title, color, stage, initials) in GAMES.items():
     thumbnail = f'<svg x="82" y="59" width="92" height="92" viewBox="0 0 256 256">{original[original.index(">")+1:original.rindex("</svg>")]}</svg>'
     score = header + '<rect width="256" height="256" fill="#0b0618"/>'
     score += f'<rect x="6" y="6" width="244" height="244" rx="6" fill="none" stroke="{color}" stroke-width="3"/>'
-    score += text(30, title, color, 18 if len(title) < 14 else 15) + text(49, 'HIGH SCORES', '#fff9e4', 13) + thumbnail
+    score += text(30, title, color, 18 if len(title) < 14 else 15) + text(49, 'TOP CREATORS' if game == 'vlogger' else 'HIGH SCORES', '#fff9e4', 13) + thumbnail
     for rank, name in enumerate(initials):
-        score += text(174 + rank * 20, f'{rank+1}  {name}  {98500-rank*17250:06}', color if rank == 0 else '#fff9e4', 16)
+        score += text(174 + rank * 20, (f'{rank+1} {name} {985-rank*172}K VIEWS' if game == 'vlogger' else f'{rank+1}  {name}  {98500-rank*17250:06}'), color if rank == 0 else '#fff9e4', 16)
     score += text(239, 'INSERT COIN', '#ffdf20', 14) + '</svg>\n'
     (ROOT / f'{game}-scores.svg').write_text(score)

@@ -140,3 +140,7 @@ Bulbee announces the current game idea in a speech bubble whenever a capsule set
 Coinie starts offstage and walks in before the first click is enabled. Each entrance gets one of twenty enthusiastic stock pitches in a yellow speech bubble. A shuffled bag exhausts all twenty before repeating, with no consecutive duplicate. His bubble follows him, stays for eight seconds, and hides when he is inserted.
 
 The foreground passer-by cast includes a space invader, joystick, hot dog, pizza slice, pretzel, eight-ball bouncer and milkshake greaser. Their original SVG artwork lives in `public/assets/passers-by/`. Each can be followed by the idle camera pan; reduced motion hides the walkers.
+
+Coinie starts with his original slot jump, then shuffles between the default, a forward somersault and a backflip, without repeating consecutive moves. Flips pivot around the coin body; the action camera follows its centre. Reduced motion uses the same stationary fade for every move. The claw star gently pulses through yellow, pink, cyan and purple, holding yellow under reduced motion.
+
+The Vlogger cabinet replaces Bogger with an influencer studio, YouTube-style live viewer and viral upload counters, and a top-creators attract screen. Its three screens use the existing staggered arcade-screen cycle.
