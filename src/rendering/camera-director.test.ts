@@ -54,3 +54,19 @@ it('keeps grab animations in the default view when reduced motion is enabled', (
   expect(camera.update(1, true, false, 'lifting')).toBe('default');
   expect(camera.update(1, true, false, 'rolling')).toBe('default');
 });
+
+it('offers an idle passer-by pan only while a walker is available', () => {
+  const camera = createCameraDirector(() => 0.999);
+  expect(camera.update(36, false, true, 'ready', true)).toBe('passerby');
+  expect(camera.update(1, false, true, 'ready', true)).toBe('passerby');
+  expect(camera.update(0, false, true, 'ready', false)).not.toBe('passerby');
+  const empty = createCameraDirector(() => 0.999);
+  expect(empty.update(36, false, true)).not.toBe('passerby');
+});
+
+it('interrupts a passer-by pan for a grab or reduced motion', () => {
+  const camera = createCameraDirector(() => 0.999);
+  expect(camera.update(36, false, true, 'ready', true)).toBe('passerby');
+  expect(camera.update(0, false, false, 'grabbing', true)).toBe('claw');
+  expect(camera.update(0, true, true, 'ready', true)).toBe('default');
+});

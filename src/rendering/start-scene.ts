@@ -142,10 +142,17 @@ export function startScene(canvas: HTMLCanvasElement) {
       reducedMotion.matches,
       world.canInsertCoinie,
       world.coiniePhase,
+      world.passerBy !== undefined,
     );
     const framing = Math.max(1, 1 / camera.aspect);
     if (shot !== 'default') {
-      if (shot === 'claw') {
+      if (shot === 'passerby' && world.passerBy) {
+        world.passerBy.getWorldPosition(shotTarget);
+        shotTarget.y += 1.2;
+        // Keep the camera in place and pan its gaze with the passing character.
+        camera.position.set(3 * framing, 3.2 * framing, 14 * framing);
+        camera.fov = 36;
+      } else if (shot === 'claw') {
         world.scene.getObjectByName('Claw')!.getWorldPosition(shotTarget);
         shotTarget.y -= 0.4;
         camera.position

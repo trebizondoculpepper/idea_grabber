@@ -81,6 +81,13 @@ export function createPassersBy(
     get walking() {
       return active ? cast[active.index].art : undefined;
     },
+    get cameraTarget() {
+      if (!active) return undefined;
+      const walker = walkers[active.index].walker;
+      return walker.visible && Math.abs(walker.position.x) <= 6
+        ? walker
+        : undefined;
+    },
     update(delta: number, reducedMotion = false) {
       if (reducedMotion) {
         hide();

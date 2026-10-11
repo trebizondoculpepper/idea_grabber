@@ -50,6 +50,9 @@ export function createScene() {
     get coinie() {
       return coinie.hero;
     },
+    get passerBy() {
+      return passersBy.cameraTarget;
+    },
     get coinieProgress() {
       return cycle.progress;
     },

@@ -1,7 +1,14 @@
 import type { CoiniePhase } from '../game/coinie-cycle';
 
 export type CameraShot =
-  'default' | 'machine' | 'claw' | 'bulbee' | 'coinie' | 'feature' | 'dutch';
+  | 'default'
+  | 'machine'
+  | 'claw'
+  | 'bulbee'
+  | 'coinie'
+  | 'feature'
+  | 'dutch'
+  | 'passerby';
 const shots: Exclude<CameraShot, 'default'>[] = [
   'machine',
   'claw',
@@ -34,6 +41,7 @@ export function createCameraDirector(random = Math.random) {
       reducedMotion: boolean,
       ready: boolean,
       phase: CoiniePhase = 'ready',
+      hasPasserBy = false,
     ): CameraShot {
       const grabShot = grabShots[phase];
       if (!reducedMotion && grabShot) {
@@ -51,6 +59,12 @@ export function createCameraDirector(random = Math.random) {
         return 'default';
       }
       if (sequence.length) {
+        // A walker can leave the foreground before its scheduled shot ends.
+        const lostTarget = sequence[0] === 'passerby' && !hasPasserBy;
+        sequence = sequence.filter(
+          (shot) => shot !== 'passerby' || hasPasserBy,
+        );
+        if (lostTarget) remaining = 2.8;
         remaining -= delta;
         while (remaining <= 0 && sequence.length) {
           sequence.shift();
@@ -65,6 +79,7 @@ export function createCameraDirector(random = Math.random) {
       wait -= delta;
       if (wait > 0) return 'default';
       const choices = [...shots];
+      if (hasPasserBy) choices.push('passerby');
       sequence = Array.from(
         { length: 2 + Math.floor(random() * 2) },
         () => choices.splice(Math.floor(random() * choices.length), 1)[0],
