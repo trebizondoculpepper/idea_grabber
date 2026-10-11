@@ -135,6 +135,6 @@ The expanded scene was verified in Chrome and Safari using the production previe
 
 Safari rendered the production preview correctly; its development-server page showed unstyled HTML without starting the scene, so production preview is the verified Safari route. This development-server limitation remains to investigate separately.
 
-Bulbee announces the current game idea in a speech bubble whenever a capsule settles in the rack. Newest ingredients come first, each name is emphasised, and only the current FIFO contents are included. The bubble follows Bulbee as the camera drifts and stays visible for ten seconds.
+Bulbee announces the current game idea in a speech bubble whenever a capsule settles in the rack. Newest ingredients come first, each name is emphasised, and only the current FIFO contents are included. The bubble follows Bulbee as the camera drifts and stays visible for ten seconds. Coinie waits until Bulbee finishes speaking and he is back on stage, then echoes the idea with a reaction to its newest genre (for example, “Platform game? That's so 1990s.”). Other genres get rotating fallback jokes; all dialogue is generated locally from curated text.
 
 Coinie starts offstage and walks in before the first click is enabled. Each entrance gets one of twenty enthusiastic stock pitches in a yellow speech bubble. A shuffled bag exhausts all twenty before repeating, with no consecutive duplicate. His bubble follows him, stays for eight seconds, and hides when he is inserted.

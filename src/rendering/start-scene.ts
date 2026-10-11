@@ -188,7 +188,7 @@ export function startScene(canvas: HTMLCanvasElement) {
     share.update();
     input.update();
     speech.update(delta);
-    coinieSpeech.update(delta);
+    coinieSpeech.update(delta, speech.talking);
     const joke = humour.update(
       delta,
       world.ingredients,

@@ -8,9 +8,11 @@ const openings = [
 ];
 export function createBulbeeLine(ingredients: Ingredient[], landing: number) {
   const names = ingredients.map((ingredient) =>
-    ingredient.id === 'deck-building'
-      ? 'deck-building'
-      : ingredient.label.toLowerCase().replace(/\s+(game|play)$/, ''),
+    ingredient.id === 'platformer'
+      ? 'platform'
+      : ingredient.id === 'deck-building'
+        ? 'deck-building'
+        : ingredient.label.toLowerCase().replace(/\s+(game|play)$/, ''),
   );
   const opening = openings[(landing - 1) % openings.length];
   const article = /^[aeiou]/i.test(names[0] ?? '') ? 'an' : 'a';

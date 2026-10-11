@@ -2,6 +2,7 @@ import { Vector3 } from 'three';
 import type { PerspectiveCamera } from 'three';
 import type { createScene } from '../scene/create-scene';
 import { createCoinieLines } from '../game/coinie-lines';
+import { createCoinieReplyCue } from '../game/coinie-reply';
 
 export function bindCoinieSpeech(
   canvas: HTMLCanvasElement,
@@ -10,13 +11,14 @@ export function bindCoinieSpeech(
 ) {
   const bubble = document.querySelector<HTMLElement>('#coinie-speech')!;
   const nextLine = createCoinieLines();
+  const replies = createCoinieReplyCue();
   const anchor = new Vector3();
   let spokenGeneration = -1;
   let remaining = 0;
   let utterance = 0;
   return {
     get busy() {
-      return remaining > 0;
+      return remaining > 0 || replies.pending;
     },
     say(text: string) {
       bubble.textContent = text;
@@ -35,15 +37,29 @@ export function bindCoinieSpeech(
     get speechKey() {
       return bubble.hidden ? undefined : utterance;
     },
-    update(delta: number) {
+    update(delta: number, bulbeeTalking = false) {
       const onstage =
         world.coiniePhase === 'ready' ||
         (world.coiniePhase === 'walking' && world.coinieProgress >= 0.55);
       if (onstage && spokenGeneration !== world.coinieGeneration) {
         spokenGeneration = world.coinieGeneration;
-        utterance++;
-        bubble.textContent = nextLine();
+        if (!world.ingredients.length) {
+          utterance++;
+          bubble.textContent = nextLine();
+          remaining = 8;
+        }
+      }
+      const reply = replies.update(delta, {
+        landings: world.landings,
+        ingredients: world.ingredients,
+        phase: world.coiniePhase,
+        progress: world.coinieProgress,
+        bulbeeTalking,
+      });
+      if (reply) {
+        bubble.textContent = reply;
         remaining = 8;
+        utterance++;
       }
       remaining = Math.max(0, remaining - delta);
       bubble.hidden =
