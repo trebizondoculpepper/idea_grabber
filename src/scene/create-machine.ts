@@ -123,6 +123,17 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     [0, 0.05, 0.13],
     kit.textured('coin-panel'),
   );
+  // Share six tiny textures rather than allocating resources as the count changes.
+  const rackCountMaterials = Array.from({ length: 6 }, (_, count) =>
+    kit.textured(`rack-count-${count}`),
+  );
+  const rackCount = kit.panel(
+    coinSlot,
+    'RackCount',
+    [(0.86 * 207) / 256, (3.75 * 88) / 512],
+    [0, 0.05 + ((256 - 440) * 3.75) / 512, 0.145],
+    rackCountMaterials[0],
+  );
   // A bright copy of the sign, toggled on and off to flash while a coin can go in.
   const insertCoinLit = kit.panel(
     coinSlot,
@@ -345,5 +356,8 @@ export function createMachine(parent: Object3D, kit: SceneKit) {
     recycle,
     coinSlot,
     insertCoinLit,
+    setRackCount(count: number) {
+      rackCount.material = rackCountMaterials[count];
+    },
   };
 }

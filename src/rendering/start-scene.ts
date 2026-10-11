@@ -10,10 +10,14 @@ import { bindSound } from '../audio/bind-sound';
 import { createRackHumour } from '../game/rack-humour';
 import { createMusicDance } from '../scene/music-dance';
 
+// Magnify the original 40-degree view by 7% while retaining its position.
+const defaultFov =
+  (Math.atan(Math.tan((20 * Math.PI) / 180) / 1.07) * 360) / Math.PI;
+
 export function startScene(canvas: HTMLCanvasElement) {
   const renderer = new WebGLRenderer({ canvas, antialias: false });
   renderer.setPixelRatio(1);
-  const camera = new PerspectiveCamera(40, 1, 0.1, 100);
+  const camera = new PerspectiveCamera(defaultFov, 1, 0.1, 100);
   camera.position.set(7, 6, 11);
   camera.lookAt(0, 2.85, 0);
   const world = createScene();
@@ -47,7 +51,7 @@ export function startScene(canvas: HTMLCanvasElement) {
         renderer.setSize(1200, 900, false);
         ps1Uniforms.resolution.value.set(1200, 900);
         camera.aspect = 4 / 3;
-        camera.fov = 40;
+        camera.fov = defaultFov;
         camera.position.set(7, 6, 11);
         camera.lookAt(0, 2.85, 0);
         camera.updateProjectionMatrix();
@@ -123,7 +127,7 @@ export function startScene(canvas: HTMLCanvasElement) {
       Math.cos(angle) * radius,
     );
     camera.lookAt(0, 2.85, 0);
-    camera.fov = 40;
+    camera.fov = defaultFov;
     ps1Uniforms.snapPixels.value = reducedMotion.matches ? 0 : 1;
     dance.restore();
     world.setTalking(speech.talking, coinieSpeech.talking);
@@ -188,6 +192,7 @@ export function startScene(canvas: HTMLCanvasElement) {
         camera.position.set(5.2 * framing, 4.6 * framing, 8 * framing);
         camera.fov = 38;
       } else {
+        camera.fov = 40;
         shotTarget.set(0, 2.85, 0);
       }
       camera.lookAt(shotTarget);

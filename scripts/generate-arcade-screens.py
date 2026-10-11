@@ -10,7 +10,7 @@ GAMES = {
     'invoicers': ('SPACE INVOICERS', '#56edb2', 'WAVE 2', ['VAT', 'TAX', 'PAY']),
     'snackman': ('SNACK-MAN', '#ffdf20', 'LEVEL 2', ['YUM', 'NOM', 'BUN']),
     'bonkey-kung': ('BONKEY KUNG', '#ff545e', 'ROUND 2', ['BNK', 'APE', 'BAN']),
-    'hasteroids': ('HASTEROIDS', '#fff9e4', 'SECTOR 2', ['HST', 'ROK', 'ZIP']),
+    'catsteroids': ('CATSTEROIDS', '#fff9e4', 'CAT FIELD 2', ['MEW', 'MOG', 'PUR']),
     'mortgage-kombat': ('MORTGAGE KOMBAT', '#39c3ff', 'ROUND 2', ['APR', 'FIX', 'LET']),
 }
 
@@ -38,7 +38,7 @@ for game, (title, color, stage, initials) in GAMES.items():
     elif game == 'bonkey-kung':
         body = body.replace('translate(120 218)', 'translate(190 151)').replace('cx="130" cy="108"', 'cx="190" cy="115"').replace('cx="90" cy="164"', 'cx="65" cy="170"')
         body += '<ellipse cx="160" cy="223" rx="10" ry="8" fill="#8a6328" stroke="#ffdf20" stroke-width="2"/>'
-    elif game == 'hasteroids':
+    elif game == 'catsteroids':
         body = f'<g transform="rotate(42 128 128)">{body}</g><path d="M72 82l12-8M54 94l8-6" stroke="#fff9e4" stroke-width="3"/>'
     elif game == 'mortgage-kombat':
         body = body.replace('translate(76 160)', 'translate(102 160)').replace('translate(184 160)', 'translate(160 160)').replace('width="96"', 'width="40"')

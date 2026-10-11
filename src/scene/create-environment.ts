@@ -39,7 +39,7 @@ export function createEnvironment(
     { art: 'invoicers', body: '#1d4fa8' },
     { art: 'snackman', body: '#398aff' },
     { art: 'bonkey-kung', body: '#ff545e' },
-    { art: 'hasteroids', body: '#2a2240' },
+    { art: 'catsteroids', body: '#2a2240' },
     { art: 'mortgage-kombat', body: '#ffb52e' },
   ];
   const spots = [

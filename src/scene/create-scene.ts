@@ -112,6 +112,7 @@ export function createScene() {
         generation = cycle.generation;
       }
       machine.update(cycle.phase, cycle.progress, delta);
+      parts.setRackCount(machine.delivered);
       if (cycle.phase === 'walking' && replacement !== generation) {
         coinie = createHero(scene, kit, 'Coinie', 3.6, 2.0);
         replacement = generation;
