@@ -24,6 +24,8 @@ export interface SoundSnapshot {
   landings: number;
   coinieSpeech: number | undefined;
   bulbeeSpeech: number | undefined;
+  coinieTalking?: boolean;
+  bulbeeTalking?: boolean;
   reducedMotion: boolean;
 }
 export interface SoundFrame {
@@ -35,6 +37,7 @@ export interface SoundFrame {
 // Read animation state, never wall-clock timers: pause and reduced motion stay in sync.
 export function createSoundDirector() {
   let previous: SoundSnapshot | undefined;
+  let wasAudible = false;
   const voices = {
     coinie: { remaining: 0, untilNext: 0 },
     bulbee: { remaining: 0, untilNext: 0 },
@@ -72,10 +75,20 @@ export function createSoundDirector() {
 
       for (const voice of ['coinie', 'bulbee'] as const) {
         const key = voice === 'coinie' ? 'coinieSpeech' : 'bulbeeSpeech';
+        const talking =
+          state[voice === 'coinie' ? 'coinieTalking' : 'bulbeeTalking'];
         const burst = voices[voice];
-        if (state[key] === undefined || state[key] !== previous?.[key]) {
+        // Catch a live entrance line after audio unlocks, without replaying old bubbles.
+        const resumedSpeech = audible && !wasAudible && talking === true;
+        if (
+          state[key] === undefined ||
+          talking === false ||
+          state[key] !== previous?.[key] ||
+          resumedSpeech
+        ) {
           frame.stopVoices.push(voice);
-          burst.remaining = state[key] !== undefined && audible ? 8 : 0;
+          burst.remaining =
+            state[key] !== undefined && audible && talking !== false ? 8 : 0;
           burst.untilNext = 0;
         }
         if (!audible) burst.remaining = 0;
@@ -96,6 +109,7 @@ export function createSoundDirector() {
           frame.loops.push('rolling');
       }
       previous = { ...state };
+      wasAudible = audible;
       return frame;
     },
   };

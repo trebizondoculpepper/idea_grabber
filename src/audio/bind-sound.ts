@@ -64,6 +64,9 @@ export function bindSound() {
   music.setHidden(document.hidden);
   refreshButton();
   refreshMusic();
+  // Play entrance speech immediately wherever autoplay is already allowed.
+  // The normal gesture listeners resume a suspended context elsewhere.
+  void player.unlock();
   let interacted = false;
   const unlock = (event: Event) => {
     interacted = true;

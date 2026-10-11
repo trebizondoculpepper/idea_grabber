@@ -227,6 +227,8 @@ export function startScene(canvas: HTMLCanvasElement) {
         landings: world.landings,
         coinieSpeech: coinieSpeech.speechKey,
         bulbeeSpeech: speech.speechKey,
+        coinieTalking: coinieSpeech.talking,
+        bulbeeTalking: speech.talking,
         reducedMotion: reducedMotion.matches,
       },
       delta,

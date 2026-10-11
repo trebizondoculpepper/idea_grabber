@@ -74,6 +74,18 @@ it('uses finite speech bursts and stops immediately when a bubble hides', () => 
   expect(sound.update(ready, 0.5, true).shots).toEqual([]);
 });
 
+it('starts Coinie entrance Animalese when audio unlocks during his first line', () => {
+  const sound = createSoundDirector();
+  const speaking = { ...ready, coinieSpeech: 1, coinieTalking: true };
+  expect(sound.update(speaking, 0.1, false).shots).toEqual([]);
+  expect(sound.update(speaking, 0.1, true).shots).toEqual(['coinie']);
+  expect(sound.update(speaking, 0.01, true).shots).toEqual([]);
+  const finished = { ...speaking, coinieTalking: false };
+  expect(sound.update(finished, 0.2, true).stopVoices).toContain('coinie');
+  sound.update(finished, 0.1, false);
+  expect(sound.update(finished, 0.1, true).shots).toEqual([]);
+});
+
 it('handles reduced motion contacts and suppresses animated footsteps', () => {
   const sound = createSoundDirector();
   const reduced = { ...ready, reducedMotion: true };

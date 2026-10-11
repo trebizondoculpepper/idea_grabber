@@ -123,6 +123,24 @@ canvas {
   text-decoration-thickness: 3px;
 }
 
+.rack-tooltip {
+  z-index: 4;
+  max-width: min(260px, calc(100% - 24px));
+  padding: 8px 12px;
+  border-width: 3px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #20dccc;
+  font:
+    800 16px/1.25 system-ui,
+    sans-serif;
+}
+.rack-tooltip::after {
+  bottom: -8px;
+  width: 12px;
+  height: 12px;
+  border-width: 3px;
+}
+
 .coinie-bubble {
   background: #ffdf20;
   box-shadow: 5px 5px 0 #20dccc;

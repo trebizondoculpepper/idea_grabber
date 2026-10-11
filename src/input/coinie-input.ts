@@ -11,6 +11,7 @@ export function bindCoinieInput(
   const pointer = new Vector2();
   const button = document.querySelector<HTMLButtonElement>('#insert-coinie');
   const announcement = document.querySelector<HTMLElement>('#coinie-status');
+  const tooltip = document.querySelector<HTMLElement>('#rack-tooltip');
   let lastPhase = world.coiniePhase;
   let lastPointer: { x: number; y: number } | undefined;
 
@@ -33,8 +34,8 @@ export function bindCoinieInput(
     );
   }
   // Tray balls can be thrown away while the machine is idle.
-  function hitTrayBall(x: number, y: number) {
-    if (!world.canInsertCoinie || !aim(x, y)) return undefined;
+  function hitTrayBall(x: number, y: number, requireIdle = true) {
+    if ((requireIdle && !world.canInsertCoinie) || !aim(x, y)) return undefined;
     const hit = raycaster.intersectObjects(world.trayBalls, true)[0];
     return world.trayBalls.find(
       (ball) => hit && (hit.object === ball || hit.object.parent === ball),
@@ -52,15 +53,18 @@ export function bindCoinieInput(
     }
   };
   const move = (event: PointerEvent) => {
+    if (event.pointerType === 'touch') return;
     lastPointer = { x: event.clientX, y: event.clientY };
   };
   const leave = () => {
     lastPointer = undefined;
     canvas.style.cursor = '';
+    if (tooltip) tooltip.hidden = true;
   };
   canvas.addEventListener('click', click);
   canvas.addEventListener('pointermove', move);
   canvas.addEventListener('pointerleave', leave);
+  canvas.addEventListener('pointercancel', leave);
   button?.addEventListener('click', insert);
 
   return {
@@ -69,12 +73,39 @@ export function bindCoinieInput(
       canvas.dataset.trayCount = String(world.trayCount);
       canvas.dataset.coinieGeneration = String(world.coinieGeneration);
       if (button) button.disabled = !world.canInsertCoinie;
+      const hoveredBall = lastPointer
+        ? hitTrayBall(lastPointer.x, lastPointer.y, false)
+        : undefined;
+      if (tooltip) {
+        tooltip.hidden = !hoveredBall;
+        if (hoveredBall && lastPointer) {
+          tooltip.textContent = hoveredBall.userData.ingredient.label;
+          const bounds = canvas.getBoundingClientRect();
+          const x = lastPointer.x - bounds.left;
+          const y = lastPointer.y - bounds.top;
+          const left = Math.max(
+            12,
+            Math.min(
+              x - tooltip.offsetWidth / 2,
+              bounds.width - tooltip.offsetWidth - 12,
+            ),
+          );
+          tooltip.style.left = `${left}px`;
+          tooltip.style.top = `${Math.max(12, y - tooltip.offsetHeight - 16)}px`;
+          tooltip.style.setProperty(
+            '--tail-left',
+            `${Math.max(12, Math.min(x - left, tooltip.offsetWidth - 12))}px`,
+          );
+        }
+      }
       if (lastPointer)
         canvas.style.cursor =
           hitCoinie(lastPointer.x, lastPointer.y) ||
-          hitTrayBall(lastPointer.x, lastPointer.y)
+          (hoveredBall && world.canInsertCoinie)
             ? 'pointer'
-            : '';
+            : hoveredBall
+              ? 'help'
+              : '';
       if (lastPhase !== world.coiniePhase) {
         if (announcement)
           announcement.textContent =
@@ -94,8 +125,13 @@ export function bindCoinieInput(
       canvas.removeEventListener('click', click);
       canvas.removeEventListener('pointermove', move);
       canvas.removeEventListener('pointerleave', leave);
+      canvas.removeEventListener('pointercancel', leave);
       button?.removeEventListener('click', insert);
       canvas.style.cursor = '';
+      if (tooltip) {
+        tooltip.hidden = true;
+        tooltip.textContent = '';
+      }
     },
   };
 }

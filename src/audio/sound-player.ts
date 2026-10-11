@@ -35,6 +35,7 @@ export function createSoundPlayer() {
   let context: AudioContext | undefined;
   let master: GainNode | undefined;
   let loading: Promise<void> | undefined;
+  let decoded = false;
   let disposed = false;
   let muted = false;
   const buffers = new Map<string, AudioBuffer>();
@@ -42,7 +43,7 @@ export function createSoundPlayer() {
   const loops = new Map<SoundCue, PlayingSound>();
   const variants = new Map<SoundCue, number>();
   const abort = new AbortController();
-  // Fetch before the first interaction, but create/resume Web Audio only in a gesture.
+  // Fetch early; browsers may require a gesture before allowing Web Audio to run.
   const downloads = Object.values(sounds)
     .flatMap(({ files }) => files)
     .map(async (file) => {
@@ -104,7 +105,11 @@ export function createSoundPlayer() {
     },
     get audible() {
       return (
-        !disposed && !muted && context?.state === 'running' && buffers.size > 0
+        !disposed &&
+        !muted &&
+        context?.state === 'running' &&
+        decoded &&
+        buffers.size > 0
       );
     },
     get muted() {
@@ -132,7 +137,9 @@ export function createSoundPlayer() {
                 /* One bad clip must not disable the game or other sounds. */
               }
             }),
-          ).then(() => undefined);
+          ).then(() => {
+            decoded = true;
+          });
         }
         await context.resume();
         await loading;
