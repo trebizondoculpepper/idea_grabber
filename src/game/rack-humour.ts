@@ -1,3 +1,5 @@
+import { createEmptyRackLines } from './empty-rack-lines';
+
 export type WordIngredient = {
   id: string;
   words: {
@@ -59,16 +61,28 @@ export function createRackSentence(
 export function createRackHumour(random = Math.random) {
   let remaining = 18 + random() * 12;
   let previous = '';
+  const emptyLine = createEmptyRackLines(random);
+  let emptySpeaker: 'bulbee' | 'coinie' = random() < 0.5 ? 'bulbee' : 'coinie';
+  let wasEmpty: boolean | undefined;
   return {
     update(
       delta: number,
       ingredients: readonly WordIngredient[],
       canSpeak: boolean,
     ) {
+      const empty = ingredients.length === 0;
+      if (wasEmpty !== undefined && wasEmpty !== empty)
+        remaining = 18 + random() * 12;
+      wasEmpty = empty;
       if (!canSpeak) return undefined;
       remaining -= delta;
       if (remaining > 0) return undefined;
       remaining = 18 + random() * 12;
+      if (empty) {
+        const speaker = emptySpeaker;
+        emptySpeaker = speaker === 'bulbee' ? 'coinie' : 'bulbee';
+        return { text: emptyLine(), sourceIds: [], speaker };
+      }
       for (let attempt = 0; attempt < 6; attempt++) {
         const line = createRackSentence(ingredients, random);
         if (!line || line.text === previous) continue;

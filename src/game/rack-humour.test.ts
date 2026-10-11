@@ -58,5 +58,27 @@ it('waits for quiet time, uses current rack contents and avoids immediate repeat
   expect(
     humour.update(18, [genre('cooking-game'), genre('chess')], true)?.text,
   ).toBe("I can't wait to cook the king!");
-  expect(humour.update(18, [], true)).toBeUndefined();
+  expect(humour.update(18, [], true)?.sourceIds).toEqual([]);
+});
+
+it('alternates empty-rack complaints between both characters without interrupting speech', () => {
+  const humour = createRackHumour(() => 0);
+  expect(humour.update(17, [], true)).toBeUndefined();
+  const first = humour.update(1, [], true)!;
+  expect(first.speaker).toBe('bulbee');
+  expect(first.sourceIds).toEqual([]);
+  expect(humour.update(100, [], false)).toBeUndefined();
+  expect(humour.update(17, [], true)).toBeUndefined();
+  const second = humour.update(1, [], true)!;
+  expect(second.speaker).toBe('coinie');
+  expect(second.text).not.toBe(first.text);
+});
+
+it('stops empty-rack complaints as soon as a ball is present and waits after the last is removed', () => {
+  const humour = createRackHumour(() => 0);
+  humour.update(17, [], true);
+  expect(humour.update(1, [genre('gardening')], true)).toBeUndefined();
+  expect(humour.update(18, [genre('gardening')], true)).toBeUndefined();
+  expect(humour.update(1, [], true)).toBeUndefined();
+  expect(humour.update(17, [], true)?.sourceIds).toEqual([]);
 });

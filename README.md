@@ -42,6 +42,8 @@ Each genre in [the catalogue](docs/ingredient-catalogue.json) has a `words` obje
 
 After 18–30 seconds of quiet time, Coinie or Bulbee may combine a verb and noun from different genres currently on the rack, optionally adding an adjective from a third. For example: “I can't wait to extract the garden!” Existing entrance and capsule announcements take priority. The feature uses fixed templates and random choices locally; it makes no AI requests.
 
+With an empty rack, the characters instead take turns complaining about running out of ideas. A shuffled collection of 28 lines includes industry jokes and random game references such as “We need the next new Minecraft. Preferably by Friday.” Complaints stop when a ball is present, and removing the last ball starts a fresh quiet-time wait.
+
 ### Sharing and camera shots
 
 After a capsule lands and Coinie returns, **Share idea** prepares a square PNG of the scene with both characters, the machine and a readable speech bubble. The preview includes a caption, device sharing, an X/Twitter draft link, Instagram sharing or image download, and a copy-caption button. The **Save image + X draft** button downloads the screenshot and opens a text/link draft; attach the saved PNG using X’s image button. The **X app: share screenshot…** button opens the device share menu with this captured PNG and the idea caption; select X if installed and offered. Installed apps can receive the PNG through the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) where file sharing is supported; download and copy remain available otherwise. Images are composed locally and are not uploaded by the game.
