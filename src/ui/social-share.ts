@@ -14,6 +14,9 @@ export function bindSocialShare(
   const caption =
     document.querySelector<HTMLTextAreaElement>('#share-caption')!;
   const twitter = document.querySelector<HTMLAnchorElement>('#share-twitter')!;
+  const twitterImage = document.querySelector<HTMLButtonElement>(
+    '#share-twitter-image',
+  )!;
   const native = document.querySelector<HTMLButtonElement>('#share-native')!;
   const instagram =
     document.querySelector<HTMLButtonElement>('#share-instagram')!;
@@ -38,7 +41,7 @@ export function bindSocialShare(
   function open() {
     release();
     const attempt = revision;
-    native.disabled = instagram.disabled = true;
+    native.disabled = instagram.disabled = twitterImage.disabled = true;
     download.hidden = true;
     preview.hidden = true;
     screenshotFailed = false;
@@ -68,6 +71,10 @@ export function bindSocialShare(
         download.href = imageUrl;
         download.hidden = false;
         native.disabled = !canShare();
+        twitterImage.disabled = !canShare();
+        twitterImage.title = canShare()
+          ? 'Choose X from your device share menu to share the screenshot'
+          : 'Image sharing to an app is unavailable here. Use Save image + X draft.';
         instagram.disabled = false;
         status.textContent = canShare()
           ? 'Share the image to an installed app, or save it and attach it to your post.'
@@ -118,6 +125,11 @@ export function bindSocialShare(
         'Image saved. Open Instagram, attach the image, and copy the caption below.';
     }
   };
+  const shareToX = () => {
+    status.textContent =
+      'Choose X from your device share menu to send this game screenshot with its idea bubble. If X is missing, use Save image + X draft and attach the PNG.';
+    void share();
+  };
   const copyCaption = async () => {
     try {
       await navigator.clipboard.writeText(caption.value);
@@ -133,6 +145,7 @@ export function bindSocialShare(
   native.addEventListener('click', share);
   instagram.addEventListener('click', insta);
   twitter.addEventListener('click', twitterDraft);
+  twitterImage.addEventListener('click', shareToX);
   copy.addEventListener('click', copyCaption);
   close.addEventListener('click', shut);
   dialog.addEventListener('close', release);
@@ -150,6 +163,7 @@ export function bindSocialShare(
       native.removeEventListener('click', share);
       instagram.removeEventListener('click', insta);
       twitter.removeEventListener('click', twitterDraft);
+      twitterImage.removeEventListener('click', shareToX);
       copy.removeEventListener('click', copyCaption);
       close.removeEventListener('click', shut);
       dialog.removeEventListener('close', release);

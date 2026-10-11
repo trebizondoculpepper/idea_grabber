@@ -146,6 +146,9 @@
         <p id="share-status" role="status" aria-live="polite"></p>
         <div class="share-actions">
           <button id="share-native" type="button" disabled>Share image…</button>
+          <button id="share-twitter-image" type="button" disabled>
+            X app: share screenshot…
+          </button>
           <a
             id="share-twitter"
             target="_blank"
@@ -165,10 +168,12 @@
         <label for="share-caption">Caption</label
         ><textarea id="share-caption" rows="3" readonly></textarea>
         <p class="share-note" id="share-note">
-          X/Twitter: the screenshot downloads when you open the draft. Attach
-          the saved PNG using X’s image button; it is not attached
-          automatically. Instagram and other apps can receive the image through
-          your device’s share menu when supported.
+          Share screenshot sends the captured scene and current idea to your
+          device’s share menu; choose X if the app is available. For an X web
+          draft, the screenshot downloads when you open the draft. Attach the
+          saved PNG using X’s image button; it is not attached automatically.
+          Instagram and other apps can receive the image through your device’s
+          share menu when supported.
         </p>
       </dialog>
       <p id="error" role="alert" hidden></p>
