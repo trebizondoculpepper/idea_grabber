@@ -24,6 +24,7 @@ export function bindSocialShare(
   let file: File | undefined;
   let imageUrl: string | undefined;
   let revision = 0;
+  let screenshotFailed = false;
   const canShare = () =>
     !!file && !!navigator.share && !!navigator.canShare?.({ files: [file] });
   function release() {
@@ -40,6 +41,8 @@ export function bindSocialShare(
     native.disabled = instagram.disabled = true;
     download.hidden = true;
     preview.hidden = true;
+    screenshotFailed = false;
+    twitter.textContent = 'Save image + X draft';
     const current = ingredients();
     const visible = document.querySelector<HTMLElement>(
       '#bulbee-speech:not([hidden]), #coinie-speech:not([hidden])',
@@ -51,7 +54,11 @@ export function bindSocialShare(
     dialog.showModal();
     try {
       drawShareImage(capture(), content.bubble, content.idea).toBlob((blob) => {
-        if (!blob || attempt !== revision) return;
+        if (attempt !== revision) return;
+        if (!blob) {
+          failedScreenshot();
+          return;
+        }
         file = new File([blob], 'idea-grabber-my-stupid-idea.png', {
           type: 'image/png',
         });
@@ -64,13 +71,28 @@ export function bindSocialShare(
         instagram.disabled = false;
         status.textContent = canShare()
           ? 'Share the image to an installed app, or save it and attach it to your post.'
-          : 'Save the image and attach it to your post. X/Twitter opens a draft with your idea and game link.';
+          : 'Save image + X draft downloads your screenshot and opens X. Attach the downloaded PNG to your draft.';
       }, 'image/png');
     } catch {
-      status.textContent =
-        'The screenshot could not be made. You can still copy your idea or open an X/Twitter draft.';
+      failedScreenshot();
     }
   }
+  function failedScreenshot() {
+    screenshotFailed = true;
+    twitter.textContent = 'X draft (text only)';
+    status.textContent =
+      'The screenshot could not be made. You can still copy your idea or open a text-only X/Twitter draft.';
+  }
+  const twitterDraft = (event: MouseEvent) => {
+    if (file) {
+      download.click();
+      status.textContent =
+        'Image download started. In X, attach idea-grabber-my-stupid-idea.png to the draft using the image button.';
+    } else if (!screenshotFailed) {
+      event.preventDefault();
+      status.textContent = 'Please wait while your screenshot is prepared.';
+    }
+  };
   async function share() {
     if (!file || !canShare()) return;
     try {
@@ -110,6 +132,7 @@ export function bindSocialShare(
   button.addEventListener('click', open);
   native.addEventListener('click', share);
   instagram.addEventListener('click', insta);
+  twitter.addEventListener('click', twitterDraft);
   copy.addEventListener('click', copyCaption);
   close.addEventListener('click', shut);
   dialog.addEventListener('close', release);
@@ -126,6 +149,7 @@ export function bindSocialShare(
       button.removeEventListener('click', open);
       native.removeEventListener('click', share);
       instagram.removeEventListener('click', insta);
+      twitter.removeEventListener('click', twitterDraft);
       copy.removeEventListener('click', copyCaption);
       close.removeEventListener('click', shut);
       dialog.removeEventListener('close', release);

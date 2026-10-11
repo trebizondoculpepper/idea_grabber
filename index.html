@@ -146,8 +146,12 @@
         <p id="share-status" role="status" aria-live="polite"></p>
         <div class="share-actions">
           <button id="share-native" type="button" disabled>Share image…</button>
-          <a id="share-twitter" target="_blank" rel="noopener noreferrer"
-            >X / Twitter</a
+          <a
+            id="share-twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-describedby="share-note"
+            >Save image + X draft</a
           >
           <button id="share-instagram" type="button" disabled>Instagram</button>
           <a
@@ -160,10 +164,11 @@
         </div>
         <label for="share-caption">Caption</label
         ><textarea id="share-caption" rows="3" readonly></textarea>
-        <p class="share-note">
-          For X/Twitter, save and attach the image to your draft. Instagram and
-          other apps can receive the image through your device’s share menu when
-          supported.
+        <p class="share-note" id="share-note">
+          X/Twitter: the screenshot downloads when you open the draft. Attach
+          the saved PNG using X’s image button; it is not attached
+          automatically. Instagram and other apps can receive the image through
+          your device’s share menu when supported.
         </p>
       </dialog>
       <p id="error" role="alert" hidden></p>

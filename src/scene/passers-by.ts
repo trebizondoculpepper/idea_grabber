@@ -8,6 +8,9 @@ const cast = [
   { art: 'joy-stick', size: [0.95, 2.4], hip: 0.62, shoulder: [0.3, 1.75] },
   { art: 'hot-dog', size: [1.1, 2.2], hip: 0.62, shoulder: [0.52, 1.6] },
   { art: 'pizza-slice', size: [1.75, 2.2], hip: 0.62, shoulder: [0.68, 2.0] },
+  { art: 'pretzel', size: [1.9, 1.85], hip: 0.62, shoulder: [0.84, 1.6] },
+  { art: 'eight-ball', size: [1.85, 1.85], hip: 0.62, shoulder: [0.91, 1.6] },
+  { art: 'milkshake', size: [1.25, 2.4], hip: 0.62, shoulder: [0.54, 1.65] },
 ] as const;
 
 const view = Math.atan2(7, 11);
